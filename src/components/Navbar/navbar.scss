@@ -1,0 +1,135 @@
+@use 'src/styles/vars';
+.navbar {
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  position: fixed;
+  width: 100vw;
+  min-height: 75px;
+  background: linear-gradient(to bottom right, rgb(41, 39, 39), 70%, rgb(177, 17, 17) );
+  color:rgb(177, 17, 17);
+
+  &__title {
+    text-align: center;
+    margin: vars.$gutter;
+    text-shadow: rgb(145, 17, 177) 5px 5px 5px;
+  }
+
+  &__links {
+    display: flex;
+  }
+
+  &__link {
+    padding:0 0.3rem;
+    color: inherit; 
+  }
+
+  &__burger {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    color : inherit;
+    display: none;
+  }
+
+  @media screen and (max-width:767px) {
+    &__links {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      
+      right: -100vw;
+      bottom: 0;
+      height: 100vh;
+      padding:2rem;
+      visibility: hidden;
+      background: linear-gradient(to bottom right, rgb(41, 39, 39), 70%, rgb(177, 17, 17) );
+    }
+
+    &__show &__links {
+      width: 100vw;
+      right:0;
+      visibility: visible;
+    }
+
+    // Pour avoir les barres qui separe les differents choix de la liste
+    &__item::after {
+      content: "";
+      display: block;
+      margin:0 auto;
+      width: 3vw;
+      height: 1px;
+      background: #FFF;
+    }
+
+    &__link {
+      display: block;
+      padding: 1.5rem;
+      font-size: 5vw;
+    }
+
+    &__burger {
+      display:block;
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+    }
+
+    &__burger:hover {
+      cursor: pointer;
+    }
+
+    &__burger--bar,
+    &__burger--bar::before,
+    &__burger--bar::after {
+      display: block;
+      width: 40px;
+      height: 3px;
+      position: relative;
+      border-radius: 3px;
+      background: #FFF;
+      transition: all .5s ease-in-out;
+    }
+
+    &__burger--bar::before,
+    &__burger--bar::after {
+      content:"";
+      position: absolute;
+      left:0;
+    }
+
+    &__burger--bar::before {
+      transform: translateY(-12px);
+    }
+
+    &__burger--bar::after {
+      transform: translateY(12px);
+    }
+
+    &__show &__burger--bar {
+      width: 0;
+      background: transparent;
+    }
+
+    &__show &__burger--bar::before {
+      transform: rotate(45deg);
+    }
+
+    &__show &__burger--bar::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+}
+
+  // &__title {
+  //   text-align: center;
+  //   margin: vars.$gutter;
+  //   text-shadow: rgb(177, 17, 17) 2px 2px 5px;
+  // }
+
+  

@@ -1,47 +1,15 @@
 // == Import
 import './home.scss';
-import coffre from 'src/assets/icons/icons8-coffre-au-trésor-64.png';
-import mainImage from 'src/assets/images/istockphoto-491606346-612x612.jpg';
+
+// import mainImage from 'src/assets/images/istockphoto-491606346-612x612.jpg';
+import Navbar from '../Navbar';
 
 // == Composant
 function Home() {
   return (
     <div className="home">
-      <header className="header">
-        <h1 className="header__title">O'Dungeons</h1>
-        <img className="header__image" src="" alt=" logo du site" />
-        <nav className="header__nav">
-          <input type="checkbox" id="toggle" />
-          <label htmlFor="toggle" className="header__label">
-            <img
-              src={coffre}
-              alt="coffre"
-            />
-
-          </label>
-
-          <ul className="header__nav--menu">
-            <li>Accueil</li>
-            <li>Classes</li>
-            <li>Races</li>
-            <li>Fiche personnage</li>
-            <li>Règles et univers</li>
-            <li>
-              <button className="header__button" type="button">
-                Connexion
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </header>
-
+      <Navbar />
       <main className="main">
-        <div className="main__image">
-          <img
-            src={mainImage}
-            alt="chevalry"
-          />
-        </div>
         <section className="main__section--presentation">
           <h2 className="main__section--presentation--title">
             Présentation

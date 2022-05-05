@@ -1,0 +1,23 @@
+@use 'src/styles/vars';
+
+.footer{
+
+  &__image{
+    width: 100%;
+    position: absolute;
+  }
+  &__list{
+    text-align: center;
+    position: relative;
+    top: 11em;
+    color: whitesmoke;
+  }
+}
+// @media screen and (min-width: 990px){
+//   .footer{
+
+//     &__image{
+      
+//     }
+// }
+

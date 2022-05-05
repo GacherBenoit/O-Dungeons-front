@@ -3,12 +3,9 @@
   display:flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
   padding: 1rem;
   position: fixed;
   width: 100vw;
-  min-height: 75px;
-  background: linear-gradient(to bottom right, rgb(41, 39, 39), 70%, rgb(177, 17, 17) );
   color:rgb(177, 17, 17);
 
   &__title {
@@ -19,6 +16,8 @@
 
   &__links {
     display: flex;
+    width:100%;
+    justify-content: space-between;
   }
 
   &__link {

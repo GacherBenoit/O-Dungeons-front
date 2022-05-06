@@ -1,0 +1,19 @@
+@use 'src/styles/vars';
+
+h1 {
+  font-size: 2em;
+  padding-top: vars.$gutter ;
+}
+p {
+  margin: vars.$gutter * 2;  
+}
+h2 {
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: bold;
+  padding-bottom: vars.$gutter;
+}
+section h2, section p {
+  text-align: left;
+  margin-left: vars.$gutter * 2;
+}

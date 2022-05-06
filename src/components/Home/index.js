@@ -13,6 +13,7 @@ import Classes from '../Classes';
 import Races from '../Races';
 import Creator from '../Creator';
 import Error from '../Error';
+import Login from '../Login';
 import Footer from '../Footer';
 
 function Home() {
@@ -39,7 +40,7 @@ function Home() {
         <Route path="/race" element={<Races />} />
         <Route path="/creation-personnages" element={<Creator />} />
         <Route path="/regles-et-univers" element={<Rules />} />
-        <Route path="/connexion" element={<Presentation />} />
+        <Route path="/connexion" element={<Login />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />

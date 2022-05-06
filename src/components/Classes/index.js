@@ -3,7 +3,7 @@ import './classes.scss';
 function Classes() {
   return (
     <div className="classes">
-      <h1>Classes</h1>
+      <p>Classes</p>
     </div>
   );
 }

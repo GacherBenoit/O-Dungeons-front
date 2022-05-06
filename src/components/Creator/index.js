@@ -5,9 +5,9 @@ import './creator.scss';
 
 function Creator() {
   return (
-    <div className="creator">
+    <main className="creator">
       <h1>Creation de personnages</h1>
-    </div>
+    </main>
   );
 }
 

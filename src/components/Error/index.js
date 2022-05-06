@@ -5,9 +5,9 @@ import './error.scss';
 
 function Error() {
   return (
-    <div className="error">
+    <main className="error">
       <h1>Classes</h1>
-    </div>
+    </main>
   );
 }
 

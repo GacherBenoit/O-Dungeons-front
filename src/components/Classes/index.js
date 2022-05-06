@@ -2,9 +2,9 @@ import './classes.scss';
 
 function Classes() {
   return (
-    <div className="classes">
+    <main>
       <p>Classes</p>
-    </div>
+    </main>
   );
 }
 

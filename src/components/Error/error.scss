@@ -1,0 +1,14 @@
+@use 'src/styles/vars.scss';
+.error {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background-color: black;
+  color: vars.$colorwhite;
+  border-radius: 15%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: vars.$gutter * 2;
+}

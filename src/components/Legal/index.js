@@ -5,9 +5,9 @@ import './legal.scss';
 
 function Legal() {
   return (
-    <div className="legal">
+    <main className="legal">
       <h1>Mentions Légal</h1>
-    </div>
+    </main>
   );
 }
 

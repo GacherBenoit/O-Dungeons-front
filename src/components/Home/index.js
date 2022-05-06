@@ -39,7 +39,7 @@ function Home() {
       <Routes>
         <Route path="/" element={<Presentation />} />
         <Route path="/classes" element={<Classes />} />
-        <Route path="/race" element={<Races />} />
+        <Route path="/races" element={<Races />} />
         <Route path="/creation-personnages" element={<Creator />} />
         <Route path="/regles-et-univers" element={<Rules />} />
         <Route path="/connexion" element={<Login />} />

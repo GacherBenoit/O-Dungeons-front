@@ -5,9 +5,9 @@ import './races.scss';
 
 function Races() {
   return (
-    <div className="races">
+    <main className="races">
       <h1>Races</h1>
-    </div>
+    </main>
   );
 }
 

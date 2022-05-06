@@ -17,6 +17,17 @@ function Rules() {
             Velit cano cum similique labore numquam alias earum recusandae officia, exercitatio
             eum tenetur eos, quidem in doloribus quod. Nisi, asperiores.
           </p>
+          <h2 className="rules__paragraph__title">Les règles</h2>
+          <p className="rules__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Velit provident cum similique labore numquam alias earum recusandae officia, exercitatio
+            eum tenetur eos, quidem in doloribus quod. Nisi, asperiores.
+            celit provident cum similique labore numquam alias earum recusandae officia, exercitatio
+            eum tenetur eos, quidem in doloribus quod. Nisi, asperiores.
+            Belot provident cum similique labore numquam alias earum recusandae officia, exercitatio
+            eum tenetur eos, quidem in doloribus quod. Nisi, asperiores.
+            Velit cano cum similique labore numquam alias earum recusandae officia, exercitatio
+            eum tenetur eos, quidem in doloribus quod. Nisi, asperiores.
+          </p>
         </section>
       </div>
     </main>

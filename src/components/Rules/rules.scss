@@ -1,5 +1,30 @@
 @use 'src/styles/vars';
 
+.rules{
+  &__section--presentation{
+    margin-top: 7em;
+    
+  }
+  &__titles{
+    font-size: 1.5em;
+    
+  }
+  &__paragraph__title{
+    font-size: 1.5em;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+  }
+  &__paragraph{
+    font-size: 1.2em;
+    margin: auto;
+    width: 80%;
+  }
+}
+
+
+@media screen and (min-width: 990px)
+{
 main {
     margin-top: 8rem;
     text-align: center;
@@ -20,4 +45,5 @@ main {
     margin: auto;
     width: 80%;
   }
+}
 }

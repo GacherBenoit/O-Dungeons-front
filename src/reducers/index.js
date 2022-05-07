@@ -1,4 +1,4 @@
-import {} from '../actions';
+import { MENU_BURGER_TOGGLE } from '../actions';
 
 // State initial du site
 const initialState = {
@@ -18,6 +18,17 @@ const initialState = {
 
 function mainReducer(state = initialState, action = {}) {
   switch (action.type) {
+    // Traduire l'action en une modification du state
+    // ici lors du clic sur le menu burger
+    // state.settingsMenu.isOpen passera a true ou false
+    case MENU_BURGER_TOGGLE:
+      return {
+        ...state,
+        settingsMenu: {
+          ...state.settingsMenu,
+          isOpen: !state.settingsMenu.isOpen,
+        },
+      };
     default:
       return state;
   }

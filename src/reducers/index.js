@@ -1,4 +1,4 @@
-import { MENU_BURGER_TOGGLE } from '../actions';
+import { MENU_BURGER_TOGGLE, SET_EMAIL, SET_PASSWORD } from '../actions';
 
 // State initial du site
 const initialState = {
@@ -27,6 +27,26 @@ function mainReducer(state = initialState, action = {}) {
         settingsMenu: {
           ...state.settingsMenu,
           isOpen: !state.settingsMenu.isOpen,
+        },
+      };
+      // Avec cette action, on remplis le state email
+      // avec chaque valeur que l'utilisateur tape sur son clavier
+    case SET_EMAIL:
+      return {
+        ...state,
+        settings: {
+          ...state.settings,
+          email: action.value,
+        },
+      };
+      // Avec cette action, on remplis le state password
+      // avec chaque valeur que l'utilisateur tape sur son clavier
+    case SET_PASSWORD:
+      return {
+        ...state,
+        settings: {
+          ...state.settings,
+          password: action.value,
         },
       };
     default:

@@ -1,22 +1,15 @@
 .header{
-  position: fixed;
-  top:0px;
-  left: 0px;
   width: 100%;
   background: linear-gradient(to bottom right, rgb(41, 39, 39), 70%, rgb(177, 17, 17) );
-  min-height: 75px;
+  height: 10vh;
 
   &__content{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top:1.5rem;
+    padding-top:0.6rem;
   }
   
-  &__logo{
-    display: none;
-  }
-
   &__title{
     
     text-align: center;
@@ -27,11 +20,9 @@
   }
 
 }
-@media screen and (min-width: 990px){
+@media screen and (min-width: 1024px){
   .header{
-    position:fixed;
-    min-height: 120px;
-
+    
     // &__logo{
     //  width: 200px;
     //  position: absolute;

@@ -18,6 +18,7 @@ import About from '../About';
 import Legal from '../Legal';
 import Footer from '../Footer';
 import Subclasses from '../Subclasses';
+import Subraces from '../Subraces';
 
 function Home() {
   // The useLocation hook allows to retrieve information
@@ -48,6 +49,7 @@ function Home() {
         <Route path="/mentions-legal" element={<Legal />} />
         <Route path="*" element={<Error />} />
         <Route path="/classes/subclasses" element={<Subclasses />} />
+        <Route path="/races/subraces" element={<Subraces />} />
       </Routes>
       <Footer />
     </div>

@@ -1,33 +1,33 @@
 @use 'src/styles/vars';
 
 .card {
-    width:100vw;
-    margin:1em auto;
+    // width:100vw;
+    // margin:1em auto;
     display: none;
-    flex-wrap: wrap;
-    align-items: center;
+    // flex-wrap: wrap;
+    // align-items: center;
     
     
-    &__image {
-      height: 50%;
-      width: 100%;
-      overflow: hidden;
+    // &__image {
+    //   height: 50%;
+    //   width: 100%;
+    //   overflow: hidden;
       
       
-    }
+    // }
 
-    &__image--classe {
-      max-width:100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
+    // &__image--classe {
+    //   max-width:100%;
+    //   min-height: 100%;
+    //   width: auto;
+    //   height: auto;
       
-    }
+    // }
 
-    &__body {
-      height: 50%;
+    // &__body {
+    //   height: 50%;
       
-    }
+    // }
 }
 
 

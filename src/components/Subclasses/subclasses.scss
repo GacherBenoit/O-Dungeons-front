@@ -1,0 +1,24 @@
+@use '../../styles/vars';
+
+.subclasses {
+  margin-top: 8rem;
+  &__mainclass {
+    text-align: center;
+  }
+  &__img {
+    width: 50%;
+  }
+}
+h2 {
+  padding: vars.$gutter * 2;
+  text-decoration: none;
+}
+@media  all and (min-width:768px) {
+  #subclasses {
+      text-align: center;
+    }
+    .subclasses__presentation {
+     display: flex; 
+    }
+}
+

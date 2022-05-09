@@ -17,6 +17,7 @@ import Login from '../Login';
 import About from '../About';
 import Legal from '../Legal';
 import Footer from '../Footer';
+import Subclasses from '../Subclasses';
 
 function Home() {
   // The useLocation hook allows to retrieve information
@@ -46,6 +47,7 @@ function Home() {
         <Route path="/qui-somme-nous" element={<About />} />
         <Route path="/mentions-legal" element={<Legal />} />
         <Route path="*" element={<Error />} />
+        <Route path="/classes/subclasses" element={<Subclasses />} />
       </Routes>
       <Footer />
     </div>

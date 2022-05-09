@@ -1,0 +1,56 @@
+.races{
+  &__cards{
+   margin-top: 5em;
+   
+   
+  }
+}
+.card{
+  width: 100%;
+  border: 3px solid #bb7070;
+  box-shadow: 10px 5px 5px #bd9999;
+
+  &__img {
+    margin-left: 0.5em;
+    margin-top:-3em;
+    margin-bottom: 0.1em;
+    height: 7em;
+  }
+  &__excerpt{
+    margin-left: .5em;
+    margin-right: 0.5em;
+  }  
+  &__title{
+    visibility: hidden;
+  }
+    
+}
+
+@media screen and (min-width: 990px){
+  .races{
+      &__cards{
+        margin-left: 2em;
+        display: flex;
+        flex-wrap: wrap;
+      }
+     
+    }
+    .card{
+      border: 3px solid #e68f8f;
+      width: 30%;
+      box-shadow: 10px 5px 5px #dfd0d0;
+      
+      &__img {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:-3em;
+        height: 17em;
+    }
+  
+    &__excerpt{
+      margin-left: inherit;
+    }
+    
+  }
+}

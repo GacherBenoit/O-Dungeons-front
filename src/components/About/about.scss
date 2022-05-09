@@ -1,26 +1,26 @@
-@use 'src/styles/vars';
-main {
-  padding: vars.$gutter * 2;
-  font-size: large;
+// @use 'src/styles/vars';
+// main {
+//   // padding: vars.$gutter * 2;
+//   font-size: large;
 
-}
-ul {
-  margin-bottom: vars.$gutter * 2;
-  text-align: left;
-}
+// }
+// ul {
+//   margin-bottom: vars.$gutter * 2;
+//   text-align: left;
+// }
 
-span {
-  color: vars.$colorTitle;
-  font-weight: bold;
+// span {
+//   color: vars.$colorTitle;
+//   font-weight: bold;
 
-}
+// }
 
-li {
-  margin-top: vars.$gutter;
-}
-header {
-  height: 150px;
-}
-.subtitle {
-  text-decoration:wavy;
-}
+// li {
+//   margin-top: vars.$gutter;
+// }
+// header {
+//   height: 150px;
+// }
+// .subtitle {
+//   text-decoration:wavy;
+// }

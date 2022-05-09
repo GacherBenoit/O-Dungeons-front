@@ -2,11 +2,10 @@
   &__cards{
    margin-top: 5em;
    
-   
   }
 }
 .card{
-
+  width: 100%;
   border: 3px solid #bb7070;
   box-shadow: 10px 5px 5px #bd9999;
 
@@ -45,7 +44,7 @@
         margin-left: auto;
         margin-right: auto;
         margin-top:-3em;
-        height: 12em;
+        height: 17em;
     }
   
     &__excerpt{

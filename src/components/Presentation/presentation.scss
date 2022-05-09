@@ -15,12 +15,28 @@
     margin: auto;
   }
 
-  &__presentation {
-    width: 90%;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    
+  &__section--presentation--paragraphe {
+    margin: auto 1rem;
+  }
+
+  &__section--presentation--link--contener {
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
+
+  // SECTION REGLES
+
+  &__rules--title {
+    margin: auto;
+  }
+
+  &__rules--paragraphe {
+    margin: auto 1rem;
+  }
+
+  &__rules--contener {
+    margin-top: 1rem;
+    margin-left: 1rem;
   }
 
 }

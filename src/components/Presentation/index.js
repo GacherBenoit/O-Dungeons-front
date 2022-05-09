@@ -59,10 +59,8 @@ function Presentation() {
       </div>
       <div className="main__cards--classes">
         <Card />
-        <Card />
       </div>
       <div className="main__cards--races">
-        <Card />
         <Card />
       </div>
     </main>

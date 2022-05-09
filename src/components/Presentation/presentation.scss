@@ -39,7 +39,21 @@
     margin-left: 1rem;
   }
 
+  // CARD
+
+  &__cards--classes {
+
+    margin: 0.5rem;
+  }
+
+  &__cards--races {
+
+    margin: 0.5rem;
+  }
+
 }
+
+
 @media screen and (min-width: 990px)
 {
   .main{
@@ -95,18 +109,18 @@
     margin-bottom: 2em;
     font-size: 1.2em;
   }
-  &__cards--classes{
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-  }
-  &__cards--races{
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-  }
+  // &__cards--classes{
+  //   display: flex;
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   width: 90%;
+  // }
+  // &__cards--races{
+  //   display: flex;
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   width: 90%;
+  // }
   }
 
 }

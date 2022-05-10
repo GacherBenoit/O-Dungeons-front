@@ -68,7 +68,7 @@
            
     }
 
-    // SECTION DE GAUCHE
+    // SECTION DE GAUCHE (presentation)
 
     &__section--presentation {
       width:45%;
@@ -102,12 +102,31 @@
       text-align: center;
     }
     
+    // Section de Droite (rules)
     &__rules {
       width: 45%;
       border: solid 1px black;
       margin-right: 1.5rem;
     }
 
+    // Cartes des races et classes
+    &__random {
+      margin-top: 1rem;
+    }
+
+    &__random--classes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-bottom: 1rem;
+    }
+
+    &__random--races {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-bottom: 1rem;
+    }
 
      
     

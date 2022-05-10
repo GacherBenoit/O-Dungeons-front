@@ -57,12 +57,23 @@ function Presentation() {
           </div>
         </section>
       </div>
-      <div className="main__cards--classes">
-        <Card />
+      <div className="main__random">
+        <h3 className="main__random--title">
+          Classes au hasard
+        </h3>
+        <div className="main__random--classes">
+          <Card />
+          <Card />
+        </div>
+        <h3 className="main__random--title">
+          Races au hasard
+        </h3>
+        <div className="main__random--races">
+          <Card />
+          <Card />
+        </div>
       </div>
-      <div className="main__cards--races">
-        <Card />
-      </div>
+
     </main>
   );
 }

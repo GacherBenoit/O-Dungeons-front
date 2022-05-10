@@ -97,19 +97,31 @@
 
 
 //Section of statisctic
-
+.statistics{
+  width: 90%;
+  border: 1px solid #000000;
+}
 .stats{
-  &__armor{
-    border: 1px solid #000000;
-  }
-  &__initiative{
-    border: 1px solid #000000;
-  }
-  &__speed{
+  &__health-all-stats{
     border: 1px solid #000000;
   }
   &__health{
+    text-align: center;
+  }
+  &__icon{
+    width: 5vh;
+  }
+  &__armor{
     border: 1px solid #000000;
+    width: 30%;
+  }
+  &__initiative{
+    border: 1px solid #000000;
+    width: 30%;
+  }
+  &__speed{
+    border: 1px solid #000000;
+    width: 30%;
   }
   &__dice{
     border: 1px solid #000000;

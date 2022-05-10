@@ -21,19 +21,21 @@ function Creator() {
           <li className="stats__armor"><img className="stats__icon" src={ArmorIcon} alt="armor-icon" />-Armure: </li>
           <li className="stats__initiative"><img className="stats__icon" src={InitiativeIcon} alt="initiative-icon" />-Initiative: </li>
           <li className="stats__speed"><img className="stats__icon" src={SpeedIcon} alt="speed-icon" />-Vitesse: </li>
-          <li className="stats__health"><img className="stats__icon__max-health" src={HealthList} alt="health-list-icon" />-Points de vie:
-            <ul>
-              <li className="stats__health--max"><img className="stats__icon__max-health" src={Health} alt="health-icon" />Points de vie max:</li>
-              <li className="stats__health-current"><img className="stats__icon__currrent-health" src={Health} alt="health-icon" />Points de vie actuel:</li>
-              <li className="stats__health-temporary"><img className="stats__icon__temporary-health" src={Health} alt="health-icon" />Points de vie temporaire:</li>
-            </ul>
-          </li>
+        </ul>
+        <div className="stats__health-all-stats">
+          <ul>
+            <li className="stats__health"><img className="stats__icon" src={HealthList} alt="health-list-icon" />-Points de vie:</li>
+            <li className="stats__health--max"><img className="stats__icon" src={Health} alt="health-icon" />Points de vie max:</li>
+            <li className="stats__health-current"><img className="stats__icon" src={Health} alt="health-icon" />Points de vie actuel:</li>
+            <li className="stats__health-temporary"><img className="stats__icon" src={Health} alt="health-icon" />Points de vie temporaire:</li>
+          </ul>
+        </div>
           <ul className="stats__dice">
             <li><h5>-Jet de dés:</h5> </li>
             <li><span className="dice__type">1D8</span></li>
             <li>Hit Dice</li>
           </ul>
-        </ul>
+        
         <div className="stats__die-throw">
           <ul>
             <li>Succès</li>

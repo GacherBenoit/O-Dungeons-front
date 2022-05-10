@@ -15,9 +15,25 @@
     flex-wrap: wrap;
   }
   &__bonus{
-    margin-left: vars.$gutter*2;
+    margin-left: vars.$gutter;
   }
   &__malus{
-    margin-left: vars.$gutter*5;
+    margin-left: vars.$gutter*2.5;
   }
+}
+@media only screen and (min-device-width : 768px){
+  .choices{
+    &__skill{
+      margin-left: vars.$gutter*6;
+    }
+  }
+  .skills {
+    &__bonus{
+      margin-left: vars.$gutter*16;
+    }
+    &__malus{
+      margin-left: vars.$gutter*19;
+    }
+  }
+  
 }

@@ -1,6 +1,7 @@
 // == Import: local
 import './creator.scss';
 import CharacterChoices from './CharacterChoices';
+import CaracteristicsPrincipals from './CaracteristicsPrincipals';
 
 // == Composant
 
@@ -26,7 +27,8 @@ function Creator() {
         </ul>
       </section>
       <h4>Caractéristiques principales avec bonus selon le choix de la classe:</h4>
-      <section className="caracteristics__principals">
+      <CaracteristicsPrincipals />
+      {/* <section className="caracteristics__principals">
         <ul>
           <li>-Force</li>
           <li>-Dextérité</li>
@@ -35,7 +37,7 @@ function Creator() {
           <li>-Volonté</li>
           <li>-Charisme</li>
         </ul>
-      </section>
+      </section> */}
       <section className="caracteristics__bonus">
         <p>Bonus de compétences:</p>
         <p>

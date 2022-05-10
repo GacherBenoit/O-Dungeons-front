@@ -30,7 +30,9 @@ function Presentation() {
             vestibulum. Sed mollis efficitur dui, at suscipit lectus. Mauris mollis aliquam
             interdum. Maecenas eu nunc tempus, dictum lorem sit amet, viverra enim. Mauris laoreet.
           </p>
-          <p><a className="main__section--presentation--link" href="#">En savoir plus....</a></p>
+          <div className="main__section--presentation--link--contener">
+            <a className="main__section--presentation--link" href="#">En savoir plus....</a>
+          </div>
         </section>
         <section className="main__rules">
           <h2 className="main__rules--title">
@@ -39,28 +41,39 @@ function Presentation() {
           <p className="main__rules--paragraphe">
             Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Rerum praesentium sint quam,
-            reiciendis atque reprehenderit unde cumque impedit! Nam quas at veritatis quae sit 
+            reiciendis atque reprehenderit unde cumque impedit! Nam quas at veritatis quae sit
             odit illo architecto quaerat alias modi.
             Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Rerum praesentium sint quam,
-            reiciendis atque reprehenderit unde cumque impedit! Nam quas at veritatis quae sit 
+            reiciendis atque reprehenderit unde cumque impedit! Nam quas at veritatis quae sit
             odit illo architecto quaerat alias modi.
             Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Rerum praesentium sint quam,
-            reiciendis atque reprehenderit unde cumque impedit! Nam quas at veritatis quae sit 
+            reiciendis atque reprehenderit unde cumque impedit! Nam quas at veritatis quae sit
             odit illo architecto quaerat alias modi.
           </p>
-          <p><a className="main__rules--paragraphe--link" href="#">Découvrir les règles ...</a></p>
+          <div className="main__rules--contener">
+            <a className="main__rules--link" href="#">Découvrir les règles ...</a>
+          </div>
         </section>
       </div>
-      <div className="main__cards--classes">
-        <Card />
-        <Card />
+      <div className="main__random">
+        <h3 className="main__random--title">
+          Classes au hasard
+        </h3>
+        <div className="main__random--classes">
+          <Card />
+          <Card />
+        </div>
+        <h3 className="main__random--title">
+          Races au hasard
+        </h3>
+        <div className="main__random--races">
+          <Card />
+          <Card />
+        </div>
       </div>
-      <div className="main__cards--races">
-        <Card />
-        <Card />
-      </div>
+
     </main>
   );
 }

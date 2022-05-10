@@ -4,14 +4,21 @@
 h1,h2,h3{
   font-family: 'Tapestry', cursive;
   text-align: center;
-  margin-bottom: 1em;
   font-size: 2em;
 }
 
-
-@media all and (max-width: 750px){
-
-
- 
+.home__right {
+  display: none;
 }
+
+@media screen and (min-width: 1024px) {
+  .home {
+    
+  
+  }
+
+  
+  
+}
+
 

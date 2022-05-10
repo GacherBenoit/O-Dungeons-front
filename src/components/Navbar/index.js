@@ -4,7 +4,6 @@
 // pour connaitre le status de isOpen dans le store, il faut faire appel a useSelector
 // qui est une méthode de react-redux
 import { useSelector, useDispatch } from 'react-redux';
-import { useState } from 'react';
 
 import { NavLink } from 'react-router-dom';
 

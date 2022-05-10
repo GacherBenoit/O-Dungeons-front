@@ -36,18 +36,9 @@
     margin-right: auto;
   }
 }
-@media screen and (min-width: 990px){
+@media screen and (min-width: 1024px){
   .footer{
-  background-image: url('src/assets/images/footer.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 500px;
-  margin-top: vars.$gutter * 0;
-  
-  &__list li {
-    font-size: 1.5rem;
-    margin-bottom: vars.$gutter *1.5;
-  }
+    
 }
 
 

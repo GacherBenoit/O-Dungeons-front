@@ -9,7 +9,9 @@ function Header() {
       <div className="header__content">
         <h1 className="header__title">O'Dungeon</h1>
       </div>
-      <Navbar />
+      <div className="header__navbar--left">
+        <Navbar />
+      </div>
     </header>
   );
 }

@@ -22,12 +22,9 @@
 }
 @media screen and (min-width: 1024px){
   .header{
-    
-    // &__logo{
-    //  width: 200px;
-    //  position: absolute;
-    //  right: 0;
-    // }
+    width: 100%;
+    position: relative;
+    height: 20vh;
   }
 }
 

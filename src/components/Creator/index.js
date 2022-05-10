@@ -12,8 +12,8 @@ import Throws from './Throws';
 import ArmorIcon from '../../assets/icons/armor.png';
 import InitiativeIcon from '../../assets/icons/initiative.png';
 import SpeedIcon from '../../assets/icons/speed.png';
-import HealthList from '../../assets/icons/life-bar.png';
 import Health from '../../assets/icons/health.png';
+import Equipment from './Equipment';
 
 function Creator() {
   return (
@@ -58,45 +58,13 @@ function Creator() {
       <Inspiration />
       <Personality />
       <Throws />
-      {/* <h4>Saving Throws</h4>
-      <div className="throws">
-        <div className="throws__div">
-          <div>
-            <input type="checkbox" id="force" name="throws" value="force" />
-            <label htmlFor="force">Force</label>
-          </div>
-          <div>
-            <input type="checkbox" id="constitution" name="throws" value="constitution" />
-            <label htmlFor="constitution">Constitution</label>
-          </div>
-        </div>
-        <div className="throws__div">
-          <div>
-            <input type="checkbox" id="volonté" name="throws" value="volonté" />
-            <label htmlFor="volonté">Volonté</label>
-          </div>
-          <div>
-            <input type="checkbox" id="intelligence" name="throws" value="intelligence" />
-            <label htmlFor="intelligence">Intelligence</label>
-          </div>
-        </div>
-        <div className="throws__div">
-          <div>
-            <input type="checkbox" id="charisme" name="throws" value="charisme" />
-            <label htmlFor="charisme">Charisme</label>
-          </div>
-          <div>
-            <input type="checkbox" id="dextérité" name="throws" value="dextérité" />
-            <label htmlFor="dextérité">Dextérité</label>
-          </div>
-        </div>
-      </div> */}
       <section className="caracteristics__attack">
         <h4>Attaques et sorts</h4>
       </section>
-      <section className="caracteristics__equipment">
+      <Equipment />
+      {/* <section className="caracteristics__equipment">
         <h4>Equipement</h4>
-      </section>
+      </section> */}
       <section className="caracteristics__traits">
         <h4>Fonction et traits</h4>
       </section>

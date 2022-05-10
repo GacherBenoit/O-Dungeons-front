@@ -94,3 +94,27 @@
 .capacities div {
   padding: vars.$gutter;
 }
+
+
+//Section of statisctic
+
+.stats{
+  &__armor{
+    border: 1px solid #000000;
+  }
+  &__initiative{
+    border: 1px solid #000000;
+  }
+  &__speed{
+    border: 1px solid #000000;
+  }
+  &__health{
+    border: 1px solid #000000;
+  }
+  &__dice{
+    border: 1px solid #000000;
+  }
+  &__die-throw{
+    border: 1px solid #000000;
+  }
+}

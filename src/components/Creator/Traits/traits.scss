@@ -1,15 +1,15 @@
 @use '../../../styles/vars';
 
-.equipment {
+.traits {
   border: 1px solid black;
   box-shadow: 1em 0 .4em vars.$colorTitle;
   margin: vars.$gutter * 2;
-  &__title {
-    margin: vars.$gutter;
-  }
+  padding: vars.$gutter;
   &__paragraphe {
     text-align: left;
     padding: vars.$gutter;
-    margin: vars.$gutter;
+    &--list {
+      padding: vars.$gutter;
+    }
   }
 }

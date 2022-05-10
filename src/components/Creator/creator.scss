@@ -1,28 +1,13 @@
 @use '../../styles/vars';
 
 .creator {
-  margin-top: 8rem;
+  // margin-top: 8rem;
   text-align: center;
 }
 
 .caracteristics {
   text-align: center;
-  &__statistics {
-  border: 1px solid vars.$colorTitle;
-  padding: vars.$gutter;
-  margin: vars.$gutter;
-  }
   &__attack {
-    border: 1px solid vars.$colorTitle;
-  padding: vars.$gutter;
-  margin: vars.$gutter;
-  }
-  &__equipment {
-    border: 1px solid vars.$colorTitle;
-  padding: vars.$gutter;
-  margin: vars.$gutter;
-  }
-  &__traits {
     border: 1px solid vars.$colorTitle;
   padding: vars.$gutter;
   margin: vars.$gutter;
@@ -37,33 +22,9 @@
 
     }
   }
-  &__language {
-    border: 1px solid vars.$colorTitle;
-  padding: vars.$gutter;
-  margin: vars.$gutter;
-  }
+ 
 }
-// .throws {
-//   display: flex;
-//   flex-direction: column;
-//   border: 1px solid vars.$colorTitle;
-//   padding: vars.$gutter;
-//   margin: vars.$gutter;
-//   &__div {
-//     display:flex;
-//     justify-content: space-around;
-//     align-items: flex-start;
 
-//   }
-// }
-.capacities {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.capacities div {
-  padding: vars.$gutter;
-}
 
 
 

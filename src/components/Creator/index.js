@@ -18,36 +18,34 @@ function Creator() {
       <CharacterChoices />
       <section className="statistics">
         <ul className="stats__list">
-          <li className="stats__armor"><img className="stats__icon" src={ArmorIcon} alt="armor-icon" />-Armure: </li>
-          <li className="stats__initiative"><img className="stats__icon" src={InitiativeIcon} alt="initiative-icon" />-Initiative: </li>
-          <li className="stats__speed"><img className="stats__icon" src={SpeedIcon} alt="speed-icon" />-Vitesse: </li>
+          <li className="stats__armor"><img className="stats__icon" src={ArmorIcon} alt="armor-icon" /><span>21</span>Armure </li>
+          <li className="stats__initiative"><img className="stats__icon" src={InitiativeIcon} alt="initiative-icon" /><span>2</span>Initiative </li>
+          <li className="stats__speed"><img className="stats__icon" src={SpeedIcon} alt="speed-icon" /><span>0</span>Vitesse </li>
         </ul>
         <div className="stats__health-all-stats">
           <ul>
-            <li className="stats__health"><img className="stats__icon" src={HealthList} alt="health-list-icon" />-Points de vie:</li>
             <li className="stats__health--max"><img className="stats__icon" src={Health} alt="health-icon" />Points de vie max:</li>
             <li className="stats__health-current"><img className="stats__icon" src={Health} alt="health-icon" />Points de vie actuel:</li>
             <li className="stats__health-temporary"><img className="stats__icon" src={Health} alt="health-icon" />Points de vie temporaire:</li>
           </ul>
         </div>
-          <ul className="stats__dice">
-            <li><h5>-Jet de dés:</h5> </li>
-            <li><span className="dice__type">1D8</span></li>
-            <li>Hit Dice</li>
-          </ul>
-        
+        <ul className="stats__dice">
+          <li><h5>Total:</h5> </li>
+          <li><span className="dice__type">1D8</span></li>
+          <li>Hit Dice</li>
+        </ul>
         <div className="stats__die-throw">
-          <ul>
+          <ul className="circle__success">
             <li>Succès</li>
-            <li><span /></li>
-            <li><span /></li>
-            <li><span /></li>
+            <li><span className="circle" /></li>
+            <li><span className="circle" /></li>
+            <li><span className="circle" /></li>
           </ul>
-          <ul>
+          <ul className="circle__loose">
             <li>Echec</li>
-            <li><span /></li>
-            <li><span /></li>
-            <li><span /></li>
+            <li><span className="circle" /></li>
+            <li><span className="circle" /></li>
+            <li><span className="circle" /></li>
             <li><p>Mort sauvés</p></li>
           </ul>
         </div>

@@ -4,13 +4,14 @@ import CharacterChoices from './CharacterChoices';
 import CaracteristicsPrincipals from './CaracteristicsPrincipals';
 import Inspiration from './Inspiration';
 import Personality from './Personality';
+import Throws from './Throws';
 
 // == Composant
 
 function Creator() {
   return (
     <main className="creator">
-      <h2>Creation de personnages</h2>
+      <h2>Création de personnages</h2>
       <CharacterChoices />
       <section className="caracteristics">
         <h4 className="caracteristics__title">Statistiques:</h4>
@@ -31,7 +32,8 @@ function Creator() {
       <CaracteristicsPrincipals />
       <Inspiration />
       <Personality />
-      <h4>Saving Throws</h4>
+      <Throws />
+      {/* <h4>Saving Throws</h4>
       <div className="throws">
         <div className="throws__div">
           <div>
@@ -63,7 +65,7 @@ function Creator() {
             <label htmlFor="dextérité">Dextérité</label>
           </div>
         </div>
-      </div>
+      </div> */}
       <section className="caracteristics__attack">
         <h4>Attaques et sorts</h4>
       </section>

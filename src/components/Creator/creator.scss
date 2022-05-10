@@ -43,19 +43,19 @@
   margin: vars.$gutter;
   }
 }
-.throws {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid vars.$colorTitle;
-  padding: vars.$gutter;
-  margin: vars.$gutter;
-  &__div {
-    display:flex;
-    justify-content: space-around;
-    align-items: flex-start;
+// .throws {
+//   display: flex;
+//   flex-direction: column;
+//   border: 1px solid vars.$colorTitle;
+//   padding: vars.$gutter;
+//   margin: vars.$gutter;
+//   &__div {
+//     display:flex;
+//     justify-content: space-around;
+//     align-items: flex-start;
 
-  }
-}
+//   }
+// }
 .capacities {
   display: flex;
   flex-direction: column;

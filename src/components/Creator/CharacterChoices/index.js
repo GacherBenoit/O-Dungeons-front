@@ -30,13 +30,13 @@ function CharacterChoices() {
         <option value="archer">Rodeur</option>
         <option value="warrior">Guerrier</option>
       </select>
-      <label htmlFor="choices__subclasse" />
+      {/* <label htmlFor="choices__subclasse" />
       <select className="Choices__sub-classe">
         <option value="">Choix de la sous-classe</option>
         <option value="assassin">assassin</option>
         <option value="barbarian">Barbare</option>
         <option value="elementalist">Mage élémentaire</option>
-      </select>
+      </select> */}
       <div className="choices__results">
         <ul className="choices__results--list">
           <li>Classe: Guerrier</li>

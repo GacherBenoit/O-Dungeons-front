@@ -1,0 +1,22 @@
+@use '../../../styles/vars';
+
+.throws {
+  border: 1px solid black;
+  box-shadow: 1em 0 .4em vars.$colorTitle;
+  margin: vars.$gutter ;
+  padding: vars.$gutter;
+  &__title {
+    margin-bottom: vars.$gutter;
+  }
+  &__div {
+    display: flex;
+    justify-content: space-around;
+    &--left {
+      text-align: left;
+    }
+    &--right {
+      text-align: right;
+    }
+  }
+  
+}

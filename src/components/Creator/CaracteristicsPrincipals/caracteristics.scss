@@ -1,0 +1,20 @@
+@use '../../../styles/vars';
+
+
+.caracteristics__principals {
+  border: 1px solid black;
+  box-shadow: 1em 0 .4em vars.$colorTitle;
+  margin: vars.$gutter;
+  &--list {
+    text-align: center;
+
+    &--item {
+      border: none;
+      font-size: 1em;
+      text-align: center;
+    }
+  }
+  &--title {
+    margin-top: vars.$gutter ;
+  }
+}

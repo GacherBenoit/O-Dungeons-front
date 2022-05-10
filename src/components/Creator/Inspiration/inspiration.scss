@@ -1,0 +1,23 @@
+@use '../../../styles/vars';
+
+.inspiration {
+  border: 1px solid black;
+  box-shadow: 1em 0 .4em vars.$colorTitle;
+  margin: vars.$gutter * 2  vars.$gutter;
+  // padding: vars.$gutter * 2;
+  display: flex;
+  flex-direction: column;
+  &__select {
+    width: 50%;
+    margin: vars.$gutter;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__paragraphe {
+    text-align: left;
+    width: 90%;
+  }
+  &__title {
+    padding-top: vars.$gutter;
+  }
+}

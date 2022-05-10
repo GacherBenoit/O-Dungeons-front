@@ -1,13 +1,13 @@
 // == Import: local
 import './characterChoices.scss';
-import barbarian from '../../../assets/images/barbarian.jpg';
+import warrior from '../../../assets/images/guerriertransparent.png';
 
 // == Composant
 
 function CharacterChoices() {
   return (
     <div className="choices">
-      <h2>character Choices</h2>
+      <h3>Character Choices</h3>
       <input type="text" placeholder="Nom du personnage" />
       <label htmlFor="choices-race" />
       <select className="choices__race" id="choices-race">
@@ -30,15 +30,15 @@ function CharacterChoices() {
         <option value="archer">Rodeur</option>
         <option value="warrior">Guerrier</option>
       </select>
-      <label htmlFor="choices__subclasse" />
+      {/* <label htmlFor="choices__subclasse" />
       <select className="Choices__sub-classe">
         <option value="">Choix de la sous-classe</option>
         <option value="assassin">assassin</option>
         <option value="barbarian">Barbare</option>
         <option value="elementalist">Mage élémentaire</option>
-      </select>
+      </select> */}
       <div className="choices__results">
-        <ul>
+        <ul className="choices__results--list">
           <li>Classe: Guerrier</li>
           <li>Race: Humain</li>
           <li>Background: Hors-la-loi</li>
@@ -46,7 +46,7 @@ function CharacterChoices() {
           <li>Nom du joueur: Alban</li>
           <li>Points d'experience: 0</li>
         </ul>
-        <img src={barbarian} alt="barabre" className="choices__results--img" />
+        <img src={warrior} alt="barabre" className="choices__results--img" />
       </div>
     </div>
   );

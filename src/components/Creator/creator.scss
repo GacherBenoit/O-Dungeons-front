@@ -5,40 +5,10 @@
   text-align: center;
 }
 
-.choices {
-  display: flex;
-  flex-direction: column;
-  &__results {
-    display: flex;
-    border: 1px solid vars.$colorTitle;
-    padding: vars.$gutter;
-    margin: vars.$gutter *2;
-    &--img {
-      width: 50%;
-    }
-  }
-}
-
 .caracteristics {
   text-align: center;
   &__statistics {
   border: 1px solid vars.$colorTitle;
-  padding: vars.$gutter;
-  margin: vars.$gutter;
-  }
-  &__principals {
-  border: 1px solid vars.$colorTitle;
-  padding: vars.$gutter;
-  margin: vars.$gutter;
-    
-  }
-  &__bonus {
-  border: 1px solid vars.$colorTitle;
-  padding: vars.$gutter;
-  margin: vars.$gutter;
-  }
-  &__personality {
-    border: 1px solid vars.$colorTitle;
   padding: vars.$gutter;
   margin: vars.$gutter;
   }
@@ -73,19 +43,19 @@
   margin: vars.$gutter;
   }
 }
-.throws {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid vars.$colorTitle;
-  padding: vars.$gutter;
-  margin: vars.$gutter;
-  &__div {
-    display:flex;
-    justify-content: space-around;
-    align-items: flex-start;
+// .throws {
+//   display: flex;
+//   flex-direction: column;
+//   border: 1px solid vars.$colorTitle;
+//   padding: vars.$gutter;
+//   margin: vars.$gutter;
+//   &__div {
+//     display:flex;
+//     justify-content: space-around;
+//     align-items: flex-start;
 
-  }
-}
+//   }
+// }
 .capacities {
   display: flex;
   flex-direction: column;
@@ -94,6 +64,7 @@
 .capacities div {
   padding: vars.$gutter;
 }
+
 
 
 //Section of statisctic
@@ -171,3 +142,4 @@
     display: flex;
   }
 }
+

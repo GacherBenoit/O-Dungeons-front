@@ -1,6 +1,10 @@
 // == Import: local
 import './creator.scss';
 import CharacterChoices from './CharacterChoices';
+import CaracteristicsPrincipals from './CaracteristicsPrincipals';
+import Inspiration from './Inspiration';
+import Personality from './Personality';
+import Throws from './Throws';
 
 // == Composant
 
@@ -14,7 +18,7 @@ import Health from '../../assets/icons/health.png';
 function Creator() {
   return (
     <main className="creator">
-      <h2>Creation de personnages</h2>
+      <h2>Création de personnages</h2>
       <CharacterChoices />
       <section className="statistics">
         <ul className="stats__list">
@@ -50,33 +54,11 @@ function Creator() {
           </ul>
         </div>
       </section>
-      <h4>Caractéristiques principales avec bonus selon le choix de la classe:</h4>
-      <section className="caracteristics__principals">
-        <ul>
-          <li>-Force</li>
-          <li>-Dextérité</li>
-          <li>-Constitution</li>
-          <li>-Intelligence</li>
-          <li>-Volonté</li>
-          <li>-Charisme</li>
-        </ul>
-      </section>
-      <section className="caracteristics__bonus">
-        <p>Bonus de compétences:</p>
-        <p>
-          Inspiration:
-        </p>
-      </section>
-      <h4>Personnalité du personnage</h4>
-      <section className="caracteristics__personality">
-        <ul>
-          <li>Trait de personnalité</li>
-          <li>Idéaux</li>
-          <li>Obligations</li>
-          <li>Défauts</li>
-        </ul>
-      </section>
-      <h4>Saving Throws</h4>
+      <CaracteristicsPrincipals />
+      <Inspiration />
+      <Personality />
+      <Throws />
+      {/* <h4>Saving Throws</h4>
       <div className="throws">
         <div className="throws__div">
           <div>
@@ -108,7 +90,7 @@ function Creator() {
             <label htmlFor="dextérité">Dextérité</label>
           </div>
         </div>
-      </div>
+      </div> */}
       <section className="caracteristics__attack">
         <h4>Attaques et sorts</h4>
       </section>

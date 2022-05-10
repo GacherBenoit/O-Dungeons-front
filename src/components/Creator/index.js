@@ -3,6 +3,7 @@ import './creator.scss';
 import CharacterChoices from './CharacterChoices';
 import CaracteristicsPrincipals from './CaracteristicsPrincipals';
 import Inspiration from './Inspiration';
+import Personality from './Personality';
 
 // == Composant
 
@@ -27,18 +28,9 @@ function Creator() {
           <li>-Jet de dés: </li>
         </ul>
       </section>
-      <h4>Caractéristiques principales avec bonus selon le choix de la classe:</h4>
       <CaracteristicsPrincipals />
       <Inspiration />
-      <h4>Personnalité du personnage</h4>
-      <section className="caracteristics__personality">
-        <ul>
-          <li>Trait de personnalité</li>
-          <li>Idéaux</li>
-          <li>Obligations</li>
-          <li>Défauts</li>
-        </ul>
-      </section>
+      <Personality />
       <h4>Saving Throws</h4>
       <div className="throws">
         <div className="throws__div">

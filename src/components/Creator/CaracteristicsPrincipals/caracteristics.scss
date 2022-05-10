@@ -6,9 +6,6 @@
   box-shadow: 1em 0 .4em vars.$colorTitle;
   margin: vars.$gutter;
   &--list {
-    // width: 50%;
-    // margin-left: auto;
-    // margin-right: auto;
     text-align: center;
 
     &--item {
@@ -16,5 +13,8 @@
       font-size: 1em;
       text-align: center;
     }
+  }
+  &--title {
+    margin-top: vars.$gutter ;
   }
 }

@@ -4,7 +4,7 @@
 .caracteristics__principals {
   border: 1px solid black;
   box-shadow: 1em 0 .4em vars.$colorTitle;
-  margin: vars.$gutter;
+  margin: vars.$gutter * 2 ;
   &--list {
     text-align: center;
 

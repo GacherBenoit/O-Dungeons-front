@@ -1,12 +1,15 @@
 @use '../../../styles/vars';
 
-.personality {
+.traits {
   border: 1px solid black;
   box-shadow: 1em 0 .4em vars.$colorTitle;
   margin: vars.$gutter * 2;
   padding: vars.$gutter;
-  &__list {
+  &__paragraphe {
     text-align: left;
-    margin: vars.$gutter;
+    padding: vars.$gutter;
+    &--list {
+      padding: vars.$gutter;
+    }
   }
 }

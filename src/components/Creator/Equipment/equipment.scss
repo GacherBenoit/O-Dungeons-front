@@ -1,12 +1,15 @@
 @use '../../../styles/vars';
 
-.personality {
+.equipment {
   border: 1px solid black;
   box-shadow: 1em 0 .4em vars.$colorTitle;
   margin: vars.$gutter * 2;
-  padding: vars.$gutter;
-  &__list {
+  &__title {
+    margin: vars.$gutter;
+  }
+  &__paragraphe {
     text-align: left;
+    padding: vars.$gutter;
     margin: vars.$gutter;
   }
 }

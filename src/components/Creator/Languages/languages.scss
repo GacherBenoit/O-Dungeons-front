@@ -1,12 +1,8 @@
 @use '../../../styles/vars';
 
-.personality {
+.languages {
   border: 1px solid black;
   box-shadow: 1em 0 .4em vars.$colorTitle;
   margin: vars.$gutter * 2;
   padding: vars.$gutter;
-  &__list {
-    text-align: left;
-    margin: vars.$gutter;
-  }
 }

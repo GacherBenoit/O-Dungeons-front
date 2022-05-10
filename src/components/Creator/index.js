@@ -2,6 +2,7 @@
 import './creator.scss';
 import CharacterChoices from './CharacterChoices';
 import CaracteristicsPrincipals from './CaracteristicsPrincipals';
+import Inspiration from './Inspiration';
 
 // == Composant
 
@@ -28,22 +29,7 @@ function Creator() {
       </section>
       <h4>Caractéristiques principales avec bonus selon le choix de la classe:</h4>
       <CaracteristicsPrincipals />
-      {/* <section className="caracteristics__principals">
-        <ul>
-          <li>-Force</li>
-          <li>-Dextérité</li>
-          <li>-Constitution</li>
-          <li>-Intelligence</li>
-          <li>-Volonté</li>
-          <li>-Charisme</li>
-        </ul>
-      </section> */}
-      <section className="caracteristics__bonus">
-        <p>Bonus de compétences:</p>
-        <p>
-          Inspiration:
-        </p>
-      </section>
+      <Inspiration />
       <h4>Personnalité du personnage</h4>
       <section className="caracteristics__personality">
         <ul>

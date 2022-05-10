@@ -1,11 +1,14 @@
 @use '../../../styles/vars';
+
 .choices {
   display: flex;
   flex-direction: column;
 
   &__results {
     display: flex;
-    border: 1px solid vars.$colorTitle;
+    border: 1px solid black;
+  box-shadow: 1em 0 .4em vars.$colorTitle;
+
     padding: vars.$gutter;
     margin: vars.$gutter *2;
     &--img {

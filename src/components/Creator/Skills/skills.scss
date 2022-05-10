@@ -1,0 +1,39 @@
+@use '../../../styles/vars';
+
+.skills {
+  border: 1px solid vars.$colorTitle;
+  box-shadow: 1em 0 .4em vars.$colorTitle;
+  padding: vars.$gutter;
+  margin: vars.$gutter;
+
+  &__content--properties{
+    display: flex;
+    justify-content: space-around;
+  }
+  &__choices-menu{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__bonus{
+    margin-left: vars.$gutter;
+  }
+  &__malus{
+    margin-left: vars.$gutter*2.5;
+  }
+}
+@media only screen and (min-device-width : 768px){
+  .choices{
+    &__skill{
+      margin-left: vars.$gutter*6;
+    }
+  }
+  .skills {
+    &__bonus{
+      margin-left: vars.$gutter*16;
+    }
+    &__malus{
+      margin-left: vars.$gutter*19;
+    }
+  }
+  
+}

@@ -4,7 +4,7 @@ import './card.scss';
 
 import barbarianImage from 'src/assets/images/barbarian.jpg';
 
-function Card({ name, description, id }) {
+function Card({ name, description }) {
   return (
     <aside className="card">
       <div className="card__image">
@@ -22,5 +22,10 @@ function Card({ name, description, id }) {
     </aside>
   );
 }
+
+Card.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
 
 export default Card;

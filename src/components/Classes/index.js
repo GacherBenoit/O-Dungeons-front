@@ -1,6 +1,7 @@
 // ==npm
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+// import PropTypes from 'prop-types';
 // ==components
 import Card from '../Card';
 // ==Actions
@@ -9,7 +10,7 @@ import { fetchClasses } from '../../actions/classes';
 import './classes.scss';
 
 function Classes() {
-  const classesList = useSelector((state) => state.classes);
+  const classesList = useSelector((state) => state.classes.classes);
   const dispatch = useDispatch();
   console.log(classesList);
   // au montage du composant principal
@@ -26,7 +27,7 @@ function Classes() {
       <h1>Classes</h1>
       <div className="classes__cards">
         { classesList.map((classe) => (
-          <Card key={classe.id} name={classe.name} description={classe.description} />
+          <Card key={classe.id} name={classe.name} description={classe.quickDescription} />
         ))}
       </div>
     </main>

@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 // == Import: local
 import './login.scss';
-import { setEmail, setPassword } from '../../actions';
+import { setEmail, setPassword } from '../../actions/users';
 
 // == Composant
 function Login() {

@@ -3,11 +3,15 @@ import axios from 'axios';
 import {
   FETCH_CLASSES,
   saveClasses,
+  saveRandomClasse,
+  RANDOM_CLASSE,
 } from '../actions/classes';
 
 import {
   FETCH_RACES,
   saveRaces,
+  saveRandomRaces,
+  RANDOM_RACES,
 } from '../actions/races';
 
 const axiosInstance = axios.create({
@@ -40,6 +44,32 @@ const apiMiddleWare = (store) => (next) => (action) => {
         )
         .catch(
           () => console.log('error api'),
+        );
+      next(action);
+      break;
+    case RANDOM_RACES:
+      axiosInstance
+        .get('races/random')
+        .then(
+          (response) => {
+            store.dispatch(saveRandomRaces(response.data));
+          },
+        )
+        .catch(
+          () => console.log('erreur api'),
+        );
+      next(action);
+      break;
+    case RANDOM_CLASSE:
+      axiosInstance
+        .get('classes/random')
+        .then(
+          (response) => {
+            store.dispatch(saveRandomClasse(response.data));
+          },
+        )
+        .catch(
+          () => console.log('erreur api'),
         );
       next(action);
       break;

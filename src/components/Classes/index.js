@@ -12,7 +12,6 @@ import './classes.scss';
 function Classes() {
   const classesList = useSelector((state) => state.classes.classes);
   const dispatch = useDispatch();
-  console.log(classesList);
   // au montage du composant principal
   useEffect(
     () => {
@@ -27,7 +26,7 @@ function Classes() {
       <h1>Classes</h1>
       <div className="classes__cards">
         { classesList.map((classe) => (
-          <Card key={classe.id} name={classe.name} description={classe.quickDescription} />
+          <Card key={classe.id} name={classe.name} description={classe.quickDescription} image={ classe.imageUrl } />
         ))}
       </div>
     </main>

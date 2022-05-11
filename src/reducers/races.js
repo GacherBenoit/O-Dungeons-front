@@ -1,8 +1,9 @@
-import { SAVE_RACES } from '../actions/races';
+import { SAVE_RACES, SAVE_RANDOM_RACES } from '../actions/races';
 
 // State initial du site
 export const initialState = {
-  races: [], // On sauvegarde les races reçue dans un tableau vide
+  races: [],
+  randomRace: [], // On sauvegarde les races reçue dans un tableau vide
 };
 function reducer(state = initialState, action = {}) {
   switch (action.type) {
@@ -10,6 +11,11 @@ function reducer(state = initialState, action = {}) {
       return {
         ...state,
         races: action.races,
+      };
+    case SAVE_RANDOM_RACES:
+      return {
+        ...state,
+        randomRace: action.race,
       };
     default:
       return state;

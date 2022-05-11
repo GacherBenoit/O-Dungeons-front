@@ -1,9 +1,32 @@
+// ==npm
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
 import mainImage from 'src/assets/images/wood-g1d44fdfb5_640.jpg';
+
+import { randomRaces } from '../../actions/races';
+import { randomClasse } from '../../actions/classes';
+
 import Card from '../Card';
 
 import './presentation.scss';
 
 function Presentation() {
+  const randomRace = useSelector((state) => state.races.randomRace);
+  const randomClasses = useSelector((state) => state.classes.randomClasse);
+
+  const dispatch = useDispatch();
+
+  useEffect(
+    () => {
+      dispatch(randomRaces());
+      dispatch(randomClasse());
+    },
+    [],
+  );
+  console.log(randomRace);
+  console.log(randomClasses);
+
   return (
     <main className="main">
       <div className="main__sections">
@@ -62,15 +85,29 @@ function Presentation() {
           Classes au hasard
         </h3>
         <div className="main__random--classes">
-          <Card />
-          <Card />
+          { randomClasses.map((classeRandom) => (
+            <Card
+              key={classeRandom.id}
+              name={classeRandom.name}
+              description={classeRandom.quickDescription}
+              image={classeRandom.imageUrl}
+            />
+          ))}
         </div>
         <h3 className="main__random--title">
           Races au hasard
         </h3>
         <div className="main__random--races">
-          <Card />
-          <Card />
+          { randomRace.map((raceRandom) => (
+            <Card
+              key={raceRandom.id}
+              name={raceRandom.name}
+              description={raceRandom.quickDescription}
+              image={raceRandom.imageUrl}
+            />
+
+          ))}
+          {/* <Card /> */}
         </div>
       </div>
 

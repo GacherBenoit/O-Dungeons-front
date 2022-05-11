@@ -1,4 +1,5 @@
 import { MENU_BURGER_TOGGLE, SET_EMAIL, SET_PASSWORD } from '../actions';
+import { SAVE_CLASSES } from '../actions/classes';
 
 // State initial du site
 const initialState = {
@@ -14,6 +15,7 @@ const initialState = {
     // la valeur du champ password
     password: '',
   },
+  classes: [], // On sauvegarde les classes reçue dans un tableau vide
 };
 
 function mainReducer(state = initialState, action = {}) {
@@ -48,6 +50,11 @@ function mainReducer(state = initialState, action = {}) {
           ...state.settings,
           password: action.value,
         },
+      };
+    case SAVE_CLASSES:
+      return {
+        ...state,
+        classes: action.classes,
       };
     default:
       return state;

@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-import { FETCH_CLASSES } from '../actions/classes';
+import { FETCH_CLASSES, saveClasses } from '../actions/classes';
 
 const axiosInstance = axios.create({
   // par exemple, on peut définir une url de base !
-  baseURL: 'http://pierre-arnaud-landoin.vpnuser.lan:8080/api/',
+  baseURL: 'http://pierre-arnaudlandoin-server.eddi.cloud/projet-17-o-dungeons-back/public/api/',
 });
 
 const apiMiddleWare = (store) => (next) => (action) => {
@@ -14,7 +14,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .get('classes')
         .then(
           (response) => {
-            console.log(response.data);
+            store.dispatch(saveClasses(response.data));
           },
         )
         .catch(

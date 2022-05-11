@@ -1,8 +1,10 @@
+import PropTypes from 'prop-types';
+
 import './card.scss';
 
 import barbarianImage from 'src/assets/images/barbarian.jpg';
 
-function Card() {
+function Card({ name, description, id }) {
   return (
     <aside className="card">
       <div className="card__image">
@@ -10,12 +12,9 @@ function Card() {
       </div>
 
       <div className="card__body">
-        <h3 className="card__body--title">Title</h3>
+        <h3 className="card__body--title">{name}</h3>
         <p className="card__body--excerpt">
-          Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Rerum praesentium sint quam,
-          reiciendis atque reprehenderit unde cumque impedit! Nam quas at veritatis quae sit
-          odit illo architecto quaerat alias modi.
+          {description}
         </p>
         <p className="card__body--link"><a>en savoir plus...</a></p>
       </div>

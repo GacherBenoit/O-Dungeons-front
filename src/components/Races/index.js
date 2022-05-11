@@ -10,11 +10,6 @@ function Races() {
       <h1>Races</h1>
       <div className="races__cards">
         <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
       </div>
     </main>
   );

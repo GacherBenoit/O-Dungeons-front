@@ -16,9 +16,9 @@ function Card({
 
   function handleClasseClick() {
     dispatch(classeCurrentId(id));
-    dispatch(fetchClasseComplete());
+    // dispatch(fetchClasseComplete());
   }
-  console.log(id);
+
   return (
     <aside className="card">
       <div className="card__image">

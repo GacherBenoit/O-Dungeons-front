@@ -50,6 +50,9 @@
 
     margin: 0.5rem;
   }
+  &__random {
+    display: none;
+  }
 
   &__random {
     display: none;
@@ -117,6 +120,7 @@
     &__random {
       display: block;
       margin-top: 1rem;
+      display:block ;
     }
 
     &__random--classes {

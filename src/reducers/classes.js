@@ -1,9 +1,10 @@
-import { SAVE_CLASSES, SAVE_RANDOM_CLASSE } from '../actions/classes';
+import { SAVE_CLASSES, SAVE_RANDOM_CLASSE, CLASSE_CURRENT_ID } from '../actions/classes';
 
 // State initial du site
 export const initialState = {
   classes: [], // On sauvegarde les classes reçue dans un tableau vide
   randomClasse: [],
+  currentId: null,
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -17,6 +18,11 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         randomClasse: action.classe,
+      };
+    case CLASSE_CURRENT_ID:
+      return {
+        ...state,
+        currentId: action.id,
       };
     default:
       return state;

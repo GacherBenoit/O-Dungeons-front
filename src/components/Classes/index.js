@@ -26,7 +26,14 @@ function Classes() {
       <h1>Classes</h1>
       <div className="classes__cards">
         { classesList.map((classe) => (
-          <Card key={classe.id} name={classe.name} description={classe.quickDescription} image={ classe.imageUrl } />
+          <Card
+            id={classe.id}
+            key={classe.name}
+            name={classe.name}
+            description={classe.quickDescription}
+            image={classe.imageUrl}
+            slug={classe.name}
+          />
         ))}
       </div>
     </main>

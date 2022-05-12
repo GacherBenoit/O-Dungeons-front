@@ -1,7 +1,11 @@
+import { useParams } from 'react-router-dom';
 import './subclasses.scss';
+
 import barbarian from '../../assets/images/barbarian.jpg';
 
 function Subclasses() {
+  const { slug } = useParams();
+  console.log(slug);
   return (
     <main className="subclasses">
       <section className="subclasses__mainclass" id="subclasses">

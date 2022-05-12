@@ -5,6 +5,7 @@ export const FETCH_CLASSES = 'FETCH_CLASSES';
 export const fetchClasses = () => ({
   type: FETCH_CLASSES,
 });
+
 // ACTION TYPE SAVE_CLASSES
 export const SAVE_CLASSES = 'SAVE_CLASSES';
 
@@ -13,6 +14,7 @@ export const saveClasses = (classes) => ({
   type: SAVE_CLASSES,
   classes,
 });
+
 // ACTION TYPE RANDOM_CLASSE
 export const RANDOM_CLASSE = 'RANDOM_CLASSE';
 
@@ -20,11 +22,29 @@ export const RANDOM_CLASSE = 'RANDOM_CLASSE';
 export const randomClasse = () => ({
   type: RANDOM_CLASSE,
 });
-  // ACTION TYPE SAVE_RANDOM_CLASSE
+
+// ACTION TYPE SAVE_RANDOM_CLASSE
 export const SAVE_RANDOM_CLASSE = 'SAVE_RANDOM_CLASSE';
 
 // ACTION CREATOR saveRandomClasse
 export const saveRandomClasse = (classe) => ({
   type: SAVE_RANDOM_CLASSE,
   classe,
+});
+
+// ACTION TYPE FETCH_CLASSE_COMPLETE
+export const FETCH_CLASSE_COMPLETE = 'FETCH_CLASSE_COMPLETE';
+
+// ACTION CREATOR fetchClasseComplete
+export const fetchClasseComplete = () => ({
+  type: FETCH_CLASSE_COMPLETE,
+});
+
+// ACTION TYPE CLASSE_CURRENT_ID
+export const CLASSE_CURRENT_ID = 'CLASSE_CURRENT_ID';
+
+// ACTION CREATOR classeCurrentId
+export const classeCurrentId = (id) => ({
+  type: CLASSE_CURRENT_ID,
+  id,
 });

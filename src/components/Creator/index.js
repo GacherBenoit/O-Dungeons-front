@@ -18,8 +18,6 @@ import SpeedIcon from '../../assets/icons/speed.png';
 import Health from '../../assets/icons/health.png';
 import Equipment from './Equipment';
 
-
-
 function Creator() {
   return (
     <main className="creator">
@@ -31,9 +29,6 @@ function Creator() {
       <Personality />
       <Skills />
       <Throws />
-      <section className="caracteristics__attack">
-        <h4>Attaques et sorts</h4>
-      </section>
       <Equipment />
       <Traits />
       <Capacities />

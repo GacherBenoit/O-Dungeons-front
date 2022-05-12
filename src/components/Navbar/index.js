@@ -11,11 +11,11 @@ import { NavLink } from 'react-router-dom';
 import './navbar.scss';
 // On importe les actions qui vont permettre la modification du state:
 // state.settingsMenu.isopen
-import { menuBurgerToggle } from '../../actions';
+import { menuBurgerToggle } from '../../actions/users';
 
 // == Composant
 function Navbar() {
-  const isOpen = useSelector((state) => state.settingsMenu.isOpen);
+  const isOpen = useSelector((state) => state.user.settingsMenu.isOpen);
 
   // obtenir la méthode dispatch du store grace a useDispatch()
   const dispatch = useDispatch();

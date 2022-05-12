@@ -3,16 +3,16 @@ import { useSelector, useDispatch } from 'react-redux';
 
 // == Import: local
 import './login.scss';
-import { setEmail, setPassword } from '../../actions';
+import { setEmail, setPassword } from '../../actions/users';
 
 // == Composant
 function Login() {
   // On cible la valeur contenu dans le state afin d'obtenir la mise a jour
   // en temp reel quand l'utilisateur tape une touche de son clavier
-  const valueMail = useSelector((state) => state.settings.email);
+  const valueMail = useSelector((state) => state.user.settings.email);
 
   // On fait la meme chose pour le password
-  const valuePassword = useSelector((state) => state.settings.password);
+  const valuePassword = useSelector((state) => state.user.settings.password);
 
   const dispatch = useDispatch();
 

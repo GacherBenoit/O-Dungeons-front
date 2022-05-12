@@ -1,6 +1,7 @@
 // ==npm
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+// import PropTypes from 'prop-types';
 // ==components
 import Card from '../Card';
 // ==Actions
@@ -9,8 +10,8 @@ import { fetchClasses } from '../../actions/classes';
 import './classes.scss';
 
 function Classes() {
+  const classesList = useSelector((state) => state.classes.classes);
   const dispatch = useDispatch();
-
   // au montage du composant principal
   useEffect(
     () => {
@@ -19,11 +20,14 @@ function Classes() {
     },
     [], // permet de charger une seule fois la liste
   );
+
   return (
     <main>
       <h1>Classes</h1>
       <div className="classes__cards">
-        <Card />
+        { classesList.map((classe) => (
+          <Card key={classe.id} name={classe.name} description={classe.quickDescription} image={ classe.imageUrl } />
+        ))}
       </div>
     </main>
   );

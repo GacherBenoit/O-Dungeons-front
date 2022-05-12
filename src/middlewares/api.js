@@ -6,6 +6,7 @@ import {
   saveRandomClasse,
   RANDOM_CLASSE,
   FETCH_CLASSE_COMPLETE,
+  saveCurrentClasse,
 } from '../actions/classes';
 
 import {
@@ -77,12 +78,12 @@ const apiMiddleWare = (store) => (next) => (action) => {
     case FETCH_CLASSE_COMPLETE: {
       // const { user: { email, password } } = store.getState();
       const { classes: { currentId } } = store.getState();
-      console.log(currentId);
+      // console.log(currentId);
       axiosInstance
         .get(`classes/${currentId}`)
         .then(
           (response) => {
-            console.log(response.data);
+            store.dispatch(saveCurrentClasse(response.data));
           },
         )
         .catch(

@@ -48,3 +48,12 @@ export const classeCurrentId = (id) => ({
   type: CLASSE_CURRENT_ID,
   id,
 });
+
+// ACTION TYPE SAVE_CURRENT_CLASSE
+export const SAVE_CURRENT_CLASSE = 'SAVE_CURRENT_CLASSE';
+
+// ACTION CREATOR saveCurrentClasse
+export const saveCurrentClasse = (currentClasse) => ({
+  type: SAVE_CURRENT_CLASSE,
+  currentClasse,
+});

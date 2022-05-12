@@ -1,23 +1,17 @@
 // import { useParams } from 'react-router-dom';
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchClasseComplete } from '../../actions/classes';
+import { useSelector } from 'react-redux';
+
+// == Import : local
+import Loading from '../Loading';
 import './subclasses.scss';
 
 function Subclasses() {
   // const { slug } = useParams();
   // console.log(slug);
+  const loading = useSelector((state) => state.classes.loading);
   const currentClasse = useSelector((state) => state.classes.currentClasse);
   const currentSubClasse = useSelector((state) => state.classes.currentClasse.subclasses);
-  const dispatch = useDispatch();
 
-  // Au montage du composant principal
-  useEffect(
-    () => {
-      dispatch(fetchClasseComplete());
-    },
-    [],
-  );
   // const informationClasse = { ...currentClasse };
   // const { currentClasse: { subclasses } } = useSelector((state) => state.classes.currentClasse);
   // const currentSubClasses = useSelector((state) => state.classes.currentClasse.subclasses);
@@ -28,6 +22,9 @@ function Subclasses() {
   console.log(currentSubClasse);
   // console.log(currentclasse.subclasses.name);
   // console.log(subClasses);
+  if (loading) {
+    return <Loading />;
+  }
   return (
     <main className="subclasses">
       <section className="subclasses__mainclass" id="subclasses">
@@ -38,11 +35,11 @@ function Subclasses() {
       <h2>Sous-classe</h2>
       <section className="subclasses__presentation">
         {/* {console.log(currentSubClasses)} */}
-        { currentClasse.map((subclasse) => (
-          <div className="subclasses__presentation--card" id={subclasse.id}>
-            <h3>{subclasse.name}</h3>
+        { currentClasse.armors.map((armor) => (
+          <div className="subclasses__presentation--card" id={armor.id}>
+            <h3>{armor.name}</h3>
             <p>
-              <span>{subclasse.description}</span>
+              <span>{armor.description}</span>
               : elfe parcourant les océans à dos d'hippocampe.Porteur
               d'une armure en écailles, ils sont de vrais nageurs....
             </p>

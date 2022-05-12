@@ -16,7 +16,7 @@ function Card({
 
   function handleClasseClick() {
     dispatch(classeCurrentId(id));
-    // dispatch(fetchClasseComplete());
+    dispatch(fetchClasseComplete());
   }
 
   return (

@@ -1,5 +1,5 @@
 import {
-  SAVE_CLASSES, SAVE_RANDOM_CLASSE, CLASSE_CURRENT_ID, SAVE_CURRENT_CLASSE,
+  SAVE_CLASSES, SAVE_RANDOM_CLASSE, CLASSE_CURRENT_ID, SAVE_CURRENT_CLASSE, FETCH_CLASSE_COMPLETE,
 } from '../actions/classes';
 
 // State initial du site
@@ -8,6 +8,7 @@ export const initialState = {
   randomClasse: [],
   currentId: null,
   currentClasse: [],
+  loading: false,
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -27,10 +28,16 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         currentId: action.id,
       };
+    case FETCH_CLASSE_COMPLETE:
+      return {
+        ...state,
+        loading: true,
+      };
     case SAVE_CURRENT_CLASSE:
       return {
         ...state,
         currentClasse: action.currentClasse,
+        loading: false,
       };
     default:
       return state;

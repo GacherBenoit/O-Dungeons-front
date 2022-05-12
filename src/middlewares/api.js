@@ -76,7 +76,6 @@ const apiMiddleWare = (store) => (next) => (action) => {
       next(action);
       break;
     case FETCH_CLASSE_COMPLETE: {
-      // const { user: { email, password } } = store.getState();
       const { classes: { currentId } } = store.getState();
       // console.log(currentId);
       axiosInstance

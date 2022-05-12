@@ -18,8 +18,8 @@ function Subclasses() {
   // const { id, name, description } = currentSubClasses;
   // // console.log(subclasses);
   // // console.log(informationClasse);
-  console.log(currentClasse);
-  console.log(currentSubClasse);
+  // console.log(currentClasse);
+  // console.log(currentSubClasse);
   // console.log(currentclasse.subclasses.name);
   // console.log(subClasses);
   if (loading) {
@@ -34,12 +34,15 @@ function Subclasses() {
       </section>
       <h2>Sous-classe</h2>
       <section className="subclasses__presentation">
-        {/* {console.log(currentSubClasses)} */}
-        { currentClasse.armors.map((armor) => (
-          <div className="subclasses__presentation--card" id={armor.id}>
-            <h3>{armor.name}</h3>
+        {console.log(currentClasse.subclasses)}
+        {/* On verifie si c'est defini et si c'est defini, on peu boucler dessus
+        ressource :
+        https://stackoverflow.com/questions/67601748/typeerror-map-is-not-a-function-using-react-js */}
+        { currentClasse.subclasses && currentClasse.subclasses.map((subclasse) => (
+          <div className="subclasses__presentation--card" id={subclasse.id}>
+            <h3>{subclasse.name}</h3>
             <p>
-              <span>{armor.description}</span>
+              <span>{subclasse.description}</span>
               : elfe parcourant les océans à dos d'hippocampe.Porteur
               d'une armure en écailles, ils sont de vrais nageurs....
             </p>

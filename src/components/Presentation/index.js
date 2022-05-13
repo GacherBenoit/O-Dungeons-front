@@ -87,10 +87,12 @@ function Presentation() {
         <div className="main__random--classes">
           { randomClasses.map((classeRandom) => (
             <Card
-              key={classeRandom.id}
+              key={classeRandom.name}
               name={classeRandom.name}
               description={classeRandom.quickDescription}
               image={classeRandom.imageUrl}
+              id={classeRandom.id}
+              slug={classeRandom.name}
             />
           ))}
         </div>
@@ -100,10 +102,12 @@ function Presentation() {
         <div className="main__random--races">
           { randomRace.map((raceRandom) => (
             <Card
-              key={raceRandom.id}
+              key={raceRandom.name}
               name={raceRandom.name}
               description={raceRandom.quickDescription}
               image={raceRandom.imageUrl}
+              id={raceRandom.id}
+              slug={raceRandom.name}
             />
 
           ))}

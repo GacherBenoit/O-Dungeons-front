@@ -23,3 +23,11 @@ export const setPassword = (value) => ({
   type: SET_PASSWORD,
   value,
 });
+
+// ACTION TYPE LOGIN
+export const LOGIN = 'LOGIN';
+
+// ACTION CREATOR Login
+export const login = () => ({
+  type: LOGIN,
+});

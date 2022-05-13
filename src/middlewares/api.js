@@ -18,6 +18,10 @@ import {
   saveCurrentRace,
 } from '../actions/races';
 
+import {
+  LOGIN,
+} from '../actions/users';
+
 const axiosInstance = axios.create({
   // par exemple, on peut définir une url de base !
   baseURL: 'http://pierre-arnaudlandoin-server.eddi.cloud/projet-17-o-dungeons-back/public/api/',
@@ -106,6 +110,29 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .catch(
           () => console.log('error api'),
         );
+      next(action);
+      break;
+    }
+    case LOGIN: {
+      const state = store.getState();
+      const { email, password } = state.user.settings;
+      console.log(email);
+      console.log(password);
+
+      axiosInstance
+        .post(
+          'login_check',
+          {
+            username: email,
+            password: password,
+          },
+        )
+        .then((response) => {
+          console.log(response);
+        })
+        .catch(() => {
+          console.log('erreur');
+        });
       next(action);
       break;
     }

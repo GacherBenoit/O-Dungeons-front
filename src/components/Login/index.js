@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 // == Import: local
 import './login.scss';
-import { setEmail, setPassword } from '../../actions/users';
+import { setEmail, setPassword, login } from '../../actions/users';
 
 // == Composant
 function Login() {
@@ -20,6 +20,7 @@ function Login() {
   // On creer une fonction qui annule le comportoment par defaut de ce dernier
   function handleSubmit(evt) {
     evt.preventDefault();
+    dispatch(login());
   }
 
   // fonction qui va permettre a l'utilisateur de rentrer son email et
@@ -33,7 +34,6 @@ function Login() {
   function handleChangePassword(evt) {
     dispatch(setPassword(evt.target.value));
   }
-
   return (
     <main className="login">
       <h1 className="login__title">Connexion</h1>

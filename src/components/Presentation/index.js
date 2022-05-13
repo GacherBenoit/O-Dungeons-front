@@ -93,6 +93,7 @@ function Presentation() {
               image={classeRandom.imageUrl}
               id={classeRandom.id}
               slug={classeRandom.name}
+              type="classes"
             />
           ))}
         </div>
@@ -108,6 +109,7 @@ function Presentation() {
               image={raceRandom.imageUrl}
               id={raceRandom.id}
               slug={raceRandom.name}
+              type="races"
             />
 
           ))}

@@ -10,7 +10,7 @@ import './card.scss';
 // import barbarianImage from 'src/assets/images/barbarian.jpg';
 
 function Card({
-  name, description, image, slug, id,
+  name, description, image, slug, id, type,
 }) {
   const dispatch = useDispatch();
 
@@ -30,7 +30,7 @@ function Card({
         <p className="card__body--excerpt">
           {description}
         </p>
-        <p className="card__body--link" onClick={handleClasseClick}><Link to={`/classes/${slug}`}>en savoir plus...</Link> </p>
+        <p className="card__body--link" onClick={handleClasseClick}><Link to={`/${type}/${slug}`}>en savoir plus...</Link> </p>
       </div>
 
     </aside>
@@ -43,6 +43,8 @@ Card.propTypes = {
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+
 };
 
 export default Card;

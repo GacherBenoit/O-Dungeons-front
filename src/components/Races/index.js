@@ -27,7 +27,15 @@ function Races() {
       <h1>Races</h1>
       <div className="races__cards">
         { listRaces.map((race) => (
-          <Card key={race.id} name={race.name} description={race.quickDescription} image={ race.imageUrl } />
+          <Card
+            key={race.id}
+            id={race.id}
+            slug={race.name}
+            name={race.name}
+            description={race.quickDescription}
+            image={race.imageUrl}
+            type="races"
+          />
         ))}
       </div>
     </main>

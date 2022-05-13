@@ -30,3 +30,28 @@ export const saveRandomRaces = (race) => ({
   type: SAVE_RANDOM_RACES,
   race,
 });
+// ACTION TYPE FETCH_RACE_COMPLETE
+export const FETCH_RACE_COMPLETE = 'FETCH_RACE_COMPLETE';
+
+// ACTION CREATOR fetchClasseComplete
+export const fetchRaceComplete = () => ({
+  type: FETCH_RACE_COMPLETE,
+});
+
+// ACTION TYPE CLASSE_CURRENT_ID
+export const RACE_CURRENT_ID = 'RACE_CURRENT_ID';
+
+// ACTION CREATOR classeCurrentId
+export const raceCurrentId = (id) => ({
+  type: RACE_CURRENT_ID,
+  id,
+});
+
+// ACTION TYPE SAVE_CURRENT_CLASSE
+export const SAVE_CURRENT_RACE = 'SAVE_CURRENT_RACE';
+
+// ACTION CREATOR saveCurrentRACE
+export const saveCurrentRace = (currentRace) => ({
+  type: SAVE_CURRENT_RACE,
+  currentRace,
+});

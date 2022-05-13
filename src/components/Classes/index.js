@@ -33,6 +33,7 @@ function Classes() {
             description={classe.quickDescription}
             image={classe.imageUrl}
             slug={classe.name}
+            type="classes"
           />
         ))}
       </div>

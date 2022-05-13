@@ -1,10 +1,24 @@
+// == Import : npm
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
+// == Import: local
+import { fetchClasseComplete, classeCurrentId } from '../../actions/classes';
 import './card.scss';
 
-import barbarianImage from 'src/assets/images/barbarian.jpg';
+// import barbarianImage from 'src/assets/images/barbarian.jpg';
 
-function Card({ name, description, image }) {
+function Card({
+  name, description, image, slug, id,
+}) {
+  const dispatch = useDispatch();
+
+  function handleClasseClick() {
+    dispatch(classeCurrentId(id));
+    dispatch(fetchClasseComplete());
+  }
+
   return (
     <aside className="card">
       <div className="card__image">
@@ -16,7 +30,7 @@ function Card({ name, description, image }) {
         <p className="card__body--excerpt">
           {description}
         </p>
-        <p className="card__body--link"><a>en savoir plus...</a></p>
+        <p className="card__body--link" onClick={handleClasseClick}><Link to={`/classes/${slug}`}>en savoir plus...</Link> </p>
       </div>
 
     </aside>
@@ -24,9 +38,11 @@ function Card({ name, description, image }) {
 }
 
 Card.propTypes = {
+  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
 };
 
 export default Card;

@@ -54,6 +54,10 @@
     display: none;
   }
 
+  &__random {
+    display: none;
+  }
+
 }
 
 
@@ -114,6 +118,7 @@
 
     // Cartes des races et classes
     &__random {
+      display: block;
       margin-top: 1rem;
       display:block ;
     }

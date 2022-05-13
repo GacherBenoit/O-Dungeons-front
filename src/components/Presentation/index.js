@@ -24,8 +24,8 @@ function Presentation() {
     },
     [],
   );
-  console.log(randomRace);
-  console.log(randomClasses);
+  // console.log(randomRace);
+  // console.log(randomClasses);
 
   return (
     <main className="main">

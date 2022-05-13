@@ -48,8 +48,8 @@ function Home() {
         <Route path="/qui-somme-nous" element={<About />} />
         <Route path="/mentions-legal" element={<Legal />} />
         <Route path="*" element={<Error />} />
-        <Route path="/classes/subclasses" element={<Subclasses />} />
-        <Route path="/races/subraces" element={<Subraces />} />
+        <Route path="/classes/:slug" element={<Subclasses />} />
+        <Route path="/races/:slug/subraces" element={<Subraces />} />
       </Routes>
       <Footer />
     </div>

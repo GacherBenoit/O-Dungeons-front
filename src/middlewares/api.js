@@ -14,6 +14,8 @@ import {
   saveRaces,
   saveRandomRaces,
   RANDOM_RACES,
+  FETCH_RACE_COMPLETE,
+  saveCurrentRace,
 } from '../actions/races';
 
 const axiosInstance = axios.create({
@@ -83,6 +85,22 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .then(
           (response) => {
             store.dispatch(saveCurrentClasse(response.data));
+          },
+        )
+        .catch(
+          () => console.log('error api'),
+        );
+      next(action);
+      break;
+    }
+    case FETCH_RACE_COMPLETE: {
+      const { races: { currentId } } = store.getState();
+      // console.log(currentId);
+      axiosInstance
+        .get(`races/${currentId}`)
+        .then(
+          (response) => {
+            store.dispatch(saveCurrentRace(response.data));
           },
         )
         .catch(

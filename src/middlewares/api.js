@@ -19,7 +19,7 @@ import {
 } from '../actions/races';
 
 import {
-  LOGIN,
+  LOGIN, saveUser,
 } from '../actions/users';
 
 const axiosInstance = axios.create({
@@ -129,6 +129,8 @@ const apiMiddleWare = (store) => (next) => (action) => {
         )
         .then((response) => {
           console.log(response);
+          store.dispatch(saveUser(response.data.user));
+          store.dispatch(saveUser(response.data));
         })
         .catch(() => {
           console.log('erreur');

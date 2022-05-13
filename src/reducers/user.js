@@ -1,6 +1,21 @@
-import { MENU_BURGER_TOGGLE, SET_EMAIL, SET_PASSWORD } from '../actions/users';
+import {
+  MENU_BURGER_TOGGLE,
+  SET_EMAIL,
+  SET_PASSWORD,
+  SAVE_USER,
+} from '../actions/users';
 
 export const initialState = {
+
+  firstName: '',
+  lastName: '',
+  email: '',
+  token: null,
+  avatar: {
+    name: '',
+    imageUrl: '',
+  },
+
   // State concernant le menu du site en version mobile
   settingsMenu: {
     // le menu est-il ouvert
@@ -47,6 +62,20 @@ function reducer(state = initialState, action = {}) {
           ...state.settings,
           password: action.value,
         },
+      };
+    case SAVE_USER:
+      return {
+        ...state,
+        ...action.user,
+        // firstName: action.firstName,
+        // lastName: action.lastName,
+        // email: action.email,
+        // token: action.token,
+        // avatar: {
+        //   ...state.avatar,
+        //   name: action.name,
+        //   imageUrl: action.imageUrl,
+        // },
       };
     default:
       return state;

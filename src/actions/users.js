@@ -31,3 +31,11 @@ export const LOGIN = 'LOGIN';
 export const login = () => ({
   type: LOGIN,
 });
+// ACTION SAVE USER
+export const SAVE_USER = 'SAVE_USER';
+
+// ACTION CREATOR saveUser
+export const saveUser = (user) => ({
+  type: SAVE_USER,
+  user,
+});

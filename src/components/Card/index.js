@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 
 // == Import: local
 import { fetchClasseComplete, classeCurrentId } from '../../actions/classes';
+import { fetchRaceComplete, raceCurrentId } from '../../actions/races';
 import './card.scss';
 
 // import barbarianImage from 'src/assets/images/barbarian.jpg';
@@ -17,6 +18,8 @@ function Card({
   function handleClasseClick() {
     dispatch(classeCurrentId(id));
     dispatch(fetchClasseComplete());
+    dispatch(raceCurrentId(id));
+    dispatch(fetchRaceComplete());
   }
 
   return (

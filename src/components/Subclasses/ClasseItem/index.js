@@ -4,7 +4,6 @@ import './classeItem.scss';
 
 function ClasseItem() {
   const currentClasse = useSelector((state) => state.classes.currentClasse);
-  console.log(currentClasse);
   return (
     <div className="items">
       <h2 className="items__title">Spécificités de la classe</h2>

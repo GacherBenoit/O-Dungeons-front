@@ -4,12 +4,12 @@
 
 
 .statistics{
-  width: 90%; 
+  // width: 90%; 
   border: 1px solid black;
   box-shadow: 1em 0 .4em vars.$colorTitle;
   font-size: small;     // --------------------------Font-size of the section
   padding: vars.$gutter;
-  margin: vars.$gutter;             
+  margin: vars.$gutter * 2;             
 }
 .stats{
   &__list{

@@ -1,0 +1,68 @@
+@use '../../styles/vars';
+
+.footer {
+  height: 200px;
+  margin-top: vars.$gutter;
+  background-image: url('src/assets/images/footer-image-mobile.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__background {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__list {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding: vars.$gutter;
+    margin-top: vars.$gutter * 3;
+    &--item {
+      margin: vars.$gutter;
+      color: vars.$colorTitle;
+    }
+  }
+}
+@media screen and(min-width:590px) {
+  .footer {
+    height: 300px;
+
+    &__list {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+@media screen and(min-width:1024px) {
+  .footer {
+    height:400px ;
+
+    &__list {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+
+@media screen and(min-width:1440px) {
+  .footer {
+    height: 600px;
+  }
+}
+
+@media screen and(min-width:1700px) {
+  .footer {
+    height: 700px;
+  }
+}
+
+@media screen and(min-width:2000px) {
+  .footer {
+    height: 800px;
+  }
+}

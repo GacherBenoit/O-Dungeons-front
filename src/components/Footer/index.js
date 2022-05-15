@@ -2,7 +2,7 @@
 import { NavLink } from 'react-router-dom';
 
 // ==  Import: local
-import './footer.scss';
+import './footer-deux.scss';
 
 function Footer() {
   return (

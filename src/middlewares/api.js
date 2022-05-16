@@ -19,7 +19,9 @@ import {
 } from '../actions/races';
 
 import {
-  LOGIN, saveUser,
+  LOGIN,
+  saveUser,
+  isLogged,
 } from '../actions/users';
 
 const axiosInstance = axios.create({
@@ -129,8 +131,20 @@ const apiMiddleWare = (store) => (next) => (action) => {
         )
         .then((response) => {
           console.log(response);
-          store.dispatch(saveUser(response.data.user));
-          store.dispatch(saveUser(response.data));
+          // on extrait la propriété data de la reponse
+          // que l'on stocke dans une variable user
+          const { data: user } = response;
+
+          console.log(user);
+          store.dispatch(saveUser(user));
+          store.dispatch(isLogged());
+
+          // on sauvegarde le token dans le local storage
+          localStorage.setItem('token', JSON.stringify(user.token));
+
+          // j'enregistre mon token sur l'instance d'axios
+          axiosInstance.defaults.headers.common.Authorization = `Bearer ${user.token}`;
+          // store.dispatch(saveUser(response.data));
         })
         .catch(() => {
           console.log('erreur');

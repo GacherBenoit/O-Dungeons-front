@@ -3,10 +3,16 @@ import {
   SET_EMAIL,
   SET_PASSWORD,
   SAVE_USER,
+  IS_LOGGED,
+  MAIL_NEW_USER,
+  PASSWORD_NEW_USER,
+  FIRSTNAME_NEW_USER,
+  LASTNAME_NEW_USER,
 } from '../actions/users';
 
 export const initialState = {
 
+  logged: false,
   firstName: '',
   lastName: '',
   email: '',
@@ -26,6 +32,18 @@ export const initialState = {
     // la valeur du champ email
     email: '',
     // la valeur du champ password
+    password: '',
+  },
+
+  // State contenant les champs pour la creation de compte
+  newAccount: {
+    // Valeur du champ prénom
+    firstName: '',
+    // Valeur du champ nom
+    lastName: '',
+    // Valeur du champ email
+    email: '',
+    // Valeur du champ password
     password: '',
   },
 };
@@ -67,15 +85,43 @@ function reducer(state = initialState, action = {}) {
       return {
         ...state,
         ...action.user,
-        // firstName: action.firstName,
-        // lastName: action.lastName,
-        // email: action.email,
-        // token: action.token,
-        // avatar: {
-        //   ...state.avatar,
-        //   name: action.name,
-        //   imageUrl: action.imageUrl,
-        // },
+      };
+    case IS_LOGGED:
+      return {
+        ...state,
+        logged: !state.user.logged,
+      };
+    case MAIL_NEW_USER:
+      return {
+        ...state,
+        newAccount: {
+          ...state.newAccount,
+          email: action.value,
+        },
+      };
+    case PASSWORD_NEW_USER:
+      return {
+        ...state,
+        newAccount: {
+          ...state.newAccount,
+          password: action.value,
+        },
+      };
+    case FIRSTNAME_NEW_USER:
+      return {
+        ...state,
+        newAccount: {
+          ...state.newAccount,
+          firstName: action.value,
+        },
+      };
+    case LASTNAME_NEW_USER:
+      return {
+        ...state,
+        newAccount: {
+          ...state.newAccount,
+          lastName: action.value,
+        },
       };
     default:
       return state;

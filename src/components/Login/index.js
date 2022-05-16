@@ -1,5 +1,6 @@
 // == Import: npm
 import { useSelector, useDispatch } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 
 // == Import: local
 import './login.scss';
@@ -63,6 +64,8 @@ function Login() {
         <button type="submit" className="login__form--button">
           Se Connecter
         </button>
+
+        <p>Pas encore de compte, <NavLink to="/creer-un-compte">créer un compte</NavLink></p>
 
       </form>
     </main>

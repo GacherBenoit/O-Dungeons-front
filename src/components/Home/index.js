@@ -19,6 +19,7 @@ import Legal from '../Legal';
 import Footer from '../Footer';
 import Subclasses from '../Subclasses';
 import Subraces from '../Subraces';
+import CreateAccount from '../CreateAccount';
 
 function Home() {
   // The useLocation hook allows to retrieve information
@@ -50,6 +51,7 @@ function Home() {
         <Route path="*" element={<Error />} />
         <Route path="/classes/:slug" element={<Subclasses />} />
         <Route path="/races/:slug" element={<Subraces />} />
+        <Route path="/creer-un-compte" element={<CreateAccount />} />
       </Routes>
       <Footer />
     </div>

@@ -37,6 +37,7 @@ function CreateAccount() {
 
   function handleAccountSubmit(evt) {
     evt.preventDefault();
+    dispatch(createNewAccount());
   }
   return (
     <main className="account">

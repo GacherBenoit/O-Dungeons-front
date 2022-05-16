@@ -22,6 +22,7 @@ import {
   LOGIN,
   saveUser,
   isLogged,
+  CREATE_NEW_ACCOUNT,
 } from '../actions/users';
 
 const axiosInstance = axios.create({
@@ -145,6 +146,36 @@ const apiMiddleWare = (store) => (next) => (action) => {
           // j'enregistre mon token sur l'instance d'axios
           axiosInstance.defaults.headers.common.Authorization = `Bearer ${user.token}`;
           // store.dispatch(saveUser(response.data));
+        })
+        .catch(() => {
+          console.log('erreur');
+        });
+      next(action);
+      break;
+    }
+    case CREATE_NEW_ACCOUNT: {
+      const state = store.getState();
+      const {
+        email,
+        password,
+        firstname,
+        lastname,
+        avatar,
+      } = state.user.newAccount;
+
+      axiosInstance
+        .post(
+          'users',
+          {
+            email: email,
+            password: password,
+            lastname: lastname,
+            firstname: firstname,
+            avatar: avatar,
+          },
+        )
+        .then((response) => {
+          console.log(response);
         })
         .catch(() => {
           console.log('erreur');

@@ -45,6 +45,8 @@ export const initialState = {
     email: '',
     // Valeur du champ password
     password: '',
+    // Valeur par défaut du champ avatar
+    avatar: 0,
   },
 };
 

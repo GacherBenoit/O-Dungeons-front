@@ -65,7 +65,7 @@ function Login() {
           Se Connecter
         </button>
 
-        <p>Pas encore de compte, <NavLink to="/creer-un-compte">créer un compte</NavLink></p>
+        <p className="login__create--account">Pas encore de compte ? <NavLink className="login__create--account--link" to="/creer-un-compte">créer un compte</NavLink></p>
 
       </form>
     </main>

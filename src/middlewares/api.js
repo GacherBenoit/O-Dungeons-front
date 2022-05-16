@@ -160,18 +160,16 @@ const apiMiddleWare = (store) => (next) => (action) => {
         password,
         firstname,
         lastname,
-        avatar,
       } = state.user.newAccount;
-
+      console.log(lastname);
       axiosInstance
         .post(
           'users',
           {
             email: email,
             password: password,
-            lastname: lastname,
-            firstname: firstname,
-            avatar: avatar,
+            lastName: lastname,
+            firstName: firstname,
           },
         )
         .then((response) => {

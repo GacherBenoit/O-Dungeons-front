@@ -38,15 +38,13 @@ export const initialState = {
   // State contenant les champs pour la creation de compte
   newAccount: {
     // Valeur du champ prénom
-    firstName: '',
+    firstname: '',
     // Valeur du champ nom
-    lastName: '',
+    lastname: '',
     // Valeur du champ email
     email: '',
     // Valeur du champ password
     password: '',
-    // Valeur par défaut du champ avatar
-    avatar: 0,
   },
 };
 
@@ -114,7 +112,7 @@ function reducer(state = initialState, action = {}) {
         ...state,
         newAccount: {
           ...state.newAccount,
-          firstName: action.value,
+          firstname: action.value,
         },
       };
     case LASTNAME_NEW_USER:
@@ -122,7 +120,7 @@ function reducer(state = initialState, action = {}) {
         ...state,
         newAccount: {
           ...state.newAccount,
-          lastName: action.value,
+          lastname: action.value,
         },
       };
     default:

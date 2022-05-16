@@ -4,13 +4,11 @@ import { useSelector } from 'react-redux';// == Import : local
 import Loading from '../Loading';
 
 import './subraces.scss';
-import barbarian from '../../assets/images/barbarian.jpg';
 
 function Subraces() {
   const loading = useSelector((state) => state.races.loading);
   const currentRace = useSelector((state) => state.races.currentRace);
   const currentSubRace = useSelector((state) => state.races.currentRace.subraces);
-  console.log(currentRace);
 
   if (loading) {
     return <Loading />;
@@ -19,7 +17,7 @@ function Subraces() {
     <main className="subraces">
       <section className="subraces__mainclass" id="subraces">
         <h2 className="subraces__mainclass--title">{currentRace.name}</h2>
-        <img className="subraces__img" src={currentRace.imageUrl} alt="race" />
+        <img className="subraces__img" src={`data:image/png;base64,${currentRace.image}`} alt="race" />
         <p>
           {currentRace.fullDescription}
         </p>
@@ -42,8 +40,7 @@ function Subraces() {
               <p>Sagesse:{subRace.wisdom}</p>
             </div>
           </div>
-        )
-        )}
+        ))}
       </section>
     </main>
   );

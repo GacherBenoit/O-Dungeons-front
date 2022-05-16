@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 // == Import: local
 import { fetchClasseComplete, classeCurrentId } from '../../actions/classes';
 import { fetchRaceComplete, raceCurrentId } from '../../actions/races';
+
 import './card.scss';
 
 // import barbarianImage from 'src/assets/images/barbarian.jpg';
@@ -21,11 +22,14 @@ function Card({
     dispatch(raceCurrentId(id));
     dispatch(fetchRaceComplete());
   }
-
+  // console.log(image);
+  // const encoded = {image};
+  // const bytes = base64.decode(encoded);
+  // console.log(bytes);
   return (
     <aside className="card">
       <div className="card__image">
-        <img className="card__image--classe" src={image} alt="barbare" />
+        <img className="card__image--classe" src={`data:image/png;base64,${image}`} alt="barbare" />
       </div>
 
       <div className="card__body">

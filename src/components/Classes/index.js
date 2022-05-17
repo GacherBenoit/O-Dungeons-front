@@ -31,7 +31,7 @@ function Classes() {
             key={classe.name}
             name={classe.name}
             description={classe.quickDescription}
-            image={classe.imageUrl}
+            image={classe.image}
             slug={classe.name}
             type="classes"
           />

@@ -33,7 +33,7 @@ function Races() {
             slug={race.name}
             name={race.name}
             description={race.quickDescription}
-            image={race.imageUrl}
+            image={race.image}
             type="races"
           />
         ))}

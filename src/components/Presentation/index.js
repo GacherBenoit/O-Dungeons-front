@@ -90,7 +90,7 @@ function Presentation() {
               key={classeRandom.name}
               name={classeRandom.name}
               description={classeRandom.quickDescription}
-              image={classeRandom.imageUrl}
+              image={classeRandom.image}
               id={classeRandom.id}
               slug={classeRandom.name}
               type="classes"
@@ -106,7 +106,7 @@ function Presentation() {
               key={raceRandom.name}
               name={raceRandom.name}
               description={raceRandom.quickDescription}
-              image={raceRandom.imageUrl}
+              image={raceRandom.image}
               id={raceRandom.id}
               slug={raceRandom.name}
               type="races"

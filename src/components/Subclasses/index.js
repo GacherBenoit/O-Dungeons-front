@@ -20,7 +20,7 @@ function Subclasses() {
     <main className="subclasses">
       <section className="subclasses__mainclass" id="subclasses">
         <h2 className="subclasses__mainclass--title">{currentClasse.name}</h2>
-        <img className="subclasses__img" src={currentClasse.imageUrl} alt="classe" />
+        <img className="subclasses__img" src={`data:image/png;base64,${currentClasse.image}`} alt="classe" />
         <p className="subclasses__paragraphe">{currentClasse.description}</p>
         <ClasseItem />
       </section>

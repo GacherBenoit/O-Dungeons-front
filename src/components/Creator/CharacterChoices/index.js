@@ -9,6 +9,7 @@ import {
   fetchCurrentClasseCreator,
   fetchBackgroundCreator,
   saveCurrentBackgroundId,
+  fetchCurrentBackgroundCreator,
 } from '../../../actions/character';
 // == Import: local
 import './characterChoices.scss';
@@ -50,6 +51,7 @@ function CharacterChoices() {
   }
   function handleBackgroundChoice(evt) {
     dispatch(saveCurrentBackgroundId(evt.target.value));
+    dispatch(fetchCurrentBackgroundCreator(evt.target.value));
   }
   useEffect(
     () => {

@@ -13,6 +13,7 @@ import {
   SAVE_CURRENT_CLASSE_ABILITIES,
   SAVE_CURRENT_CLASSE_CREATOR,
   SAVE_CURRENT_BACKGROUND_ID,
+  SAVE_CURRENT_BACKGROUND,
 } from '../actions/character';
 // import { FETCH_RACES, SAVE_CURRENT_RACE } from '../actions/races';
 
@@ -24,6 +25,7 @@ const initialState = {
   raceList: [],
   backgroundList: [],
   currentBackgroundId: '',
+  currentBackground:{},
   currentId: '',
   currentRace: {},
   currentSubraceId: '',
@@ -105,6 +107,11 @@ function reducer(state = initialState, action = {}) {
       return {
         ...state,
         currentBackgroundId: action.id,
+      };
+    case SAVE_CURRENT_BACKGROUND:
+      return {
+        ...state,
+        currentBackground: action.background,
       };
     default:
       return state;

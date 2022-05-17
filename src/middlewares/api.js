@@ -29,7 +29,12 @@ import {
   FETCH_RACE_CREATOR,
   FETCH_SUBRACE_CREATOR,
   saveBackgroundCreator,
-  saveCurrentClasseAbilities, saveCurrentClasseCreator, saveCurrentRaceCreator, saveCurrentSubrace,
+  saveCurrentClasseAbilities,
+  saveCurrentClasseCreator,
+  saveCurrentRaceCreator,
+  saveCurrentSubrace,
+  FETCH_CURRENT_BACKGROUND_CREATOR,
+  saveCurrentBackground,
 } from '../actions/character';
 
 const axiosInstance = axios.create({
@@ -226,6 +231,21 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .catch(() => {
           console.log('erreur');
         });
+      next(action);
+      break;
+    }
+    case FETCH_CURRENT_BACKGROUND_CREATOR: {
+      const { character: { currentBackgroundId } } = store.getState();
+      axiosInstance
+        .get(`backgrounds/${currentBackgroundId}`)
+        .then(
+          (response) => {
+            store.dispatch(saveCurrentBackground(response.data));
+          },
+        )
+        .catch(
+          () => console.log('error api'),
+        );
       next(action);
       break;
     }

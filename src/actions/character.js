@@ -125,3 +125,43 @@ export const saveCurrentClasseCreator = (classe) => ({
   type: SAVE_CURRENT_CLASSE_CREATOR,
   classe,
 });
+// ACTION TYPE FETCH_BACKGROUND_CREATOR
+export const FETCH_BACKGROUND_CREATOR = 'FETCH_BACKGROUND_CREATOR';
+
+// ACTION CREATOR fetchBackgroundCreator
+export const fetchBackgroundCreator = (id) => ({
+  type: FETCH_BACKGROUND_CREATOR,
+  id,
+});
+// ACTION TYPE SAVE_BACKGROUND_CREATOR
+export const SAVE_BACKGROUND_CREATOR = 'SAVE_BACKGROUND_CREATOR';
+
+// ACTION CREATOR saveBackgroundCreator
+export const saveBackgroundCreator = (background) => ({
+  type: SAVE_BACKGROUND_CREATOR,
+  background,
+});
+// ACTION TYPE SAVE_CURRENT_BACKGROUND_ID
+export const SAVE_CURRENT_BACKGROUND_ID = 'SAVE_CURRENT_BACKGROUND_ID';
+
+// ACTION CREATOR saveCurrentBackgroundId
+export const saveCurrentBackgroundId = (id) => ({
+  type: SAVE_CURRENT_BACKGROUND_ID,
+  id,
+});
+// ACTION TYPE FETCH_CURRENT_BACKGROUND_CREATOR
+export const FETCH_CURRENT_BACKGROUND_CREATOR = 'FETCH_CURRENT_BACKGROUND_CREATOR';
+
+// ACTION CREATOR fetchCurrentBackgroundCreator
+export const fetchCurrentBackgroundCreator = (id) => ({
+  type: FETCH_CURRENT_BACKGROUND_CREATOR,
+  id,
+});
+// ACTION TYPE SAVE_CCURRENT_BACKGROUND_CREATOR
+export const SAVE_CURRENT_BACKGROUND = 'SAVE_CURRENT_BACKGROUND';
+
+// ACTION CREATOR saveCurrentbackground
+export const saveCurrentBackground = (background) => ({
+  type: SAVE_CURRENT_BACKGROUND,
+  background,
+});

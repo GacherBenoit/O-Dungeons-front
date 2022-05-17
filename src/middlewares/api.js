@@ -24,10 +24,17 @@ import {
 
 import {
   FETCH_CURRENT_CLASSE_ABILITIES,
+  FETCH_BACKGROUND_CREATOR,
   FETCH_CURRENT_CLASSE_CREATOR,
   FETCH_RACE_CREATOR,
   FETCH_SUBRACE_CREATOR,
-  saveCurrentClasseAbilities, saveCurrentClasseCreator, saveCurrentRaceCreator, saveCurrentSubrace,
+  saveBackgroundCreator,
+  saveCurrentClasseAbilities,
+  saveCurrentClasseCreator,
+  saveCurrentRaceCreator,
+  saveCurrentSubrace,
+  FETCH_CURRENT_BACKGROUND_CREATOR,
+  saveCurrentBackground,
 } from '../actions/character';
 
 const axiosInstance = axios.create({
@@ -56,6 +63,19 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .then(
           (response) => {
             store.dispatch(saveRaces(response.data));
+          },
+        )
+        .catch(
+          () => console.log('error api'),
+        );
+      next(action);
+      break;
+    case FETCH_BACKGROUND_CREATOR:
+      axiosInstance
+        .get('backgrounds')
+        .then(
+          (response) => {
+            store.dispatch(saveBackgroundCreator(response.data));
           },
         )
         .catch(
@@ -211,6 +231,21 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .catch(() => {
           console.log('erreur');
         });
+      next(action);
+      break;
+    }
+    case FETCH_CURRENT_BACKGROUND_CREATOR: {
+      const { character: { currentBackgroundId } } = store.getState();
+      axiosInstance
+        .get(`backgrounds/${currentBackgroundId}`)
+        .then(
+          (response) => {
+            store.dispatch(saveCurrentBackground(response.data));
+          },
+        )
+        .catch(
+          () => console.log('error api'),
+        );
       next(action);
       break;
     }

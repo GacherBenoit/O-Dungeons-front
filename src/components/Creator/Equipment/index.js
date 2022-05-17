@@ -3,6 +3,7 @@ import './equipment.scss';
 
 function Equipment() {
   const equipmentList = useSelector((state) => state.character.currentClasse.playableClassItems);
+  const equipmentFromBackground = useSelector((state) => state.character.currentBackground.items);
   // console.log(equipmentList);
   return (
     <div className="equipment">
@@ -20,6 +21,13 @@ function Equipment() {
           >
             -{equipment.quantity} {equipment.item.name} ayant un poids de  {equipment.item.weight}
             kg
+          </li>
+        ))}
+        {equipmentFromBackground && equipmentFromBackground.map((equipement) => (
+          <li
+            key={equipement.id}
+            className="equipment__list--item"
+          >-{equipement.name}  ayant un poids de   {equipement.weight}
           </li>
         ))}
       </ul>

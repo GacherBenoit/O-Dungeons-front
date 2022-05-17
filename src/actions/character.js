@@ -141,3 +141,11 @@ export const saveBackgroundCreator = (background) => ({
   type: SAVE_BACKGROUND_CREATOR,
   background,
 });
+// ACTION TYPE SAVE_CURRENT_BACKGROUND_ID
+export const SAVE_CURRENT_BACKGROUND_ID = 'SAVE_CURRENT_BACKGROUND_ID';
+
+// ACTION CREATOR saveCurrentBackgroundId
+export const saveCurrentBackgroundId = (id) => ({
+  type: SAVE_CURRENT_BACKGROUND_ID,
+  id,
+});

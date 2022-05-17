@@ -8,6 +8,7 @@ import {
   fetchCurrentClasseAbilities,
   fetchCurrentClasseCreator,
   fetchBackgroundCreator,
+  saveCurrentBackgroundId,
 } from '../../../actions/character';
 // == Import: local
 import './characterChoices.scss';
@@ -47,7 +48,9 @@ function CharacterChoices() {
     dispatch(fetchCurrentClasseCreator(evt.target.value));
     dispatch(fetchCurrentClasseAbilities(evt.target.value));
   }
-
+  function handleBackgroundChoice(evt) {
+    dispatch(saveCurrentBackgroundId(evt.target.value));
+  }
   useEffect(
     () => {
       dispatch(fetchRaces());
@@ -102,7 +105,7 @@ function CharacterChoices() {
         ))}
       </select>
       <label htmlFor='choices__background'>
-        <select className='choices__background'>
+        <select className='choices__background' onChange={handleBackgroundChoice}>
           <option value="">Choix du vécus</option>
           {backgroundList.map((background) => (
             <option key={background.id} value={background.id}>{background.name}</option>

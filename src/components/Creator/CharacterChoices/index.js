@@ -25,6 +25,7 @@ function CharacterChoices() {
   const classeName = useSelector((state) => state.character.currentClasse.name);
   const subracesList = useSelector((state) => state.character.currentRace.subraces);
   const backgroundList = useSelector((state) => state.character.backgroundList);
+  const background = useSelector((state) => state.character.currentBackground.name);
 
   const dispatch = useDispatch();
   // Fonction qui déclenche l'action de sauvegarde champ du Nom de personnage
@@ -117,11 +118,11 @@ function CharacterChoices() {
       </label>
       <div className="choices__results">
         <ul className="choices__results--list">
+          <li>Nom du joueur:{valueName}</li>
           <li>Classe: {classeName}</li>
           <li>Race: {raceName}</li>
-          <li>Background:</li>
+          <li>Background:{background}</li>
           <li>Alignement: Neutre</li>
-          <li>Nom du joueur:{valueName}</li>
           <li>Points d'experience: 0</li>
         </ul>
         <img src={warrior} alt="barabre" className="choices__results--img" />

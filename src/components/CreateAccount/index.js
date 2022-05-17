@@ -12,10 +12,10 @@ import {
 
 // == Composant
 function CreateAccount() {
-  const mail = useSelector((state) => state.user.newAccount.email);
-  const password = useSelector((state) => state.user.newAccount.password);
-  const firstname = useSelector((state) => state.user.newAccount.firstname);
-  const lastname = useSelector((state) => state.user.newAccount.lastname);
+  const mail = useSelector((state) => state.user.email);
+  const password = useSelector((state) => state.user.password);
+  const firstname = useSelector((state) => state.user.firstname);
+  const lastname = useSelector((state) => state.user.lastname);
 
   const dispatch = useDispatch();
 

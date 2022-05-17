@@ -1,9 +1,11 @@
 // == Import: npm
 import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Routes, Route, useLocation } from 'react-router-dom';
 
 // == Import
 import './home.scss';
+import { setId, findUser } from '../../actions/users';
 
 // == Composant
 import Header from '../Header';
@@ -22,6 +24,18 @@ import Subraces from '../Subraces';
 import CreateAccount from '../CreateAccount';
 
 function Home() {
+  // On récupère le token dans le localStorage
+  const token = localStorage.getItem('token');
+
+  // On récupère l'id dans le localStorage
+  const id = localStorage.getItem('id');
+
+  const dispatch = useDispatch();
+
+  if (id !== null) {
+    dispatch(findUser());
+  }
+
   // The useLocation hook allows to retrieve information
   // on the current location (url) and subscribes the component
   //  who uses it has the modification of the url

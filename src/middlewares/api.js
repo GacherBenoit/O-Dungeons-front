@@ -23,6 +23,7 @@ import {
   saveUser,
   isLogged,
   CREATE_NEW_ACCOUNT,
+  FIND_USER,
 } from '../actions/users';
 
 const axiosInstance = axios.create({
@@ -118,9 +119,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
     }
     case LOGIN: {
       const state = store.getState();
-      const { email, password } = state.user.settings;
-      console.log(email);
-      console.log(password);
+      const { email, password } = state.user;
 
       axiosInstance
         .post(
@@ -140,11 +139,13 @@ const apiMiddleWare = (store) => (next) => (action) => {
           store.dispatch(saveUser(user));
           store.dispatch(isLogged());
 
+          // on sauvegarde l'id de l'utilisateur dans le local storage
+          localStorage.setItem('id', JSON.stringify(user.user.id));
           // on sauvegarde le token dans le local storage
           localStorage.setItem('token', JSON.stringify(user.token));
 
           // j'enregistre mon token sur l'instance d'axios
-          axiosInstance.defaults.headers.common.Authorization = `Bearer ${user.token}`;
+          // axiosInstance.defaults.headers.common.Authorization = `Bearer ${user.token}`;
           // store.dispatch(saveUser(response.data));
         })
         .catch(() => {
@@ -160,7 +161,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
         password,
         firstname,
         lastname,
-      } = state.user.newAccount;
+      } = state.user;
       console.log(lastname);
       axiosInstance
         .post(
@@ -174,6 +175,38 @@ const apiMiddleWare = (store) => (next) => (action) => {
         )
         .then((response) => {
           console.log(response);
+        })
+        .catch(() => {
+          console.log('erreur');
+        });
+      next(action);
+      break;
+    }
+    case FIND_USER: {
+      const findId = localStorage.getItem('id');
+      const idSave = JSON.parse(findId);
+      const findToken = localStorage.getItem('token');
+      const token = JSON.parse(findToken);
+      // const state = store.getState();
+      // const { id } = state.user;
+
+      axiosInstance
+        .get(
+          `users/${idSave}`,
+          // on envoi l'id et le header avec le token
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          },
+
+        )
+        .then((response) => {
+          console.log(response);
+
+          const { data: user } = response;
+          store.dispatch(saveUser(user));
+          store.dispatch(isLogged());
         })
         .catch(() => {
           console.log('erreur');

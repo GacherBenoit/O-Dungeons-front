@@ -88,7 +88,24 @@ export const lastnameNewUser = (value) => ({
 // ACTION TYPE CREATE_NEW_ACCOUNT
 export const CREATE_NEW_ACCOUNT = 'CREATE_NEW_ACCOUNT';
 
-// ACTION CREATOR CREATE_NEW_ACCOUNT
+// ACTION CREATOR createNewAccount
 export const createNewAccount = () => ({
   type: CREATE_NEW_ACCOUNT,
+});
+
+// ACTION TYPE SET_ID
+export const SET_ID = 'SET_ID';
+
+// ACTION CREATOR setId
+export const setId = (id) => ({
+  type: SET_ID,
+  id,
+});
+
+// ACTION TYPE FIND_USER
+export const FIND_USER = 'FIND_USER';
+
+// ACTION CREATOR findUser
+export const findUser = () => ({
+  type: FIND_USER,
 });

@@ -24,6 +24,7 @@ import {
   isLogged,
   CREATE_NEW_ACCOUNT,
   FIND_USER,
+  LOGOUT,
 } from '../actions/users';
 
 const axiosInstance = axios.create({
@@ -211,6 +212,11 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .catch(() => {
           console.log('erreur');
         });
+      next(action);
+      break;
+    }
+    case LOGOUT: {
+      localStorage.clear();
       next(action);
       break;
     }

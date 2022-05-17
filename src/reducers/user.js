@@ -9,6 +9,7 @@ import {
   FIRSTNAME_NEW_USER,
   LASTNAME_NEW_USER,
   SET_ID,
+  LOGOUT,
 } from '../actions/users';
 
 export const initialState = {
@@ -93,6 +94,20 @@ function reducer(state = initialState, action = {}) {
       return {
         ...state,
         lastname: action.value,
+      };
+    case LOGOUT:
+      return {
+        ...state,
+        logged: false,
+        id: null,
+        firstName: '',
+        lastName: '',
+        email: '',
+        password: '',
+        avatar: {
+          name: '',
+          imageUrl: '',
+        },
       };
     default:
       return state;

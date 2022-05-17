@@ -1,15 +1,19 @@
 // == Import : npm
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 // == Import : local
 import './logout.scss';
+import { logout } from '../../../actions/users';
 
 // == Composant
 
 function Logout() {
   const firstname = useSelector((state) => state.user.firstName);
 
-  function handleLogout() {
+  const dispatch = useDispatch();
 
+  function handleLogout() {
+    dispatch(logout());
+    console.log('click');
   }
 
   return (
@@ -20,7 +24,7 @@ function Logout() {
         className="logout__button"
         onClick={handleLogout}
       >
-        Se Deconnecter
+        Deconnexion
       </button>
     </div>
   );

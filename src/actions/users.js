@@ -109,3 +109,11 @@ export const FIND_USER = 'FIND_USER';
 export const findUser = () => ({
   type: FIND_USER,
 });
+
+// ACTION TYPE LOGOUT
+export const LOGOUT = 'LOGOUT';
+
+// ACTION CREATOR logout
+export const logout = () => ({
+  type: LOGOUT,
+});

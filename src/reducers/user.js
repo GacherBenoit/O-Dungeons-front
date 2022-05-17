@@ -25,6 +25,7 @@ export const initialState = {
     name: '',
     imageUrl: '',
   },
+  roles: [],
 
   // State concernant le menu du site en version mobile
   settingsMenu: {
@@ -69,6 +70,8 @@ function reducer(state = initialState, action = {}) {
       return {
         ...state,
         ...action.user,
+        // on vide le champ password
+        password: '',
       };
     case IS_LOGGED:
       return {
@@ -88,12 +91,12 @@ function reducer(state = initialState, action = {}) {
     case FIRSTNAME_NEW_USER:
       return {
         ...state,
-        firstname: action.value,
+        firstName: action.value,
       };
     case LASTNAME_NEW_USER:
       return {
         ...state,
-        lastname: action.value,
+        lastName: action.value,
       };
     case LOGOUT:
       return {

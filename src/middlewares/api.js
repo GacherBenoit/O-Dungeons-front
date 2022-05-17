@@ -137,7 +137,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
           const { data: user } = response;
 
           console.log(user);
-          store.dispatch(saveUser(user));
+          store.dispatch(saveUser(user.user));
           store.dispatch(isLogged());
 
           // on sauvegarde l'id de l'utilisateur dans le local storage
@@ -160,22 +160,32 @@ const apiMiddleWare = (store) => (next) => (action) => {
       const {
         email,
         password,
-        firstname,
-        lastname,
+        firstName,
+        lastName,
       } = state.user;
-      console.log(lastname);
+      console.log(lastName);
       axiosInstance
         .post(
           'users',
           {
             email: email,
             password: password,
-            lastName: lastname,
-            firstName: firstname,
+            lastName: lastName,
+            firstName: firstName,
           },
         )
         .then((response) => {
           console.log(response);
+          const { data: user } = response;
+
+          console.log(user);
+          store.dispatch(saveUser(user.user));
+          store.dispatch(isLogged());
+
+          // on sauvegarde l'id de l'utilisateur dans le local storage
+          localStorage.setItem('id', JSON.stringify(user.user.id));
+          // on sauvegarde le token dans le local storage
+          localStorage.setItem('token', JSON.stringify(user.token));
         })
         .catch(() => {
           console.log('erreur');

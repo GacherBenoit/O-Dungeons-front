@@ -12,4 +12,7 @@
     padding: vars.$gutter;
     margin: vars.$gutter;
   }
+  &__list--item {
+    margin: vars.$gutter;
+  }
 }

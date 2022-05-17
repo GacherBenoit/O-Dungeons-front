@@ -22,6 +22,14 @@ import {
   LOGIN, saveUser,
 } from '../actions/users';
 
+import {
+  FETCH_CURRENT_CLASSE_ABILITIES,
+  FETCH_CURRENT_CLASSE_CREATOR,
+  FETCH_RACE_CREATOR,
+  FETCH_SUBRACE_CREATOR,
+  saveCurrentClasseAbilities, saveCurrentClasseCreator, saveCurrentRaceCreator, saveCurrentSubrace,
+} from '../actions/character';
+
 const axiosInstance = axios.create({
   // par exemple, on peut définir une url de base !
   baseURL: 'http://pierre-arnaudlandoin-server.eddi.cloud/projet-17-o-dungeons-back/public/api/',
@@ -105,6 +113,74 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .then(
           (response) => {
             store.dispatch(saveCurrentRace(response.data));
+          },
+        )
+        .catch(
+          () => console.log('error api'),
+        );
+      next(action);
+      break;
+    }
+    case FETCH_RACE_CREATOR: {
+      const { character: { currentId } } = store.getState();
+      console.log(currentId);
+      axiosInstance
+        .get(`races/${currentId}`)
+        .then(
+          (response) => {
+            console.log(response.data);
+            store.dispatch(saveCurrentRaceCreator(response.data));
+          },
+        )
+        .catch(
+          () => console.log('error api'),
+        );
+      next(action);
+      break;
+    }
+    case FETCH_SUBRACE_CREATOR: {
+      const { character: { currentSubraceId } } = store.getState();
+      console.log(currentSubraceId);
+      axiosInstance
+        .get(`subraces/${currentSubraceId}`)
+        .then(
+          (response) => {
+            console.log(response.data);
+            store.dispatch(saveCurrentSubrace(response.data));
+          },
+        )
+        .catch(
+          () => console.log('error api'),
+        );
+      next(action);
+      break;
+    }
+    case FETCH_CURRENT_CLASSE_ABILITIES: {
+      const { character: { currentClasseId } } = store.getState();
+      console.log(currentClasseId);
+      axiosInstance
+        .get(`classes/${currentClasseId}/abilities`)
+        .then(
+          (response) => {
+            console.log(response.data);
+            store.dispatch(saveCurrentClasseAbilities(response.data));
+          },
+        )
+        .catch(
+          () => console.log('error api'),
+        );
+      next(action);
+      break;
+    }
+    case FETCH_CURRENT_CLASSE_CREATOR: {
+      const { character: { currentClasseId } } = store.getState();
+      console.log(currentClasseId);
+      axiosInstance
+        .get(`classes/${currentClasseId}`)
+        .then(
+          (response) => {
+            console.log(response.data);
+            store.dispatch(saveCurrentClasseCreator(response.data));
           },
         )
         .catch(

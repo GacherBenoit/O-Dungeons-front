@@ -22,10 +22,6 @@ function Card({
     dispatch(raceCurrentId(id));
     dispatch(fetchRaceComplete());
   }
-  // console.log(image);
-  // const encoded = {image};
-  // const bytes = base64.decode(encoded);
-  // console.log(bytes);
   return (
     <aside className="card">
       <div className="card__image">

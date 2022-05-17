@@ -125,3 +125,19 @@ export const saveCurrentClasseCreator = (classe) => ({
   type: SAVE_CURRENT_CLASSE_CREATOR,
   classe,
 });
+// ACTION TYPE FETCH_BACKGROUND_CREATOR
+export const FETCH_BACKGROUND_CREATOR = 'FETCH_BACKGROUND_CREATOR';
+
+// ACTION CREATOR fetchBackgroundCreator
+export const fetchBackgroundCreator = (id) => ({
+  type: FETCH_BACKGROUND_CREATOR,
+  id,
+});
+// ACTION TYPE SAVE_BACKGROUND_CREATOR
+export const SAVE_BACKGROUND_CREATOR = 'SAVE_BACKGROUND_CREATOR';
+
+// ACTION CREATOR saveBackgroundCreator
+export const saveBackgroundCreator = (background) => ({
+  type: SAVE_BACKGROUND_CREATOR,
+  background,
+});

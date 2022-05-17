@@ -7,6 +7,7 @@ import {
   saveSubraceCurrentId, saveClasseCurrentId, fetchRaceCreator, saveCurrentId, fetchSubraceCreator,
   fetchCurrentClasseAbilities,
   fetchCurrentClasseCreator,
+  fetchBackgroundCreator,
 } from '../../../actions/character';
 // == Import: local
 import './characterChoices.scss';
@@ -21,6 +22,7 @@ function CharacterChoices() {
   const raceName = useSelector((state) => state.character.currentRace.name);
   const classeName = useSelector((state) => state.character.currentClasse.name);
   const subracesList = useSelector((state) => state.character.currentRace.subraces);
+  const backgroundList = useSelector((state) => state.character.backgroundList);
 
   const dispatch = useDispatch();
   // Fonction qui déclenche l'action de sauvegarde champ du Nom de personnage
@@ -50,6 +52,7 @@ function CharacterChoices() {
     () => {
       dispatch(fetchRaces());
       dispatch(fetchClasses());
+      dispatch(fetchBackgroundCreator());
     },
     [],
   );
@@ -98,11 +101,20 @@ function CharacterChoices() {
           <option key={classe.id} value={classe.id}>{classe.name}</option>
         ))}
       </select>
+      <label htmlFor='choices__background'>
+        <select className='choices__background'>
+          <option value="">Choix du vécus</option>
+          {backgroundList.map((background) => (
+            <option key={background.id} value={background.id}>{background.name}</option>
+          ))}
+        </select>
+
+      </label>
       <div className="choices__results">
         <ul className="choices__results--list">
           <li>Classe: {classeName}</li>
           <li>Race: {raceName}</li>
-          <li>Background: Hors-la-loi</li>
+          <li>Background:</li>
           <li>Alignement: Neutre</li>
           <li>Nom du joueur:{valueName}</li>
           <li>Points d'experience: 0</li>

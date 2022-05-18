@@ -14,6 +14,8 @@ import {
   SAVE_CURRENT_CLASSE_CREATOR,
   SAVE_CURRENT_BACKGROUND_ID,
   SAVE_CURRENT_BACKGROUND,
+  SAVE_MORALITY,
+  SAVE_ALIGNEMENT,
 } from '../actions/character';
 // import { FETCH_RACES, SAVE_CURRENT_RACE } from '../actions/races';
 
@@ -25,13 +27,15 @@ const initialState = {
   raceList: [],
   backgroundList: [],
   currentBackgroundId: '',
-  currentBackground:{},
+  currentBackground: {},
   currentId: '',
   currentRace: {},
   currentSubraceId: '',
   currentSubrace: {},
   currentClasseId: '',
   currentAbilities: [],
+  morality: '',
+  alignement: '',
 };
 
 function reducer(state = initialState, action = {}) {
@@ -112,6 +116,16 @@ function reducer(state = initialState, action = {}) {
       return {
         ...state,
         currentBackground: action.background,
+      };
+    case SAVE_MORALITY:
+      return {
+        ...state,
+        morality: action.morality,
+      };
+    case SAVE_ALIGNEMENT:
+      return {
+        ...state,
+        alignement: action.alignement,
       };
     default:
       return state;

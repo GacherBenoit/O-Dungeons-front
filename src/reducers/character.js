@@ -14,6 +14,7 @@ import {
   SAVE_CURRENT_CLASSE_CREATOR,
   SAVE_CURRENT_BACKGROUND_ID,
   SAVE_CURRENT_BACKGROUND,
+
   SAVE_CURRENT_FIRST_ABILITIES_ID,
   SAVE_CURRENT_SECOND_ABILITIES_ID,
   SAVE_CURRENT_THIRD_ABILITIES_ID,
@@ -22,6 +23,10 @@ import {
   SAVE_CURRENT_SECOND_ABILITIES_SPECS,
   SAVE_CURRENT_THIRD_ABILITIES_SPECS,
   SAVE_CURRENT_FOURTH_ABILITIES_SPECS,
+
+  SAVE_MORALITY,
+  SAVE_ALIGNEMENT,
+
 } from '../actions/character';
 
 const initialState = {
@@ -39,6 +44,7 @@ const initialState = {
   currentSubrace: {},
   currentClasseId: '',
   currentAbilities: [],
+
   firstCurrentAbilitiesId: '',
   secondCurrentAbilitiesId: '',
   thirdCurrentAbilitiesId: '',
@@ -47,6 +53,10 @@ const initialState = {
   secondCurrentAbilitiesSpecs: '',
   thirdCurrentAbilitiesSpecs: '',
   fourthCurrentAbilitiesSpecs: '',
+
+  morality: '',
+  alignement: '',
+
 };
 
 function reducer(state = initialState, action = {}) {
@@ -128,6 +138,7 @@ function reducer(state = initialState, action = {}) {
         ...state,
         currentBackground: action.background,
       };
+
     case SAVE_CURRENT_FIRST_ABILITIES_ID:
       return {
         ...state,
@@ -167,6 +178,17 @@ function reducer(state = initialState, action = {}) {
       return {
         ...state,
         fourthCurrentAbilitiesSpecs: action.abilitie,
+
+    case SAVE_MORALITY:
+      return {
+        ...state,
+        morality: action.morality,
+      };
+    case SAVE_ALIGNEMENT:
+      return {
+        ...state,
+        alignement: action.alignement,
+
       };
     default:
       return state;

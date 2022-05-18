@@ -165,6 +165,7 @@ export const saveCurrentBackground = (background) => ({
   type: SAVE_CURRENT_BACKGROUND,
   background,
 });
+
 // ACTION TYPE SAVE_CURRENT_FIRST_ABILITIES
 export const SAVE_CURRENT_FIRST_ABILITIES_ID = 'SAVE_CURRENT_FIRST_ABILITIES_ID';
 
@@ -257,4 +258,23 @@ export const SAVE_CURRENT_FOURTH_ABILITIES_SPECS = 'SAVE_CURRENT_FOURTH_ABILITIE
 export const saveCurrentFourthAbilitiesSpecs = (abilitie) => ({
   type: SAVE_CURRENT_FOURTH_ABILITIES_SPECS,
   abilitie,
+=======
+
+// ACTION TYPE SAVE_MORALITY
+export const SAVE_MORALITY = 'SAVE_MORALITY';
+
+// ACTION CREATOR saveMorality
+export const saveMorality = (morality) => ({
+  type: SAVE_MORALITY,
+  morality,
+});
+
+// ACTION TYPE SAVE_ALIGNEMENT
+export const SAVE_ALIGNEMENT = 'SAVE_ALIGNEMENT';
+
+// ACTION CREATOR saveAlignement
+export const saveAlignement = (alignement) => ({
+  type: SAVE_ALIGNEMENT,
+  alignement,
+
 });

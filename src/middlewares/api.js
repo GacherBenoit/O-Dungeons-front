@@ -35,6 +35,8 @@ import {
   saveCurrentSubrace,
   FETCH_CURRENT_BACKGROUND_CREATOR,
   saveCurrentBackground,
+  FETCH_CURRENT_ABILITIES,
+  saveCurrentAbilities,
 } from '../actions/character';
 
 const axiosInstance = axios.create({

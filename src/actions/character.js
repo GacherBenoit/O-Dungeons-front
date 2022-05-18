@@ -165,3 +165,35 @@ export const saveCurrentBackground = (background) => ({
   type: SAVE_CURRENT_BACKGROUND,
   background,
 });
+// ACTION TYPE SAVE_CURRENT_FIRST_ABILITIES
+export const SAVE_CURRENT_FIRST_ABILITIES_ID = 'SAVE_CURRENT_FIRST_ABILITIES_ID';
+
+// ACTION CREATOR saveCurrentFirstAbilitiesId
+export const saveCurrentFirstAbilitiesId = (id) => ({
+  type: SAVE_CURRENT_FIRST_ABILITIES_ID,
+  id,
+});
+// ACTION TYPE SAVE_CURRENT_SECOND_ABILITIES_ID
+export const SAVE_CURRENT_SECOND_ABILITIES_ID = 'SAVE_CURRENT_SECOND_ABILITIES_ID';
+
+// ACTION CREATOR saveCurrentSecondAbilitiesId
+export const saveCurrentSecondAbilitiesId = (id) => ({
+  type: SAVE_CURRENT_SECOND_ABILITIES_ID,
+  id,
+});
+// ACTION TYPE SAVE_CURRENT_THIRD_ABILITIES_ID
+export const SAVE_CURRENT_THIRD_ABILITIES_ID = 'SAVE_CURRENT_THIRD_ABILITIES_ID';
+
+// ACTION CREATOR saveCurrentThirdAbilitiesId
+export const saveCurrentThirdAbilitiesId = (id) => ({
+  type: SAVE_CURRENT_THIRD_ABILITIES_ID,
+  id,
+});
+// ACTION TYPE SAVE_CURRENT_FOURTH_ABILITIES_ID
+export const SAVE_CURRENT_FOURTH_ABILITIES_ID = 'SAVE_CURRENT_FOURTH_ABILITIES_ID';
+
+// ACTION CREATOR saveCurrentFourthAbilitiesId
+export const saveCurrentFourthAbilitiesId = (id) => ({
+  type: SAVE_CURRENT_FOURTH_ABILITIES_ID,
+  id,
+});

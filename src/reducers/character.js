@@ -14,6 +14,10 @@ import {
   SAVE_CURRENT_CLASSE_CREATOR,
   SAVE_CURRENT_BACKGROUND_ID,
   SAVE_CURRENT_BACKGROUND,
+  SAVE_CURRENT_FIRST_ABILITIES_ID,
+  SAVE_CURRENT_SECOND_ABILITIES_ID,
+  SAVE_CURRENT_THIRD_ABILITIES_ID,
+  SAVE_CURRENT_FOURTH_ABILITIES_ID,
 } from '../actions/character';
 // import { FETCH_RACES, SAVE_CURRENT_RACE } from '../actions/races';
 
@@ -32,6 +36,10 @@ const initialState = {
   currentSubrace: {},
   currentClasseId: '',
   currentAbilities: [],
+  firstCurrentAbilitiesId: '',
+  secondCurrentAbilitiesId: '',
+  thirdCurrentAbilitiesId: '',
+  fourthCurrentAbilitiesId: '',
 };
 
 function reducer(state = initialState, action = {}) {
@@ -112,6 +120,26 @@ function reducer(state = initialState, action = {}) {
       return {
         ...state,
         currentBackground: action.background,
+      };
+    case SAVE_CURRENT_FIRST_ABILITIES_ID:
+      return {
+        ...state,
+        firstCurrentAbilitiesId: action.id,
+      };
+    case SAVE_CURRENT_SECOND_ABILITIES_ID:
+      return {
+        ...state,
+        secondCurrentAbilitiesId: action.id,
+      };
+    case SAVE_CURRENT_THIRD_ABILITIES_ID:
+      return {
+        ...state,
+        thirdCurrentAbilitiesId: action.id,
+      };
+    case SAVE_CURRENT_FOURTH_ABILITIES_ID:
+      return {
+        ...state,
+        fourthCurrentAbilitiesId: action.id,
       };
     default:
       return state;

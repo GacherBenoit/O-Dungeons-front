@@ -14,11 +14,15 @@
     display: flex;
     flex-wrap: wrap;
   }
-  &__bonus{
+  &__incantation_duration{
     margin-left: vars.$gutter;
   }
-  &__malus{
+  &__range{
     margin-left: vars.$gutter*2.5;
+  }
+  &__duration{
+    margin-left: vars.$gutter*2.5;
+    
   }
 }
 @media only screen and (min-device-width : 768px){
@@ -28,11 +32,16 @@
     }
   }
   .skills {
-    &__bonus{
+    &__incantation_duration{
       margin-left: vars.$gutter*16;
     }
-    &__malus{
+    &__range{
       margin-left: vars.$gutter*19;
+      
+    }
+    &__duration{
+      margin-left: vars.$gutter*19;
+      
     }
   }
   

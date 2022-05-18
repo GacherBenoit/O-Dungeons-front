@@ -165,3 +165,21 @@ export const saveCurrentBackground = (background) => ({
   type: SAVE_CURRENT_BACKGROUND,
   background,
 });
+
+// ACTION TYPE SAVE_MORALITY
+export const SAVE_MORALITY = 'SAVE_MORALITY';
+
+// ACTION CREATOR saveMorality
+export const saveMorality = (morality) => ({
+  type: SAVE_MORALITY,
+  morality,
+});
+
+// ACTION TYPE SAVE_ALIGNEMENT
+export const SAVE_ALIGNEMENT = 'SAVE_ALIGNEMENT';
+
+// ACTION CREATOR saveAlignement
+export const saveAlignement = (alignement) => ({
+  type: SAVE_ALIGNEMENT,
+  alignement,
+});

@@ -25,8 +25,8 @@ function CharacterChoices() {
   const classeName = useSelector((state) => state.character.currentClasse.name);
   const subracesList = useSelector((state) => state.character.currentRace.subraces);
   const backgroundList = useSelector((state) => state.character.backgroundList);
-  const background = useSelector((state) => state.character.currentBackground.name);
-
+  const backgroundName = useSelector((state) => state.character.currentBackground.name);
+  const currentClasseImage = useSelector((state) => state.character.currentClasse.image);
   const dispatch = useDispatch();
   // Fonction qui déclenche l'action de sauvegarde champ du Nom de personnage
   function handleChangeName(evt) {
@@ -34,7 +34,6 @@ function CharacterChoices() {
   }
   // Fonction  qui déclenche l'action de Sauvegarde du choix de la race dans le state
   function handleRaceChoice(evt) {
-    console.log(evt.target.value);
     // dispatch(setRace(evt.target.value));
     dispatch(saveCurrentId(evt.target.value));
     dispatch(fetchRaceCreator(evt.target.value));
@@ -107,8 +106,8 @@ function CharacterChoices() {
           <option key={classe.id} value={classe.id}>{classe.name}</option>
         ))}
       </select>
-      <label htmlFor='choices__background'>
-        <select className='choices__background' onChange={handleBackgroundChoice}>
+      <label htmlFor="choices__background">
+        <select className="choices__background" onChange={handleBackgroundChoice}>
           <option value="">Choix du vécus</option>
           {backgroundList.map((background) => (
             <option key={background.id} value={background.id}>{background.name}</option>
@@ -121,11 +120,11 @@ function CharacterChoices() {
           <li>Nom du joueur:{valueName}</li>
           <li>Classe: {classeName}</li>
           <li>Race: {raceName}</li>
-          <li>Background:{background}</li>
+          <li>Background:{backgroundName}</li>
           <li>Alignement: Neutre</li>
           <li>Points d'experience: 0</li>
         </ul>
-        <img src={warrior} alt="barabre" className="choices__results--img" />
+        <img src={`data:image/png;base64,${currentClasseImage}`} alt="" className="choices__results--img" />
       </div>
     </div>
   );

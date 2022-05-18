@@ -13,6 +13,14 @@
     box-shadow: 0.5rem 0.4rem black;
   }
 
+  &__information--p {
+    border: solid 1px black;
+    color: crimson;
+    margin: 1rem;
+    width: 90%;
+    height: 5vh;
+  }
+
   &__information--avatar {
     // border: 2px solid blue;
     width: 50%;

@@ -18,7 +18,21 @@ import { saveCurrentFirstAbilitiesId,
 import './skills.scss';
 
 function Skills() {
-  const abilitiesList = useSelector((state) => state.character.currentAbilities);
+  const abilitiesList = useSelector(
+    (state) => state.character.currentAbilities,
+  );
+  const firstAbilitieSpecs = useSelector(
+    (state) => state.character.firstCurrentAbilitiesSpecs,
+  );
+  const secondAbilitieSpecs = useSelector(
+    (state) => state.character.secondCurrentAbilitiesSpecs,
+  );
+  const thirdAbilitieSpecs = useSelector(
+    (state) => state.character.thirdCurrentAbilitiesSpecs,
+  );
+  const fourthAbilitieSpecs = useSelector(
+    (state) => state.character.fourthCurrentAbilitiesSpecs,
+  );
 
   const dispatch = useDispatch();
 
@@ -47,6 +61,7 @@ function Skills() {
           <li>Temps d'incantation</li>
           <li>Portée</li>
           <li>Durée</li>
+          <li>Description</li>
         </ul>
       </div>
       <div className="skills__choices-menu">
@@ -62,9 +77,10 @@ function Skills() {
               </option>
             ))}
           </select>
-          <span className="skills__incantation_duration">+5</span>
-          <span className="skills__range">1D6 -Pier</span>
-          <span className="skills__duration">1D5 -Pier</span>
+          <span className="skills__incantation_duration">{firstAbilitieSpecs.incantationTime}</span>
+          <span className="skills__range">{firstAbilitieSpecs.abilityRange}</span>
+          <span className="skills__duration">{firstAbilitieSpecs.duration}</span>
+          <span className="skills__description">{firstAbilitieSpecs.quickDescription}</span>
         </div>
         <div className="skills__choices">
           <label htmlFor="choices-skill" />
@@ -78,9 +94,10 @@ function Skills() {
               </option>
             ))}
           </select>
-          <span className="skills__incantation_duration">+5</span>
-          <span className="skills__range">1D6 -Pier</span>
-          <span className="skills__duration">1D5 -Pier</span>
+          <span className="skills__incantation_duration">{secondAbilitieSpecs.incantationTime}</span>
+          <span className="skills__range">{secondAbilitieSpecs.abilityRange}</span>
+          <span className="skills__duration">{secondAbilitieSpecs.duration}</span>
+          <span className="skills__description">{secondAbilitieSpecs.quickDescription}</span>
         </div>
         <div className="skills__choices">
           <label htmlFor="choices-skill" />
@@ -94,9 +111,10 @@ function Skills() {
               </option>
             ))}
           </select>
-          <span className="skills__incantation_duration">+5</span>
-          <span className="skills__range">1D6 -Pier</span>
-          <span className="skills__duration">1D5 -Pier</span>
+          <span className="skills__incantation_duration">{thirdAbilitieSpecs.incantationTime}</span>
+          <span className="skills__range">{thirdAbilitieSpecs.abilityRange}</span>
+          <span className="skills__duration">{thirdAbilitieSpecs.duration}</span>
+          <span className="skills__description">{thirdAbilitieSpecs.quickDescription}</span>
         </div>
         <div className="skills__choices">
           <label htmlFor="choices-skill" />
@@ -110,9 +128,10 @@ function Skills() {
               </option>
             ))}
           </select>
-          <span className="skills__incantation_duration">+5</span>
-          <span className="skills__range">1D6 -Pier</span>
-          <span className="skills__duration">1D5 -Pier</span>
+          <span className="skills__incantation_duration">{fourthAbilitieSpecs.incantationTime}</span>
+          <span className="skills__range">{fourthAbilitieSpecs.abilityRange}</span>
+          <span className="skills__duration">{fourthAbilitieSpecs.duration}</span>
+          <span className="skills__description">{fourthAbilitieSpecs.quickDescription}</span>
         </div>
       </div>
     </section>

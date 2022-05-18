@@ -274,9 +274,9 @@ const apiMiddleWare = (store) => (next) => (action) => {
       break;
     }
     case FETCH_SECOND_ABILITIES_SPECS: {
-      const { character: { firstCurrentAbilitiesId } } = store.getState();
+      const { character: { secondCurrentAbilitiesId } } = store.getState();
       axiosInstance
-        .get(`abilities/${firstCurrentAbilitiesId}`)
+        .get(`abilities/${secondCurrentAbilitiesId}`)
         .then(
           (response) => {
             console.log(response.data);
@@ -290,9 +290,9 @@ const apiMiddleWare = (store) => (next) => (action) => {
       break;
     }
     case FETCH_THIRD_ABILITIES_SPECS: {
-      const { character: { firstCurrentAbilitiesId } } = store.getState();
+      const { character: { thirdCurrentAbilitiesId } } = store.getState();
       axiosInstance
-        .get(`abilities/${firstCurrentAbilitiesId}`)
+        .get(`abilities/${thirdCurrentAbilitiesId}`)
         .then(
           (response) => {
             console.log(response.data);
@@ -306,9 +306,9 @@ const apiMiddleWare = (store) => (next) => (action) => {
       break;
     }
     case FETCH_FOURTH_ABILITIES_SPECS: {
-      const { character: { firstCurrentAbilitiesId } } = store.getState();
+      const { character: { fourthCurrentAbilitiesId } } = store.getState();
       axiosInstance
-        .get(`abilities/${firstCurrentAbilitiesId}`)
+        .get(`abilities/${fourthCurrentAbilitiesId}`)
         .then(
           (response) => {
             console.log(response.data);

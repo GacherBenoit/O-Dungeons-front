@@ -33,14 +33,18 @@
   }
   .skills {
     &__incantation_duration{
-      margin-left: vars.$gutter*16;
+      margin-left: vars.$gutter*1;
     }
     &__range{
-      margin-left: vars.$gutter*19;
+      margin-left: vars.$gutter*1;
       
     }
     &__duration{
-      margin-left: vars.$gutter*19;
+      margin-left: vars.$gutter*1;
+      
+    }
+    &__description{
+      margin-left: vars.$gutter*1;
       
     }
   }

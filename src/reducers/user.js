@@ -26,6 +26,7 @@ export const initialState = {
     imageUrl: '',
   },
   roles: [],
+  error: false,
 
   // State concernant le menu du site en version mobile
   settingsMenu: {

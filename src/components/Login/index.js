@@ -1,6 +1,6 @@
 // == Import: npm
 import { useSelector, useDispatch } from 'react-redux';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 // == Import: local
 import './login.scss';
@@ -17,11 +17,14 @@ function Login() {
 
   const dispatch = useDispatch();
 
+  const navigate = useNavigate();
+
   // Afin d'eviter le rechargement de la page lors de la soumission du formulaire
   // On creer une fonction qui annule le comportoment par defaut de ce dernier
   function handleSubmit(evt) {
     evt.preventDefault();
     dispatch(login());
+    navigate('/', { replace: true });
   }
 
   // fonction qui va permettre a l'utilisateur de rentrer son email et
@@ -65,7 +68,11 @@ function Login() {
           Se Connecter
         </button>
 
-        <p className="login__create--account">Pas encore de compte ? <NavLink className="login__create--account--link" to="/creer-un-compte">créer un compte</NavLink></p>
+        <div className="login__create--account">
+          <p className="login__create--account--texte">Pas encore de compte ? </p>
+          <NavLink className="login__create--account--link" to="/creer-un-compte">créer un compte</NavLink>
+
+        </div>
 
       </form>
     </main>

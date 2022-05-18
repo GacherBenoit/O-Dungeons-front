@@ -23,6 +23,7 @@ import Subclasses from '../Subclasses';
 import Subraces from '../Subraces';
 import CreateAccount from '../CreateAccount';
 import Account from '../Account';
+import Logout from '../Logout';
 
 function Home() {
   // On récupère l'id dans le localStorage
@@ -59,6 +60,9 @@ function Home() {
   return (
     <div className="home">
       <Header />
+      {logged && (
+        <Logout />
+      )}
       <Routes>
         <Route path="/" element={<Presentation />} />
         <Route path="/classes" element={<Classes />} />

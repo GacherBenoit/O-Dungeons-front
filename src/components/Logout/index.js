@@ -2,7 +2,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 // == Import : local
 import './logout.scss';
-import { logout } from '../../../actions/users';
+import { logout } from '../../actions/users';
 
 // == Composant
 

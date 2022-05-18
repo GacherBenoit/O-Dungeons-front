@@ -1,4 +1,5 @@
 // == Import : npm
+import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 // == Import : local
 import './CreateAccount.scss';
@@ -19,6 +20,8 @@ function CreateAccount() {
 
   const dispatch = useDispatch();
 
+  const navigate = useNavigate();
+
   function handleChangeNewEmail(evt) {
     dispatch(mailNewUser(evt.target.value));
   }
@@ -38,6 +41,7 @@ function CreateAccount() {
   function handleAccountSubmit(evt) {
     evt.preventDefault();
     dispatch(createNewAccount());
+    navigate('/', { replace: true });
   }
   return (
     <main className="account">

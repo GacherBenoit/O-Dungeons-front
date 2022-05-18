@@ -163,7 +163,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
         firstName,
         lastName,
       } = state.user;
-      console.log(lastName);
+      // console.log(lastName);
       axiosInstance
         .post(
           'users',
@@ -175,7 +175,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
           },
         )
         .then((response) => {
-          console.log(response);
+          // console.log(response);
           const { data: user } = response;
 
           console.log(user);

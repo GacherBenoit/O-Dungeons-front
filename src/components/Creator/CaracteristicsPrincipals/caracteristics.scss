@@ -11,11 +11,14 @@
     &--item {
       border: none;
       font-size: 1em;
-      text-align: center;
+      // text-align: center;
       margin: vars.$gutter;
+      display: flex;
+      justify-content: space-around;
     }
   }
   &--title {
     margin-top: vars.$gutter ;
   }
+  
 }

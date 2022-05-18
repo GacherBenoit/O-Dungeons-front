@@ -16,6 +16,12 @@ import {
   SAVE_CURRENT_BACKGROUND,
   SAVE_MORALITY,
   SAVE_ALIGNEMENT,
+  SAVE_DEXTERITY_DICE,
+  SAVE_STRENGTH_DICE,
+  SAVE_CONSTITUTION_DICE,
+  SAVE_INTELLIGENCE_DICE,
+  SAVE_WISDOM_DICE,
+  SAVE_CHARISMA_DICE,
 } from '../actions/character';
 // import { FETCH_RACES, SAVE_CURRENT_RACE } from '../actions/races';
 
@@ -36,6 +42,12 @@ const initialState = {
   currentAbilities: [],
   morality: '',
   alignement: '',
+  dexterityDice: '',
+  strenghtDice: '',
+  constitutionDice: '',
+  intelligenceDice: '',
+  wisdomDice: '',
+  charismaDice: '',
 };
 
 function reducer(state = initialState, action = {}) {
@@ -126,6 +138,36 @@ function reducer(state = initialState, action = {}) {
       return {
         ...state,
         alignement: action.alignement,
+      };
+    case SAVE_DEXTERITY_DICE:
+      return {
+        ...state,
+        dexterityDice: action.dice,
+      };
+    case SAVE_STRENGTH_DICE:
+      return {
+        ...state,
+        strenghtDice: action.dice,
+      };
+    case SAVE_CONSTITUTION_DICE:
+      return {
+        ...state,
+        constitutionDice: action.dice,
+      };
+    case SAVE_INTELLIGENCE_DICE:
+      return {
+        ...state,
+        intelligenceDice: action.dice,
+      };
+    case SAVE_WISDOM_DICE:
+      return {
+        ...state,
+        wisdomDice: action.dice,
+      };
+    case SAVE_CHARISMA_DICE:
+      return {
+        ...state,
+        charismaDice: action.dice,
       };
     default:
       return state;

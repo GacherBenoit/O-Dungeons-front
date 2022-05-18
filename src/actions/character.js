@@ -183,3 +183,57 @@ export const saveAlignement = (alignement) => ({
   type: SAVE_ALIGNEMENT,
   alignement,
 });
+
+// ACTION TYPE SAVE_DEXTERITY_DICE
+export const SAVE_DEXTERITY_DICE = 'SAVE_DEXTERITY_DICE';
+
+// ACTION CREATOR saveDexterityDice
+export const saveDexterityDice = (dice) => ({
+  type: SAVE_DEXTERITY_DICE,
+  dice,
+});
+
+// ACTION TYPE SAVE_STRENGTH_DICE
+export const SAVE_STRENGTH_DICE = 'SAVE_STRENGTH_DICE';
+
+// ACTION CREATOR saveStrengthDice
+export const saveStrengthDice = (dice) => ({
+  type: SAVE_STRENGTH_DICE,
+  dice,
+});
+
+// ACTION TYPE SAVE_CONSTITUTION_DICE
+export const SAVE_CONSTITUTION_DICE = 'SAVE_CONSTITUTION_DICE';
+
+// ACTION CREATOR saveConstitutionDice
+export const saveConstitutionDice = (dice) => ({
+  type: SAVE_CONSTITUTION_DICE,
+  dice,
+});
+
+// ACTION TYPE SAVE_INTELLIGENCE_DICE
+export const SAVE_INTELLIGENCE_DICE = 'SAVE_INTELLIGENCE_DICE';
+
+// ACTION CREATOR saveIntelligenceDice
+export const saveIntelligenceDice = (dice) => ({
+  type: SAVE_INTELLIGENCE_DICE,
+  dice,
+});
+
+// ACTION TYPE SAVE_WISDOM_DICE
+export const SAVE_WISDOM_DICE = 'SAVE_WISDOM_DICE';
+
+// ACTION CREATOR saveWisdomDice
+export const saveWisdomDice = (dice) => ({
+  type: SAVE_WISDOM_DICE,
+  dice,
+});
+
+// ACTION TYPE SAVE_CHARISMA_DICE
+export const SAVE_CHARISMA_DICE = 'SAVE_CHARISMA_DICE';
+
+// ACTION CREATOR saveCharismaDice
+export const saveCharismaDice = (dice) => ({
+  type: SAVE_CHARISMA_DICE,
+  dice,
+});

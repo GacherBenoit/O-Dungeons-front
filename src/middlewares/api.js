@@ -26,6 +26,8 @@ import {
   FIND_USER,
   LOGOUT,
   EDIT_ACCOUNT_USER,
+  EDIT_PASSWORD_USER,
+  passwordChange,
 } from '../actions/users';
 
 const axiosInstance = axios.create({
@@ -271,6 +273,42 @@ const apiMiddleWare = (store) => (next) => (action) => {
           const { data: user } = response;
           store.dispatch(saveUser(user));
           store.dispatch(isLogged());
+        })
+        .catch(() => {
+          console.log('erreur');
+        });
+      next(action);
+      break;
+    }
+    case EDIT_PASSWORD_USER: {
+      const findToken = localStorage.getItem('token');
+      const token = JSON.parse(findToken);
+      axiosInstance.defaults.headers.common.Authorization = `Bearer ${token}`;
+
+      const state = store.getState();
+      const { id, password, newpassword } = state.user;
+
+      axiosInstance
+        .patch(
+          `users/${id}/password`,
+          /*
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+          */
+          {
+            oldPassword: password,
+            newPassword: newpassword,
+          },
+        )
+        .then((response) => {
+          console.log(response);
+
+          const { data: user } = response;
+          store.dispatch(saveUser(user));
+          store.dispatch(passwordChange());
         })
         .catch(() => {
           console.log('erreur');

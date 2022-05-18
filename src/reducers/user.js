@@ -87,6 +87,8 @@ function reducer(state = initialState, action = {}) {
         ...action.user,
         // on vide le champ password
         password: '',
+        // on vide le champ newpassword
+        newpassword: '',
       };
     case IS_LOGGED:
       return {

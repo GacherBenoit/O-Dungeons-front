@@ -9,6 +9,7 @@ import {
   lastnameNewUser,
   editAccountUser,
   setNewPassword,
+  editPasswordUser,
 } from '../../actions/users';
 
 // == Composant
@@ -22,6 +23,7 @@ function Account() {
   const prenom = useSelector((state) => state.user.firstName);
   const password = useSelector((state) => state.user.password);
   const newPassword = useSelector((state) => state.user.newpassword);
+  const passwordChange = useSelector((state) => state.user.password_change);
 
   const dispatch = useDispatch();
 
@@ -50,9 +52,17 @@ function Account() {
     dispatch(editAccountUser());
   }
 
+  function editPasswordSubmit(evt) {
+    evt.preventDefault();
+    dispatch(editPasswordUser());
+  }
+
   return (
     <div className="my-account">
       <h3 className="my-account__title">Mes informations</h3>
+      {passwordChange && (
+        <p className="my-account__information">Votre mot de passe a bien été changer</p>
+      )}
       <div className="my-account__information">
         <div className="my-account__information--avatar">
           {/* a decommenter des demains lorsque la modification serait fait
@@ -112,7 +122,7 @@ function Account() {
         </form>
       </div>
       <div className="my-account__password">
-        <form className="my-account__password--form">
+        <form className="my-account__password--form" onSubmit={editPasswordSubmit}>
           <label htmlFor="password">
             <span className="my-account__password--form--title"> Ancien Mot de passe</span>
             <input
@@ -136,7 +146,7 @@ function Account() {
           </label>
 
           <button type="submit" className="account__form--button">
-            Créer un compte
+            Changer de mot de passe
           </button>
         </form>
       </div>

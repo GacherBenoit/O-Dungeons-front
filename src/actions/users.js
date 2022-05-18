@@ -142,3 +142,11 @@ export const PASSWORD_CHANGE = 'PASSWORD_CHANGE';
 export const passwordChange = () => ({
   type: PASSWORD_CHANGE,
 });
+
+// ACTION TYPE EDIT_PASSWORD_USER
+export const EDIT_PASSWORD_USER = 'EDIT_PASSWORD_USER';
+
+// ACTION CREATOR editPasswordUser
+export const editPasswordUser = () => ({
+  type: EDIT_PASSWORD_USER,
+});

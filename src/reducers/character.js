@@ -178,7 +178,7 @@ function reducer(state = initialState, action = {}) {
       return {
         ...state,
         fourthCurrentAbilitiesSpecs: action.abilitie,
-
+      };
     case SAVE_MORALITY:
       return {
         ...state,

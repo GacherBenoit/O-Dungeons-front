@@ -258,8 +258,7 @@ export const SAVE_CURRENT_FOURTH_ABILITIES_SPECS = 'SAVE_CURRENT_FOURTH_ABILITIE
 export const saveCurrentFourthAbilitiesSpecs = (abilitie) => ({
   type: SAVE_CURRENT_FOURTH_ABILITIES_SPECS,
   abilitie,
-=======
-
+});
 // ACTION TYPE SAVE_MORALITY
 export const SAVE_MORALITY = 'SAVE_MORALITY';
 

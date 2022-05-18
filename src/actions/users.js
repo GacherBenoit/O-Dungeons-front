@@ -117,3 +117,11 @@ export const LOGOUT = 'LOGOUT';
 export const logout = () => ({
   type: LOGOUT,
 });
+
+// ACTION TYPE EDIT_ACCOUNT_USER
+export const EDIT_ACCOUNT_USER = 'EDIT_ACCOUNT_USER';
+
+// ACTION CREATOR editAccountUser
+export const editAccountUser = () => ({
+  type: EDIT_ACCOUNT_USER,
+});

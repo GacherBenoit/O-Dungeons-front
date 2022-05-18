@@ -22,6 +22,7 @@ export const initialState = {
   password: '',
   token: null,
   avatar: {
+    id: '',
     name: '',
     imageUrl: '',
   },

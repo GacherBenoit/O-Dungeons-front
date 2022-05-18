@@ -25,11 +25,13 @@ import {
   CREATE_NEW_ACCOUNT,
   FIND_USER,
   LOGOUT,
+  EDIT_ACCOUNT_USER,
 } from '../actions/users';
 
 const axiosInstance = axios.create({
   // par exemple, on peut définir une url de base !
   baseURL: 'http://pierre-arnaudlandoin-server.eddi.cloud/projet-17-o-dungeons-back/public/api/',
+  // baseURL: 'http://pierre-arnaud-landoin.vpnuser.lan:8080/api/',
 });
 
 const apiMiddleWare = (store) => (next) => (action) => {
@@ -205,6 +207,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .get(
           `users/${idSave}`,
           // on envoi l'id et le header avec le token
+
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -227,6 +230,51 @@ const apiMiddleWare = (store) => (next) => (action) => {
     }
     case LOGOUT: {
       localStorage.clear();
+      next(action);
+      break;
+    }
+    case EDIT_ACCOUNT_USER: {
+      const findToken = localStorage.getItem('token');
+      const token = JSON.parse(findToken);
+      const state = store.getState();
+
+      // Necessaire avec de passer le header en commentaire et que cela
+      // fonctionne quand meme
+      axiosInstance.defaults.headers.common.Authorization = `Bearer ${token}`;
+      const {
+        id,
+        email,
+        firstName,
+        lastName,
+      } = state.user;
+      console.log(state.user);
+      axiosInstance
+        .put(
+          `users/${id}`,
+          /*
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+          */
+          {
+            id: id,
+            email: email,
+            lastName: lastName,
+            firstName: firstName,
+          },
+        )
+        .then((response) => {
+          console.log(response);
+
+          const { data: user } = response;
+          store.dispatch(saveUser(user));
+          store.dispatch(isLogged());
+        })
+        .catch(() => {
+          console.log('erreur');
+        });
       next(action);
       break;
     }

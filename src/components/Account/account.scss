@@ -1,0 +1,98 @@
+.my-account {
+  position: relative;
+
+  &__information {
+    // border: solid 2px red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1rem;
+    width: 90%;
+    height: 150px;
+    border: solid 1px crimson;
+    box-shadow: 0.5rem 0.4rem black;
+  }
+
+  &__information--avatar {
+    // border: 2px solid blue;
+    width: 50%;
+    height: 100%;
+  }
+
+  &__information--avatar--image {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__information--personnal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    width: 45%;
+  }
+
+  &__avatar {
+    border: solid 1px black;
+    margin: 1rem;
+    box-shadow: 0.5rem 0.4rem black;
+  }
+
+  &__edit {
+    border: solid 1px black;
+    box-shadow: 0.5rem 0.4rem crimson;
+    margin: 1rem;
+    height: 35vh;
+    width: 90%;
+    padding: 0.3rem;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__edit--form--title {
+    display: block;
+    color: crimson;
+    margin-bottom: 0.5rem;
+    text-align: left;
+
+  }
+
+  &__edit--form--input {
+    width: 80vw;
+    height: 30px;
+    border: 1px solid crimson;
+    margin-bottom: 0.5rem;
+    box-shadow: rgb(255, 255, 255) 1px 1px 10px;
+  }
+
+  &__edit--form--button {
+    width: 80vw;
+    height: 30px;
+    margin-top: 1rem;
+    border: solid 1px crimson;
+    box-shadow: 0.1rem 0.1rem black;
+    margin-bottom: 1rem;
+    color: crimson;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .my-account {
+
+    &__information {
+      margin: 1rem auto;
+    }
+    &__avatar {
+      width: 90%;
+      margin: 1rem auto;
+    }
+    &__edit {
+      margin: auto;
+    }
+  }
+}

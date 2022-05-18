@@ -18,8 +18,11 @@ import {
   SAVE_CURRENT_SECOND_ABILITIES_ID,
   SAVE_CURRENT_THIRD_ABILITIES_ID,
   SAVE_CURRENT_FOURTH_ABILITIES_ID,
+  SAVE_CURRENT_FIRST_ABILITIES_SPECS,
+  SAVE_CURRENT_SECOND_ABILITIES_SPECS,
+  SAVE_CURRENT_THIRD_ABILITIES_SPECS,
+  SAVE_CURRENT_FOURTH_ABILITIES_SPECS,
 } from '../actions/character';
-// import { FETCH_RACES, SAVE_CURRENT_RACE } from '../actions/races';
 
 const initialState = {
   race: '',
@@ -29,7 +32,7 @@ const initialState = {
   raceList: [],
   backgroundList: [],
   currentBackgroundId: '',
-  currentBackground:{},
+  currentBackground: {},
   currentId: '',
   currentRace: {},
   currentSubraceId: '',
@@ -40,6 +43,10 @@ const initialState = {
   secondCurrentAbilitiesId: '',
   thirdCurrentAbilitiesId: '',
   fourthCurrentAbilitiesId: '',
+  firstCurrentAbilitiesSpecs: '',
+  secondCurrentAbilitiesSpecs: '',
+  thirdCurrentAbilitiesSpecs: '',
+  fourthCurrentAbilitiesSpecs: '',
 };
 
 function reducer(state = initialState, action = {}) {
@@ -140,6 +147,26 @@ function reducer(state = initialState, action = {}) {
       return {
         ...state,
         fourthCurrentAbilitiesId: action.id,
+      };
+    case SAVE_CURRENT_FIRST_ABILITIES_SPECS:
+      return {
+        ...state,
+        firstCurrentAbilitiesSpecs: action.abilitie,
+      };
+    case SAVE_CURRENT_SECOND_ABILITIES_SPECS:
+      return {
+        ...state,
+        secondCurrentAbilitiesSpecs: action.abilitie,
+      };
+    case SAVE_CURRENT_THIRD_ABILITIES_SPECS:
+      return {
+        ...state,
+        thirdCurrentAbilitiesSpecs: action.abilitie,
+      };
+    case SAVE_CURRENT_FOURTH_ABILITIES_SPECS:
+      return {
+        ...state,
+        fourthCurrentAbilitiesSpecs: action.abilitie,
       };
     default:
       return state;

@@ -7,7 +7,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import { saveCurrentFirstAbilitiesId,
   saveCurrentSecondAbilitiesId,
   saveCurrentThirdAbilitiesId,
-  saveCurrentFourthAbilitiesId 
+  saveCurrentFourthAbilitiesId,
+  fetchFirstAbilitiesSpecs,
+  fetchSecondAbilitiesSpecs,
+  fetchThirdAbilitiesSpecs,
+  fetchFourthAbilitiesSpecs,
 } from '../../../actions/character';
 
 // Import CSS
@@ -20,15 +24,19 @@ function Skills() {
 
   function handleFirstAbilitiesChoice(evt) {
     dispatch(saveCurrentFirstAbilitiesId(evt.target.value));
+    dispatch(fetchFirstAbilitiesSpecs(evt.target.value));
   }
   function handleSecondAbilitiesChoice(evt) {
     dispatch(saveCurrentSecondAbilitiesId(evt.target.value));
+    dispatch(fetchSecondAbilitiesSpecs(evt.target.value));
   }
   function handleThirdAbilitiesChoice(evt) {
     dispatch(saveCurrentThirdAbilitiesId(evt.target.value));
+    dispatch(fetchThirdAbilitiesSpecs(evt.target.value));
   }
   function handleFourthAbilitiesChoice(evt) {
     dispatch(saveCurrentFourthAbilitiesId(evt.target.value));
+    dispatch(fetchFourthAbilitiesSpecs(evt.target.value));
   }
 
   return (
@@ -56,7 +64,7 @@ function Skills() {
           </select>
           <span className="skills__incantation_duration">+5</span>
           <span className="skills__range">1D6 -Pier</span>
-          <span className="skills__duration">1D6 -Pier</span>
+          <span className="skills__duration">1D5 -Pier</span>
         </div>
         <div className="skills__choices">
           <label htmlFor="choices-skill" />
@@ -70,8 +78,9 @@ function Skills() {
               </option>
             ))}
           </select>
-          <span className="skills__bonus">+5</span>
-          <span className="skills__malus">1D6 -Pier</span>
+          <span className="skills__incantation_duration">+5</span>
+          <span className="skills__range">1D6 -Pier</span>
+          <span className="skills__duration">1D5 -Pier</span>
         </div>
         <div className="skills__choices">
           <label htmlFor="choices-skill" />
@@ -85,8 +94,9 @@ function Skills() {
               </option>
             ))}
           </select>
-          <span className="skills__bonus">+5</span>
-          <span className="skills__malus">1D6 -Pier</span>
+          <span className="skills__incantation_duration">+5</span>
+          <span className="skills__range">1D6 -Pier</span>
+          <span className="skills__duration">1D5 -Pier</span>
         </div>
         <div className="skills__choices">
           <label htmlFor="choices-skill" />
@@ -100,8 +110,9 @@ function Skills() {
               </option>
             ))}
           </select>
-          <span className="skills__bonus">+5</span>
-          <span className="skills__malus">1D6 -Pier</span>
+          <span className="skills__incantation_duration">+5</span>
+          <span className="skills__range">1D6 -Pier</span>
+          <span className="skills__duration">1D5 -Pier</span>
         </div>
       </div>
     </section>

@@ -197,3 +197,64 @@ export const saveCurrentFourthAbilitiesId = (id) => ({
   type: SAVE_CURRENT_FOURTH_ABILITIES_ID,
   id,
 });
+// ACTION TYPE FETCH_FIRST_ABILITIES_SPECS
+export const FETCH_FIRST_ABILITIES_SPECS = 'FETCH_FIRST_ABILITIES_SPECS';
+
+// ACTION CREATOR fetchFirstAbilitiesSpecs
+export const fetchFirstAbilitiesSpecs = () => ({
+  type: FETCH_FIRST_ABILITIES_SPECS,
+});
+
+// ACTION TYPE FETCH_SECOND_ABILITIES_SPECS
+export const FETCH_SECOND_ABILITIES_SPECS = 'FETCH_SECOND_ABILITIES_SPECS';
+
+// ACTION CREATOR fetcheSecondAbilitiesSpecs
+export const fetchSecondAbilitiesSpecs = () => ({
+  type: FETCH_SECOND_ABILITIES_SPECS,
+});
+// ACTION TYPE FETCH_THIRD_ABILITIES_SPECS
+export const FETCH_THIRD_ABILITIES_SPECS = 'FETCH_THIRD_ABILITIES_SPECS';
+
+// ACTION CREATOR fetchThirdAbilitiesSpecs
+export const fetchThirdAbilitiesSpecs = () => ({
+  type: FETCH_THIRD_ABILITIES_SPECS,
+});
+// ACTION TYPE FETCH_FOURTH_ABILITIES_SPECS
+export const FETCH_FOURTH_ABILITIES_SPECS = 'FETCH_FOURTH_ABILITIES_SPECS';
+
+// ACTION CREATOR fetchFourthAbilitiesSpecs
+export const fetchFourthAbilitiesSpecs = () => ({
+  type: FETCH_FOURTH_ABILITIES_SPECS,
+});
+// ACTION TYPE SAVE_CURRENT_FIRST_ABILITIES_SPECS
+export const SAVE_CURRENT_FIRST_ABILITIES_SPECS = 'SAVE_CURRENT_FIRST_ABILITIES_SPECS';
+
+// ACTION CREATOR saveCurrentFirstAbilitiesSpecs
+export const saveCurrentFirstAbilitiesSpecs = (abilitie) => ({
+  type: SAVE_CURRENT_FIRST_ABILITIES_SPECS,
+  abilitie,
+});
+// ACTION TYPE SAVE_CURRENT_SECOND_ABILITIES_SPECS
+export const SAVE_CURRENT_SECOND_ABILITIES_SPECS = 'SAVE_CURRENT_SECOND_ABILITIES_SPECS';
+
+// ACTION CREATOR saveCurrentSecondAbilitiesSpecs
+export const saveCurrentSecondAbilitiesSpecs = (abilitie) => ({
+  type: SAVE_CURRENT_SECOND_ABILITIES_SPECS,
+  abilitie,
+});
+// ACTION TYPE SAVE_CURRENT_THIRD_ABILITIES_SPECS
+export const SAVE_CURRENT_THIRD_ABILITIES_SPECS = 'SAVE_CURRENT_THIRD_ABILITIES_SPECS';
+
+// ACTION CREATOR saveCurrentThirdAbilitiesSpecs
+export const saveCurrentThirdAbilitiesSpecs = (abilitie) => ({
+  type: SAVE_CURRENT_THIRD_ABILITIES_SPECS,
+  abilitie,
+});
+// ACTION TYPE SAVE_CURRENT_FOURTH_ABILITIES_SPECS
+export const SAVE_CURRENT_FOURTH_ABILITIES_SPECS = 'SAVE_CURRENT_FOURTH_ABILITIES_SPECS';
+
+// ACTION CREATOR saveCurrentFourthAbilitiesSpecs
+export const saveCurrentFourthAbilitiesSpecs = (abilitie) => ({
+  type: SAVE_CURRENT_FOURTH_ABILITIES_SPECS,
+  abilitie,
+});

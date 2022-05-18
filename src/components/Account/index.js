@@ -8,6 +8,7 @@ import {
   firstnameNewUser,
   lastnameNewUser,
   editAccountUser,
+  setNewPassword,
 } from '../../actions/users';
 
 // == Composant
@@ -19,6 +20,8 @@ function Account() {
   const email = useSelector((state) => state.user.email);
   const nom = useSelector((state) => state.user.lastName);
   const prenom = useSelector((state) => state.user.firstName);
+  const password = useSelector((state) => state.user.password);
+  const newPassword = useSelector((state) => state.user.newpassword);
 
   const dispatch = useDispatch();
 
@@ -32,6 +35,14 @@ function Account() {
 
   function handleEditLastname(evt) {
     dispatch(lastnameNewUser(evt.target.value));
+  }
+
+  function handleEditpassword(evt) {
+    dispatch(passwordNewUser(evt.target.value));
+  }
+
+  function handleEditNewPassword(evt) {
+    dispatch(setNewPassword(evt.target.value));
   }
 
   function editAccountSubmit(evt) {
@@ -101,7 +112,33 @@ function Account() {
         </form>
       </div>
       <div className="my-account__password">
-        <p>editer le mot de passe</p>
+        <form className="my-account__password--form">
+          <label htmlFor="password">
+            <span className="my-account__password--form--title"> Ancien Mot de passe</span>
+            <input
+              type="password"
+              className="my-account__password--form--input"
+              placeholder="Saisissez votre ancien mot de passe"
+              value={password}
+              onChange={handleEditpassword}
+            />
+          </label>
+
+          <label htmlFor="newpassword">
+            <span className="my-account__password--form--title">Nouveau Mot de passe</span>
+            <input
+              type="password"
+              className="my-account__password--form--input"
+              placeholder="Saisissez votre nouveau mot de passe"
+              value={newPassword}
+              onChange={handleEditNewPassword}
+            />
+          </label>
+
+          <button type="submit" className="account__form--button">
+            Créer un compte
+          </button>
+        </form>
       </div>
     </div>
   );

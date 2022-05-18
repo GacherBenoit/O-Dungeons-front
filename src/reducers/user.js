@@ -2,6 +2,8 @@ import {
   MENU_BURGER_TOGGLE,
   SET_EMAIL,
   SET_PASSWORD,
+  SET_NEW_PASSWORD,
+  PASSWORD_CHANGE,
   SAVE_USER,
   IS_LOGGED,
   MAIL_NEW_USER,
@@ -20,6 +22,7 @@ export const initialState = {
   lastName: '',
   email: '',
   password: '',
+  newpassword: '',
   token: null,
   avatar: {
     id: '',
@@ -27,7 +30,7 @@ export const initialState = {
     imageUrl: '',
   },
   roles: [],
-  error: false,
+  password_change: false,
 
   // State concernant le menu du site en version mobile
   settingsMenu: {
@@ -67,6 +70,16 @@ function reducer(state = initialState, action = {}) {
       return {
         ...state,
         password: action.value,
+      };
+    case SET_NEW_PASSWORD:
+      return {
+        ...state,
+        newpassword: action.value,
+      };
+    case PASSWORD_CHANGE:
+      return {
+        ...state,
+        password_change: true,
       };
     case SAVE_USER:
       return {

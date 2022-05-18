@@ -125,3 +125,20 @@ export const EDIT_ACCOUNT_USER = 'EDIT_ACCOUNT_USER';
 export const editAccountUser = () => ({
   type: EDIT_ACCOUNT_USER,
 });
+
+// ACTION TYPE SET_NEW_PASSWORD
+export const SET_NEW_PASSWORD = 'SET_NEW_PASSWORD';
+
+// ACTION CREATOR setNewPassword
+export const setNewPassword = (value) => ({
+  type: SET_NEW_PASSWORD,
+  value,
+});
+
+// ACTION TYPE PASSWORD_CHANGE
+export const PASSWORD_CHANGE = 'PASSWORD_CHANGE';
+
+// ACTION CREATOR passwordChange
+export const passwordChange = () => ({
+  type: PASSWORD_CHANGE,
+});

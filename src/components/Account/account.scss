@@ -1,6 +1,6 @@
 .my-account {
   position: relative;
-
+  // Champ Information
   &__information {
     // border: solid 2px red;
     display: flex;
@@ -32,13 +32,14 @@
     align-items: stretch;
     width: 45%;
   }
-
+  // Champ pour modification avatar
   &__avatar {
     border: solid 1px black;
     margin: 1rem;
     box-shadow: 0.5rem 0.4rem black;
   }
 
+  // Champ pour edition des infos utilisateurs 
   &__edit {
     border: solid 1px black;
     box-shadow: 0.5rem 0.4rem crimson;
@@ -79,20 +80,73 @@
     margin-bottom: 1rem;
     color: crimson;
   }
+
+  // Champ Modification du mot de passe
+  &__password {
+    border: solid 1px black;
+    box-shadow: 0.5rem 0.4rem crimson;
+    margin: 1rem;
+    height: 25vh;
+    width: 90%;
+    padding: 0.3rem;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__password--form--title {
+    display: block;
+    color: crimson;
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
+
+  &__password--form--input {
+    width: 80vw;
+    height: 30px;
+    border: 1px solid crimson;
+    margin-bottom: 0.5rem;
+    box-shadow: rgb(255, 255, 255) 1px 1px 10px;
+  }
+
+  &__password--form--button {
+    width: 80vw;
+    height: 30px;
+    margin-top: 1rem;
+    border: solid 1px crimson;
+    box-shadow: 0.1rem 0.1rem black;
+    margin-bottom: 1rem;
+    color: crimson;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .my-account {
 
+    // Champ information
     &__information {
       margin: 1rem auto;
     }
+
+    // Champ avatar
     &__avatar {
       width: 90%;
       margin: 1rem auto;
     }
+    
+    // Champ edition des information
     &__edit {
       margin: auto;
     }
+
+    // Champ Modification du mot de passe
+    &__password {
+      margin: auto;
+    }
+
+ 
   }
 }

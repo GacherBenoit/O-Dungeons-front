@@ -35,6 +35,14 @@ import {
   saveCurrentSubrace,
   FETCH_CURRENT_BACKGROUND_CREATOR,
   saveCurrentBackground,
+  FETCH_FIRST_ABILITIES_SPECS,
+  FETCH_SECOND_ABILITIES_SPECS,
+  FETCH_THIRD_ABILITIES_SPECS,
+  FETCH_FOURTH_ABILITIES_SPECS,
+  saveCurrentFirstAbilitiesSpecs,
+  saveCurrentSecondAbilitiesSpecs,
+  saveCurrentThirdAbilitiesSpecs,
+  saveCurrentFourthAbilitiesSpecs,
 } from '../actions/character';
 
 const axiosInstance = axios.create({
@@ -241,6 +249,70 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .then(
           (response) => {
             store.dispatch(saveCurrentBackground(response.data));
+          },
+        )
+        .catch(
+          () => console.log('error api'),
+        );
+      next(action);
+      break;
+    }
+    case FETCH_FIRST_ABILITIES_SPECS: {
+      const { character: { firstCurrentAbilitiesId } } = store.getState();
+      axiosInstance
+        .get(`abilities/${firstCurrentAbilitiesId}`)
+        .then(
+          (response) => {
+            console.log(response.data);
+            store.dispatch(saveCurrentFirstAbilitiesSpecs(response.data));
+          },
+        )
+        .catch(
+          () => console.log('error api'),
+        );
+      next(action);
+      break;
+    }
+    case FETCH_SECOND_ABILITIES_SPECS: {
+      const { character: { secondCurrentAbilitiesId } } = store.getState();
+      axiosInstance
+        .get(`abilities/${secondCurrentAbilitiesId}`)
+        .then(
+          (response) => {
+            console.log(response.data);
+            store.dispatch(saveCurrentSecondAbilitiesSpecs(response.data));
+          },
+        )
+        .catch(
+          () => console.log('error api'),
+        );
+      next(action);
+      break;
+    }
+    case FETCH_THIRD_ABILITIES_SPECS: {
+      const { character: { thirdCurrentAbilitiesId } } = store.getState();
+      axiosInstance
+        .get(`abilities/${thirdCurrentAbilitiesId}`)
+        .then(
+          (response) => {
+            console.log(response.data);
+            store.dispatch(saveCurrentThirdAbilitiesSpecs(response.data));
+          },
+        )
+        .catch(
+          () => console.log('error api'),
+        );
+      next(action);
+      break;
+    }
+    case FETCH_FOURTH_ABILITIES_SPECS: {
+      const { character: { fourthCurrentAbilitiesId } } = store.getState();
+      axiosInstance
+        .get(`abilities/${fourthCurrentAbilitiesId}`)
+        .then(
+          (response) => {
+            console.log(response.data);
+            store.dispatch(saveCurrentFourthAbilitiesSpecs(response.data));
           },
         )
         .catch(

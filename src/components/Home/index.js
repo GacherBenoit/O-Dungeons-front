@@ -1,9 +1,11 @@
 // == Import: npm
 import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Routes, Route, useLocation } from 'react-router-dom';
 
 // == Import
 import './home.scss';
+import { findUser } from '../../actions/users';
 
 // == Composant
 import Header from '../Header';
@@ -19,8 +21,28 @@ import Legal from '../Legal';
 import Footer from '../Footer';
 import Subclasses from '../Subclasses';
 import Subraces from '../Subraces';
+import CreateAccount from '../CreateAccount';
+import Account from '../Account';
+import Logout from '../Logout';
 
 function Home() {
+  // On récupère l'id dans le localStorage
+  const id = localStorage.getItem('id');
+
+  const dispatch = useDispatch();
+
+  useEffect(
+    () => {
+      if (id !== null) {
+        dispatch(findUser());
+      }
+    },
+    [],
+  );
+
+  // on regarde dans le state si l'utilisateur est connecter
+  const logged = useSelector((state) => state.user.logged);
+
   // The useLocation hook allows to retrieve information
   // on the current location (url) and subscribes the component
   //  who uses it has the modification of the url
@@ -38,6 +60,9 @@ function Home() {
   return (
     <div className="home">
       <Header />
+      {logged && (
+        <Logout />
+      )}
       <Routes>
         <Route path="/" element={<Presentation />} />
         <Route path="/classes" element={<Classes />} />
@@ -50,6 +75,8 @@ function Home() {
         <Route path="*" element={<Error />} />
         <Route path="/classes/:slug" element={<Subclasses />} />
         <Route path="/races/:slug" element={<Subraces />} />
+        <Route path="/creer-un-compte" element={<CreateAccount />} />
+        <Route path="/mon-compte" element={<Account />} />
       </Routes>
       <Footer />
     </div>

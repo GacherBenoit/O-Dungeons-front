@@ -14,6 +14,16 @@ import {
   SAVE_CURRENT_CLASSE_CREATOR,
   SAVE_CURRENT_BACKGROUND_ID,
   SAVE_CURRENT_BACKGROUND,
+
+  SAVE_CURRENT_FIRST_ABILITIES_ID,
+  SAVE_CURRENT_SECOND_ABILITIES_ID,
+  SAVE_CURRENT_THIRD_ABILITIES_ID,
+  SAVE_CURRENT_FOURTH_ABILITIES_ID,
+  SAVE_CURRENT_FIRST_ABILITIES_SPECS,
+  SAVE_CURRENT_SECOND_ABILITIES_SPECS,
+  SAVE_CURRENT_THIRD_ABILITIES_SPECS,
+  SAVE_CURRENT_FOURTH_ABILITIES_SPECS,
+
   SAVE_MORALITY,
   SAVE_ALIGNEMENT,
   SAVE_DEXTERITY_DICE,
@@ -22,8 +32,7 @@ import {
   SAVE_INTELLIGENCE_DICE,
   SAVE_WISDOM_DICE,
   SAVE_CHARISMA_DICE,
-} from '../actions/character';
-// import { FETCH_RACES, SAVE_CURRENT_RACE } from '../actions/races';
+  } from '../actions/character';
 
 const initialState = {
   race: '',
@@ -40,8 +49,19 @@ const initialState = {
   currentSubrace: {},
   currentClasseId: '',
   currentAbilities: [],
+
+  firstCurrentAbilitiesId: '',
+  secondCurrentAbilitiesId: '',
+  thirdCurrentAbilitiesId: '',
+  fourthCurrentAbilitiesId: '',
+  firstCurrentAbilitiesSpecs: '',
+  secondCurrentAbilitiesSpecs: '',
+  thirdCurrentAbilitiesSpecs: '',
+  fourthCurrentAbilitiesSpecs: '',
+
   morality: '',
   alignement: '',
+
   dexterityDice: '',
   strenghtDice: '',
   constitutionDice: '',
@@ -129,6 +149,47 @@ function reducer(state = initialState, action = {}) {
         ...state,
         currentBackground: action.background,
       };
+
+    case SAVE_CURRENT_FIRST_ABILITIES_ID:
+      return {
+        ...state,
+        firstCurrentAbilitiesId: action.id,
+      };
+    case SAVE_CURRENT_SECOND_ABILITIES_ID:
+      return {
+        ...state,
+        secondCurrentAbilitiesId: action.id,
+      };
+    case SAVE_CURRENT_THIRD_ABILITIES_ID:
+      return {
+        ...state,
+        thirdCurrentAbilitiesId: action.id,
+      };
+    case SAVE_CURRENT_FOURTH_ABILITIES_ID:
+      return {
+        ...state,
+        fourthCurrentAbilitiesId: action.id,
+      };
+    case SAVE_CURRENT_FIRST_ABILITIES_SPECS:
+      return {
+        ...state,
+        firstCurrentAbilitiesSpecs: action.abilitie,
+      };
+    case SAVE_CURRENT_SECOND_ABILITIES_SPECS:
+      return {
+        ...state,
+        secondCurrentAbilitiesSpecs: action.abilitie,
+      };
+    case SAVE_CURRENT_THIRD_ABILITIES_SPECS:
+      return {
+        ...state,
+        thirdCurrentAbilitiesSpecs: action.abilitie,
+      };
+    case SAVE_CURRENT_FOURTH_ABILITIES_SPECS:
+      return {
+        ...state,
+        fourthCurrentAbilitiesSpecs: action.abilitie,
+      };
     case SAVE_MORALITY:
       return {
         ...state,
@@ -138,6 +199,7 @@ function reducer(state = initialState, action = {}) {
       return {
         ...state,
         alignement: action.alignement,
+
       };
     case SAVE_DEXTERITY_DICE:
       return {

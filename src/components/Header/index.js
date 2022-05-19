@@ -1,7 +1,8 @@
-// == Composants
+// == Import : local
 import Navbar from '../Navbar';
-
 import './header.scss';
+
+// == Composants
 
 function Header() {
   return (
@@ -15,4 +16,7 @@ function Header() {
     </header>
   );
 }
+
+// == Export
+
 export default Header;

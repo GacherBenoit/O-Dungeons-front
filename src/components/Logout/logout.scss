@@ -1,0 +1,20 @@
+.logout {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+
+  &__texte {
+    color: crimson;
+    padding: 0.5rem;
+  }
+
+  &__button {
+    border: solid 2px crimson;
+    background-color: black;
+    color: crimson;
+    padding: 0.5rem;
+  }
+}

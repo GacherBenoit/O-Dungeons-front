@@ -1,5 +1,6 @@
 // == Import: npm
 import { useSelector, useDispatch } from 'react-redux';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 // == Import: local
 import './login.scss';
@@ -9,18 +10,21 @@ import { setEmail, setPassword, login } from '../../actions/users';
 function Login() {
   // On cible la valeur contenu dans le state afin d'obtenir la mise a jour
   // en temp reel quand l'utilisateur tape une touche de son clavier
-  const valueMail = useSelector((state) => state.user.settings.email);
+  const valueMail = useSelector((state) => state.user.email);
 
   // On fait la meme chose pour le password
-  const valuePassword = useSelector((state) => state.user.settings.password);
+  const valuePassword = useSelector((state) => state.user.password);
 
   const dispatch = useDispatch();
+
+  const navigate = useNavigate();
 
   // Afin d'eviter le rechargement de la page lors de la soumission du formulaire
   // On creer une fonction qui annule le comportoment par defaut de ce dernier
   function handleSubmit(evt) {
     evt.preventDefault();
     dispatch(login());
+    navigate('/', { replace: true });
   }
 
   // fonction qui va permettre a l'utilisateur de rentrer son email et
@@ -63,6 +67,12 @@ function Login() {
         <button type="submit" className="login__form--button">
           Se Connecter
         </button>
+
+        <div className="login__create--account">
+          <p className="login__create--account--texte">Pas encore de compte ? </p>
+          <NavLink className="login__create--account--link" to="/creer-un-compte">créer un compte</NavLink>
+
+        </div>
 
       </form>
     </main>

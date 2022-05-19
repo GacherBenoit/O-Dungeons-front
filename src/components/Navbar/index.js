@@ -16,6 +16,7 @@ import { menuBurgerToggle } from '../../actions/users';
 // == Composant
 function Navbar() {
   const isOpen = useSelector((state) => state.user.settingsMenu.isOpen);
+  const logged = useSelector((state) => state.user.logged);
 
   // obtenir la méthode dispatch du store grace a useDispatch()
   const dispatch = useDispatch();
@@ -33,7 +34,12 @@ function Navbar() {
         <li className="navbar__item"><NavLink className="navbar__link" to="/races">Races</NavLink></li>
         <li className="navbar__item"><NavLink className="navbar__link" to="/creation-personnages">Fiche personnage</NavLink></li>
         <li className="navbar__item"><NavLink className="navbar__link" to="/regles-et-univers">Règles et univers</NavLink></li>
-        <li className="navbar__item"><NavLink className="navbar__link" to="/connexion">Connexion</NavLink></li>
+        {logged && (
+          <li className="navbar__item"><NavLink className="navbar__link" to="/mon-compte">Mon compte</NavLink></li>
+        )}
+        {!logged && (
+          <li className="navbar__item"><NavLink className="navbar__link" to="/connexion">Connexion</NavLink></li>
+        )}
       </ul>
       <button className="navbar__burger" type="button" onClick={handleShowLink}>
         <span className="navbar__burger--bar" />

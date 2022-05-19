@@ -61,7 +61,7 @@ function Account() {
     <div className="my-account">
       <h3 className="my-account__title">Mes informations</h3>
       {passwordChange && (
-        <p className="my-account__information--p">Votre mot de passe a bien été changer</p>
+        <p className="my-account__information--p">Votre mot de passe a bien été changé</p>
       )}
       <div className="my-account__information">
         <div className="my-account__information--avatar">
@@ -77,7 +77,7 @@ function Account() {
       </div>
 
       <div className="my-account__avatar">
-        <p>Choix de l'avatar (a venir....)</p>
+        <p>Choix de l'avatar (à venir....)</p>
       </div>
 
       <div className="my-account__edit">

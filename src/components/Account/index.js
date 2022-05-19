@@ -16,8 +16,8 @@ import {
 
 function Account() {
   // On récupère les infos dans le state
-  // const image = useSelector((state) => state.user.avatar.imageUrl);
-  // const name = useSelector((state) => state.user.avatar.name);
+  const image = useSelector((state) => state.user.avatar.imageUrl);
+  const name = useSelector((state) => state.user.avatar.name);
   const email = useSelector((state) => state.user.email);
   const nom = useSelector((state) => state.user.lastName);
   const prenom = useSelector((state) => state.user.firstName);
@@ -65,9 +65,7 @@ function Account() {
       )}
       <div className="my-account__information">
         <div className="my-account__information--avatar">
-          {/* a decommenter des demains lorsque la modification serait fait
-          sur le serveur officiel */}
-          {/* <img className="my-account__information--avatar--image" src={image} alt={name} /> */}
+          <img className="my-account__information--avatar--image" src={image} alt={name} />
         </div>
         <div className="my-account__information--personnal">
           <p className="my-account__information--nom">Nom: {nom}</p>
@@ -145,7 +143,7 @@ function Account() {
             />
           </label>
 
-          <button type="submit" className="account__form--button">
+          <button type="submit" className="my-account__password--form--button">
             Changer de mot de passe
           </button>
         </form>

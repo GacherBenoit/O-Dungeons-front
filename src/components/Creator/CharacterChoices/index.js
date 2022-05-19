@@ -27,6 +27,8 @@ function CharacterChoices() {
   const backgroundList = useSelector((state) => state.character.backgroundList);
   const backgroundName = useSelector((state) => state.character.currentBackground.name);
   const currentClasseImage = useSelector((state) => state.character.currentClasse.image);
+  const currentMorality = useSelector((state) => state.character.morality);
+  const currentAlignement = useSelector((state) => state.character.alignement);
   const dispatch = useDispatch();
   // Fonction qui déclenche l'action de sauvegarde champ du Nom de personnage
   function handleChangeName(evt) {
@@ -121,7 +123,7 @@ function CharacterChoices() {
           <li>Classe: {classeName}</li>
           <li>Race: {raceName}</li>
           <li>Background:{backgroundName}</li>
-          <li>Alignement: Neutre</li>
+          <li>Alignement: {currentMorality}-{currentAlignement}</li>
           <li>Points d'experience: 0</li>
         </ul>
         <img src={`data:image/png;base64,${currentClasseImage}`} alt="" className="choices__results--img" />

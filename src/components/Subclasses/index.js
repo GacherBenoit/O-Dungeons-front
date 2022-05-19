@@ -24,19 +24,16 @@ function Subclasses() {
         <p className="subclasses__paragraphe">{currentClasse.description}</p>
         <ClasseItem />
       </section>
-      <h2>Sous-classe</h2>
+      <h2 className="subclasses__title">Sous-classe</h2>
       <section className="subclasses__presentation">
         {/* On verifie si c'est defini et si c'est defini, on peu boucler dessus
         ressource :
         https://stackoverflow.com/questions/67601748/typeerror-map-is-not-a-function-using-react-js */}
         { currentSubClasse && currentClasse.subclasses.map((subclasse) => (
           <div className="subclasses__presentation--card" id={subclasse.id} key={subclasse.id}>
-            <h3>{subclasse.name}</h3>
+            <h3 className="subclasses__presentation--title">{subclasse.name}</h3>
             <p>
-              <span>{subclasse.description}</span>
-            </p>
-            <p>
-              <span>Trait</span>: force moyenne, courage sans égal, espiègle.
+              <p className="subclasses__presentation--descritpion">{subclasse.description}</p>
             </p>
           </div>
         ))}

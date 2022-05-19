@@ -1,23 +1,24 @@
 @use '../../styles/vars';
 
-.subraces {
-  margin-top: 8rem;
-  &__mainclass {
-    text-align: center;
-  }
-  &__img {
-    width: 50%;
-  }
-}
-h2 {
-  padding: vars.$gutter * 2;
-  text-decoration: none;
-}
-@media  all and (min-width:768px) {
-  #subraces {
-      text-align: center;
-    }
-    .subraces__presentation {
-     display: flex; 
-    }
-}
+
+// .subraces {
+//   margin-top: 8rem;
+//   &__mainclass {
+//     text-align: center;
+//   }
+//   &__img {
+//     width: 50%;
+//   }
+// }
+// h2 {
+//   padding: vars.$gutter * 2;
+//   text-decoration: none;
+// }
+// @media  all and (min-width:768px) {
+//   #subraces {
+//       text-align: center;
+//     }
+//     .subraces__presentation {
+//      display: flex; 
+//     }
+// }

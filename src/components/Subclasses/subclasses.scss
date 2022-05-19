@@ -1,24 +1,64 @@
 @use '../../styles/vars';
 
 .subclasses {
-  margin-top: 8rem;
-  &__mainclass {
-    text-align: center;
-  }
+
   &__img {
-    width: 50%;
+    width: 160px;
+    height: 90%;
+    margin-top: 25%;
+    margin-bottom: 15%;
+  }
+  &__mainclass--title {
+    display: initial;
+    margin-left: vars.$gutter;
+    font-weight: 800
+  }
+  &__paragraphe{
+    margin-left: vars.$gutter*0.5;
+    margin-right: vars.$gutter*0.5;
+    margin-top: vars.$gutter;
+  }
+  &__title{
+    text-align: center;
+    font-weight: 800
+  }
+  &__presentation--title{
+    margin-top: vars.$gutter;
+    margin-bottom:vars.$gutter ;
+    text-align: center;
+    font-weight: 400;
+  }
+  &__presentation--descritpion{
+    margin-right: vars.$gutter*0.5;
+    margin-left: vars.$gutter*0.5
+    
   }
 }
-h2 {
-  padding: vars.$gutter * 2;
-  text-decoration: none;
-}
-@media  all and (min-width:768px) {
-  #subclasses {
-      text-align: center;
-    }
-    .subclasses__presentation {
-     display: flex; 
-    }
-}
+
+
+
+
+
+
+// .subclasses {
+//   margin-top: 8rem;
+//   &__mainclass {
+//     text-align: center;
+//   }
+//   &__img {
+//     width: 50%;
+//   }
+// }
+// h2 {
+//   padding: vars.$gutter * 2;
+//   text-decoration: none;
+// }
+// @media  all and (min-width:768px) {
+//   #subclasses {
+//       text-align: center;
+//     }
+//     .subclasses__presentation {
+//      display: flex; 
+//     }
+// }
 

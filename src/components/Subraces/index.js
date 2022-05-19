@@ -18,11 +18,11 @@ function Subraces() {
       <section className="subraces__mainclass" id="subraces">
         <h2 className="subraces__mainclass--title">{currentRace.name}</h2>
         <img className="subraces__img" src={`data:image/png;base64,${currentRace.image}`} alt="race" />
-        <p>
+        <p className="subraces__mainclass--description">
           {currentRace.fullDescription}
         </p>
       </section>
-      <h2>sous-race</h2>
+      <h2 className="subraces__title">Sous-race</h2>
       <section className="subraces__presentation">
         {currentSubRace && currentSubRace.map((subRace) => (
           <div key={subRace.id} className="subraces__presentation--card">

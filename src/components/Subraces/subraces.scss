@@ -1,6 +1,28 @@
 @use '../../styles/vars';
 
+.subraces{
+  &__mainclass--title{
+    display: initial;
+    margin-left: vars.$gutter;
+    font-weight: 800
+  }
+  &__img {
+    width: 160px;
+    height: 90%;
+    margin-top: 25%;
+    margin-bottom: 15%;
+  }
+  &__mainclass--description{
+    margin-left: vars.$gutter*0.5;
+    margin-right: vars.$gutter*0.5;
+    margin-top: vars.$gutter;
+  }
+  &__title{
+    text-align: center;
+    font-weight: 800
+  }
 
+}
 // .subraces {
 //   margin-top: 8rem;
 //   &__mainclass {

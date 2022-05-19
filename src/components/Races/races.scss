@@ -5,26 +5,26 @@
    
   }
 }
-.card{
-  width: 30%;
-  border: 3px solid #bb7070;
-  box-shadow: 10px 5px 5px #bd9999;
+// .card{
+//   width: 30%;
+//   border: 3px solid #bb7070;
+//   box-shadow: 10px 5px 5px #bd9999;
 
-  &__img {
-    margin-left: 0.5em;
-    margin-top:-3em;
-    margin-bottom: 0.1em;
-    height: 7em;
-  }
-  &__excerpt{
-    margin-left: .5em;
-    margin-right: 0.5em;
-  }  
-  &__title{
-    visibility: hidden;
-  }
+//   &__img {
+//     margin-left: 0.5em;
+//     margin-top:-3em;
+//     margin-bottom: 0.1em;
+//     height: 7em;
+//   }
+//   &__excerpt{
+//     margin-left: .5em;
+//     margin-right: 0.5em;
+//   }  
+//   &__title{
+//     visibility: hidden;
+//   }
     
-}
+// }
 
 @media screen and (min-width: 990px){
   .races{

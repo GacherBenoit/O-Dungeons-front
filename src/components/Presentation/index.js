@@ -10,6 +10,7 @@ import { randomClasse } from '../../actions/classes';
 import Card from '../Card';
 
 import './presentation.scss';
+import { NavLink } from 'react-router-dom';
 
 function Presentation() {
   const randomRace = useSelector((state) => state.races.randomRace);
@@ -54,7 +55,7 @@ function Presentation() {
             interdum. Maecenas eu nunc tempus, dictum lorem sit amet, viverra enim. Mauris laoreet.
           </p>
           <div className="main__section--presentation--link--contener">
-            <a className="main__section--presentation--link" href="#">En savoir plus....</a>
+            <NavLink className="main__section--presentation--link" to="/regles-et-univers"> En savoir plus....</NavLink>
           </div>
         </section>
         <section className="main__rules">
@@ -76,7 +77,7 @@ function Presentation() {
             odit illo architecto quaerat alias modi.
           </p>
           <div className="main__rules--contener">
-            <a className="main__rules--link" href="#">Découvrir les règles ...</a>
+            <NavLink className="main__section--presentation--link" to="/regles-et-univers"> En savoir plus....</NavLink>
           </div>
         </section>
       </div>

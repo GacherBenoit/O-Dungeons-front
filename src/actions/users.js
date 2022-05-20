@@ -167,3 +167,20 @@ export const saveAllAvatars = (allavatars) => ({
   type: SAVE_ALL_AVATARS,
   allavatars,
 });
+
+// ACTION TYPE SET_NEW_AVATAR_ID
+export const SET_NEW_AVATAR_ID = 'SET_NEW_AVATAR_ID';
+
+// ACTION CREATOR setNewAvatarId
+export const setNewAvatarId = (id) => ({
+  type: SET_NEW_AVATAR_ID,
+  id,
+});
+
+// ACTION TYPE CHANGE_AVATAR
+export const CHANGE_AVATAR = 'CHANGE_AVATAR';
+
+// ACTION CREATOR changeAvatar
+export const changeAvatar = () => ({
+  type: CHANGE_AVATAR,
+});

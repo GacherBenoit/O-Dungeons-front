@@ -13,6 +13,7 @@ import {
   SET_ID,
   LOGOUT,
   SAVE_ALL_AVATARS,
+  SET_NEW_AVATAR_ID,
 } from '../actions/users';
 
 export const initialState = {
@@ -33,6 +34,7 @@ export const initialState = {
   roles: [],
   password_change: false,
   allavatars: [],
+  idnewavatar: null,
 
   // State concernant le menu du site en version mobile
   settingsMenu: {
@@ -135,6 +137,11 @@ function reducer(state = initialState, action = {}) {
       return {
         ...state,
         allavatars: action.allavatars,
+      };
+    case SET_NEW_AVATAR_ID:
+      return {
+        ...state,
+        idnewavatar: action.id,
       };
     default:
       return state;

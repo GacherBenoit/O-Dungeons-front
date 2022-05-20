@@ -12,6 +12,8 @@ import {
   setNewPassword,
   editPasswordUser,
   getAllAvatar,
+  setNewAvatarId,
+  changeAvatar,
 } from '../../actions/users';
 
 // == Composant
@@ -67,7 +69,11 @@ function Account() {
     evt.preventDefault();
     dispatch(editPasswordUser());
   }
-  console.log(allavatars);
+
+  function handleChoiceAvatar(evt) {
+    dispatch(setNewAvatarId(evt.target.id));
+    dispatch(changeAvatar());
+  }
   return (
     <div className="my-account">
       <h3 className="my-account__title">Mes informations</h3>
@@ -90,7 +96,13 @@ function Account() {
         <button type="button" className="my-account__avatar--button"> Voir les avatars</button>
         <div className="my-account__avatar--allavatar">
           {allavatars.map((avatar) => (
-            <img key={avatar.id} src={avatar.imageUrl} alt={avatar.name} />
+            <img
+              key={avatar.id}
+              id={avatar.id}
+              src={avatar.imageUrl}
+              alt={avatar.name}
+              onClick={handleChoiceAvatar}
+            />
           ))}
         </div>
       </div>

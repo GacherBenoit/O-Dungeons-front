@@ -30,6 +30,7 @@ import {
   passwordChange,
   GET_ALL_AVATAR,
   saveAllAvatars,
+  CHANGE_AVATAR,
 } from '../actions/users';
 
 import {
@@ -513,6 +514,45 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .catch(
           () => console.log('erreur'),
         );
+      next(action);
+      break;
+    }
+    case CHANGE_AVATAR: {
+      const findToken = localStorage.getItem('token');
+      const token = JSON.parse(findToken);
+      const state = store.getState();
+
+      // Necessaire avec de passer le header en commentaire et que cela
+      // fonctionne quand meme
+      axiosInstance.defaults.headers.common.Authorization = `Bearer ${token}`;
+      const {
+        id,
+        idnewavatar,
+      } = state.user;
+
+      axiosInstance
+        .patch(
+          `users/${id}/avatar`,
+          /*
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+        */
+          {
+            avatar: idnewavatar,
+          },
+        )
+        .then((response) => {
+          console.log(response);
+
+          const { data: user } = response;
+          store.dispatch(saveUser(user));
+        })
+        .catch(() => {
+          console.log('erreur');
+        });
       next(action);
       break;
     }

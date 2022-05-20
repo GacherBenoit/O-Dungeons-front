@@ -29,16 +29,16 @@ function Navbar() {
   return (
     <nav className={`navbar ${isOpen ? 'navbar__show' : 'navbar__hide'}`}>
       <ul className="navbar__links">
-        <li className="navbar__item"><NavLink className="navbar__link" to="/">Accueil</NavLink></li>
-        <li className="navbar__item"><NavLink className="navbar__link" to="/classes">Classes</NavLink></li>
-        <li className="navbar__item"><NavLink className="navbar__link" to="/races">Races</NavLink></li>
-        <li className="navbar__item"><NavLink className="navbar__link" to="/creation-personnages">Fiche personnage</NavLink></li>
-        <li className="navbar__item"><NavLink className="navbar__link" to="/regles-et-univers">Règles et univers</NavLink></li>
+        <li className="navbar__item" onClick={handleShowLink}><NavLink className="navbar__link" to="/">Accueil</NavLink></li>
+        <li className="navbar__item" onClick={handleShowLink}><NavLink className="navbar__link" to="/classes">Classes</NavLink></li>
+        <li className="navbar__item" onClick={handleShowLink}><NavLink className="navbar__link" to="/races">Races</NavLink></li>
+        <li className="navbar__item" onClick={handleShowLink}><NavLink className="navbar__link" to="/creation-personnages">Fiche personnage</NavLink></li>
+        <li className="navbar__item" onClick={handleShowLink}><NavLink className="navbar__link" to="/regles-et-univers">Règles et univers</NavLink></li>
         {logged && (
-          <li className="navbar__item"><NavLink className="navbar__link" to="/mon-compte">Mon compte</NavLink></li>
+          <li className="navbar__item" onClick={handleShowLink}><NavLink className="navbar__link" to="/mon-compte">Mon compte</NavLink></li>
         )}
         {!logged && (
-          <li className="navbar__item"><NavLink className="navbar__link" to="/connexion">Connexion</NavLink></li>
+          <li className="navbar__item" onClick={handleShowLink}><NavLink className="navbar__link" to="/connexion">Connexion</NavLink></li>
         )}
       </ul>
       <button className="navbar__burger" type="button" onClick={handleShowLink}>

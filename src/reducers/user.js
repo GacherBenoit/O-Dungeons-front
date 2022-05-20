@@ -14,6 +14,7 @@ import {
   LOGOUT,
   SAVE_ALL_AVATARS,
   SET_NEW_AVATAR_ID,
+  SEE_AVATAR_TOOGLE,
 } from '../actions/users';
 
 export const initialState = {
@@ -40,6 +41,7 @@ export const initialState = {
   settingsMenu: {
     // le menu est-il ouvert
     isOpen: false,
+    seeAvatar: false,
   },
 };
 
@@ -54,6 +56,14 @@ function reducer(state = initialState, action = {}) {
         settingsMenu: {
           ...state.settingsMenu,
           isOpen: !state.settingsMenu.isOpen,
+        },
+      };
+    case SEE_AVATAR_TOOGLE:
+      return {
+        ...state,
+        settingsMenu: {
+          ...state.settingsMenu,
+          seeAvatar: !state.settingsMenu.seeAvatar,
         },
       };
     case SET_ID:

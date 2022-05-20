@@ -184,3 +184,11 @@ export const CHANGE_AVATAR = 'CHANGE_AVATAR';
 export const changeAvatar = () => ({
   type: CHANGE_AVATAR,
 });
+
+// ACTION TYPE SEE_AVATAR_TOOGLE
+export const SEE_AVATAR_TOOGLE = 'SEE_AVATAR_TOOGLE';
+
+// ACTION CREATOR seeAvatarToogle
+export const seeAvatarToogle = () => ({
+  type: SEE_AVATAR_TOOGLE,
+});

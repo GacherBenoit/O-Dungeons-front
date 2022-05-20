@@ -48,8 +48,27 @@
     box-shadow: 0.5rem 0.4rem black;
   }
 
+  &__avatar--title {
+    margin: 0.5rem;
+  }
+
+  &__avatar--button {
+    display: inline-block;
+    margin: 0.5rem 1rem;
+    padding: 0.4rem;    
+    width: 90%;
+    color: crimson;
+    border: 1px crimson solid;
+    box-shadow: 0.4rem 0.4rem black;
+  }
+
   &__avatar--allavatar {
+    display: block;
     width: 100%;
+  }
+
+  &__avatar--allavatar--hidden {
+    display: none;
   }
 
   &__avatar--avatars {
@@ -160,12 +179,6 @@
       box-shadow: none;
     }
 
-    // Champ information avatar
-    &__avatar {
-      width: 90%;
-      margin: 1rem auto;
-    }
-
     &__information--avatar {
       border: 1px solid black;
       width: 150px;
@@ -178,6 +191,16 @@
     }
 
     // champ avatar
+
+    // Champ information avatar
+    &__avatar {
+      width: 90%;
+      margin: 1rem auto;
+    }
+
+    &__avatar--button {
+      margin: 1rem 3rem;
+    }
 
     &__avatar--avatars--image {
       width: 150px;

@@ -14,6 +14,7 @@ import {
   getAllAvatar,
   setNewAvatarId,
   changeAvatar,
+  seeAvatarToogle,
 } from '../../actions/users';
 
 // == Composant
@@ -29,6 +30,7 @@ function Account() {
   const newPassword = useSelector((state) => state.user.newpassword);
   const passwordChange = useSelector((state) => state.user.password_change);
   const allavatars = useSelector((state) => state.user.allavatars);
+  const seeAvatar = useSelector((state) => state.user.settingsMenu.seeAvatar);
 
   const dispatch = useDispatch();
 
@@ -74,6 +76,11 @@ function Account() {
     dispatch(setNewAvatarId(evt.target.id));
     dispatch(changeAvatar());
   }
+
+  function handleSeeImage() {
+    dispatch(seeAvatarToogle());
+  }
+
   return (
     <div className="my-account">
       <h3 className="my-account__title">Mes informations</h3>
@@ -93,8 +100,8 @@ function Account() {
 
       <div className="my-account__avatar">
         <h3 className="my-account__avatar--title">Choisir un nouvel avatar</h3>
-        <button type="button" className="my-account__avatar--button"> Voir les avatars</button>
-        <div className="my-account__avatar--allavatar">
+        <button type="button" className="my-account__avatar--button" onClick={handleSeeImage}> Voir les avatars</button>
+        <div className={`my-account ${seeAvatar ? 'my-account__avatar--allavatar' : 'my-account__avatar--allavatar--hidden'}`}>
           <div className="my-account__avatar--avatars">
             {allavatars.map((avatar) => (
               <img

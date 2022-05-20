@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import mainImage from 'src/assets/images/wood-g1d44fdfb5_640.jpg';
+import { NavLink } from 'react-router-dom';
 
 import { randomRaces } from '../../actions/races';
 import { randomClasse } from '../../actions/classes';
@@ -10,7 +11,6 @@ import { randomClasse } from '../../actions/classes';
 import Card from '../Card';
 
 import './presentation.scss';
-import { NavLink } from 'react-router-dom';
 
 function Presentation() {
   const randomRace = useSelector((state) => state.races.randomRace);

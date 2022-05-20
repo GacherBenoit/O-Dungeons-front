@@ -1,0 +1,30 @@
+@use '../../../styles/vars';
+
+.items{
+    margin-left: vars.$gutter*0.5;
+    margin-right: vars.$gutter*0.5;
+    margin-top: vars.$gutter;
+    &__spec{
+      margin: vars.$gutter*1.2;
+    }
+    &__title{
+      text-align: center;
+      font-weight: 600;
+      
+    }
+    &__dices{
+      margin: vars.$gutter*2;
+    }
+    &__weapon--title{
+      text-align: center;
+      font-weight: 600;
+    }
+    &__armor--title{
+      text-align: center;
+      font-weight: 600;
+    }
+    &__items--title{
+      text-align: center;
+      font-weight: 600;
+    }
+}

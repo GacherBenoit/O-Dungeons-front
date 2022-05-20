@@ -24,7 +24,7 @@ function Logout() {
         className="logout__button"
         onClick={handleLogout}
       >
-        Deconnexion
+        Déconnexion
       </button>
     </div>
   );

@@ -1,24 +1,25 @@
 @use 'src/styles/vars';
-
-
-h1,h2,h3{
-  font-family: 'Tapestry', cursive;
-  text-align: center;
-  font-size: 2em;
+#root{
+  background-image: linear-gradient(to bottom, rgb(236, 224, 224), #faf1fc, #fbf6fe, #fcfbff, #ffffff);
 }
+// h1,h2,h3{
+//   font-family: 'Tapestry', cursive;
+//   text-align: center;
+//   font-size: 2em;
+// }
 
-.home__right {
-  display: none;
-}
+// .home__right {
+//   display: none;
+// }
 
-@media screen and (min-width: 1024px) {
-  .home {
+// @media screen and (min-width: 1024px) {
+//   .home {
     
   
-  }
+//   }
 
   
   
-}
+// }
 
 

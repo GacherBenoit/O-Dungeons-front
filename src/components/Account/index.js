@@ -85,7 +85,7 @@ function Account() {
     <div className="my-account">
       <h3 className="my-account__title">Mes informations</h3>
       {passwordChange && (
-        <p className="my-account__information--p">Votre mot de passe a bien été changer</p>
+        <p className="my-account__information--p">Votre mot de passe a bien été changé</p>
       )}
       <div className="my-account__information">
         <div className="my-account__information--avatar">
@@ -97,7 +97,6 @@ function Account() {
           <p className="my-account__information--email">Email: {email}</p>
         </div>
       </div>
-
       <div className="my-account__avatar">
         <h3 className="my-account__avatar--title">Choisir un nouvel avatar</h3>
         <button type="button" className="my-account__avatar--button" onClick={handleSeeImage}> Voir les avatars</button>
@@ -114,10 +113,9 @@ function Account() {
               />
             ))}
           </div>
-
         </div>
+        <p>Choix de l'avatar (à venir....)</p>
       </div>
-
       <div className="my-account__edit">
         <form className="my-account__edit--form" onSubmit={editAccountSubmit}>
           <label htmlFor="lastname">

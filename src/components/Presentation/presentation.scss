@@ -5,6 +5,27 @@
   &__section--presentation {  
     width: 100vw;
     margin: auto;
+     display: block;
+     position: relative;
+  
+  }
+  &__section--presentation--right {  
+    width: 100vw;
+    margin: auto;
+  
+  }
+  &__section--presentation::before{
+    content: "";
+    background-image: url(../../assets/images/rodeur.png);
+    margin-top: 50vw;
+    background-size: cover;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
   }
 
   &__image {

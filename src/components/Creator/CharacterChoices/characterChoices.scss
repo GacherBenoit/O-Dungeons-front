@@ -3,17 +3,23 @@
 .choices {
   display: flex;
   flex-direction: column;
-
+ 
+  &__main--title{
+    margin-top: 12vw;
+    text-align: center;
+  }
   &__results {
     display: flex;
     border: 1px solid black;
-  box-shadow: 1em 0 .4em vars.$colorTitle;
-
+   box-shadow: 1em 0 .4em vars.$colorTitle;
+    padding: vars.$gutter;
+    margin: vars.$gutter *2;
     padding: vars.$gutter;
     margin: vars.$gutter *2;
     &--img {
       width: 50%;
     }
+   
   }
 }
 

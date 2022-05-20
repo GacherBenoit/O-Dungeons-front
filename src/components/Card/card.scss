@@ -1,11 +1,25 @@
 @use 'src/styles/vars';
 
 .card {
+  
+  
+   &__image--classe{
+    width: 160px;
+    height: 160px;
+    margin-left: 25vw;
     
-  // display: none;
-  width: 30%;  
+   }
+   &__body--title{
+     margin:vars.$gutter ;
+   }
+   &__body--excerpt{
+    margin:vars.$gutter*0.5 ;
+  }
+  &__body--link{
+    margin:vars.$gutter ;
+    margin-left: 33%;
+  }
 }
-
 
   
 

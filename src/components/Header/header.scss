@@ -1,8 +1,15 @@
 .header{
   width: 100vw;
-  background: linear-gradient(to bottom right, rgb(41, 39, 39), 70%, rgb(177, 17, 17) );
+  // background: linear-gradient(to bottom right, rgb(41, 39, 39), 70%, rgb(177, 17, 17) );
   height: 10vh;
-  position: fixed;
+  // position: fixed;
+  // background-image: url(../../assets/images/logo.png);
+  background-image: url(http://localhost:8080/images/d2199a00a2749e9dd485.png);
+  height: 10vh;
+  width: 100vw;
+  background-position: center;
+  margin-top: -1vw;
+
 
   &__content{
     display: flex;
@@ -26,6 +33,10 @@
     width: 100%;
     position: relative;
     height: 20vh;
+    width: 100vw;
+    background-image: url(../../assets/images/logo-definitive.png);
+    background-repeat: no-repeat;
+  
   }
 }
 

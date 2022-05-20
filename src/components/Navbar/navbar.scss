@@ -6,8 +6,8 @@
   align-items: center;
   padding: 1rem;
   width: 100vw;
-  color: rgb(177, 17, 17);
-
+  color: rgb(248, 248, 248);
+  
   &__links {
     display: flex;
     width:100vw;
@@ -20,7 +20,10 @@
     height: 100vh;
     padding: 2rem;
     visibility: hidden;
-    background: linear-gradient(to bottom right, rgb(41, 39, 39), 70%, rgb(177, 17, 17) );
+    // background: linear-gradient(to bottom right, rgb(41, 39, 39), 70%, rgb(177, 17, 17) );
+    background-image: url(../../assets/images/fantasy-gcad0e870d_640.jpg);
+    background-position-x: 35em;
+    background-size: cover;
   }
 
   &__show &__links {
@@ -105,6 +108,7 @@
     align-items: center;
     padding: 1rem;
     width: 100vw;
+    color: rgb(190, 54, 54);
 
     &__links {
       display: flex;

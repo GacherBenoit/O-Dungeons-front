@@ -23,6 +23,12 @@
    }
    &__body--excerpt{
     margin:vars.$gutter*0.5 ;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        margin-left: auto;
   }
   &__body--link{
     margin:vars.$gutter ;
@@ -87,6 +93,12 @@
       text-align: left;
       margin-left: 0.5rem;
       margin-bottom: 1rem;
+      overflow: hidden;
+     text-overflow: ellipsis;
+     -webkit-line-clamp: 3;
+     -webkit-box-orient: vertical;
+     display: -webkit-box;
+     margin-left: auto;
     }
 
     &__body--link {

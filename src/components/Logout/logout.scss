@@ -18,3 +18,11 @@
     padding: 0.5rem;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .logout {
+    width: 90%;
+    margin: 1rem auto;
+  }
+  
+}

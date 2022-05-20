@@ -18,7 +18,7 @@ function Logout() {
 
   return (
     <div className="logout">
-      <p className="logout__texte"> Bienvennue {firstname}</p>
+      <p className="logout__texte"> Bienvenue {firstname}</p>
       <button
         type="button"
         className="logout__button"

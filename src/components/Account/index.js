@@ -1,5 +1,6 @@
 // == Import : npm
 import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 // == Import : local
 import './account.scss';
 import {
@@ -10,6 +11,7 @@ import {
   editAccountUser,
   setNewPassword,
   editPasswordUser,
+  getAllAvatar,
 } from '../../actions/users';
 
 // == Composant
@@ -26,6 +28,14 @@ function Account() {
   const passwordChange = useSelector((state) => state.user.password_change);
 
   const dispatch = useDispatch();
+
+  useEffect(
+    () => {
+      // je veux charger les avatar disponible en BDD, je demande au store
+      dispatch(getAllAvatar());
+    },
+    [], // permet de charger une seule fois la liste
+  );
 
   function handleEditEmail(evt) {
     dispatch(mailNewUser(evt.target.value));

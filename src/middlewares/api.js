@@ -28,6 +28,7 @@ import {
   EDIT_ACCOUNT_USER,
   EDIT_PASSWORD_USER,
   passwordChange,
+  GET_ALL_AVATAR,
 } from '../actions/users';
 
 import {
@@ -495,6 +496,20 @@ const apiMiddleWare = (store) => (next) => (action) => {
         )
         .catch(
           () => console.log('error api'),
+        );
+      next(action);
+      break;
+    }
+    case GET_ALL_AVATAR: {
+      axiosInstance
+        .get('avatars')
+        .then(
+          (response) => {
+            console.log(response);
+          },
+        )
+        .catch(
+          () => console.log('erreur'),
         );
       next(action);
       break;

@@ -150,3 +150,11 @@ export const EDIT_PASSWORD_USER = 'EDIT_PASSWORD_USER';
 export const editPasswordUser = () => ({
   type: EDIT_PASSWORD_USER,
 });
+
+// ACTION TYPE GET_ALL_AVATAR
+export const GET_ALL_AVATAR = 'GET_ALL_AVATAR';
+
+// ACTION CREATOR getAllAvatar
+export const getAllAvatar = () => ({
+  type: GET_ALL_AVATAR,
+});

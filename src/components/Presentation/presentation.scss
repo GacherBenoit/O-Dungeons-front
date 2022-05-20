@@ -1,5 +1,6 @@
 @use 'src/styles/vars';
 .main {
+  margin-top: vars.$gutter * 2;
   
   &__section--presentation {  
     width: 100vw;
@@ -13,7 +14,10 @@
   }
 
   &__section--presentation--title {
-    margin: auto;
+    margin: vars.$gutter *2;
+    text-align: center;
+    font-family: vars.$policeTitle;
+    font-size: 1.5rem;
   }
 
   &__section--presentation--paragraphe {
@@ -29,7 +33,10 @@
   // SECTION REGLES
 
   &__rules--title {
-    margin: auto;
+    font-family: vars.$policeTitle;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: vars.$gutter * 1.5;
   }
 
   &__rules--paragraphe {
@@ -59,6 +66,11 @@
 
   &__random {
     display: none;
+
+    &--title {
+      font-family: vars.$policeTitle;
+      font-size: 50px;
+    }
   }
 
 }
@@ -70,12 +82,19 @@
 
     &__sections{
       margin-top: 1rem;
-      width: 100%;
-      height: 50%;
+      width: 90%;
+      height: 500px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-           
+      background-image: url('../../assets/images/druid-g4a26deb11_640.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: rgba(146, 114, 19, 0.979);
+      // color: #FFD700;
+      margin: vars.$gutter;
+      margin-left: auto;
+      margin-right: auto;     
     }
 
     // SECTION DE GAUCHE (presentation)
@@ -84,7 +103,9 @@
       width:45%;
       display: flex;
       flex-wrap: wrap;
-      border: solid 1px black;
+      // border: solid 1px black;
+      background-color: rgba($color: #494545, $alpha: 0.2);
+      font-weight: 500;
     }
 
     &__image {
@@ -92,37 +113,60 @@
       width: 40%;
       height: 30%;
       margin: 0;
+      display: none;
     } 
 
     &__section--presentation--title{
-      width: 60%;
+      width: 100%;
       font-size: 2em;
-
+      text-align: center;
+      // margin-left: vars.$gutter * 2;
     }
 
     &__section--presentation--paragraphe{
       width: 100%;
       font-size: 1rem;
       margin-top: 1rem;
-      // margin: 0;
     }
 
     &__section--presentation--link {
       font-style: oblique;
-      text-align: center;
+      // text-align: center;
+
+      &--contener {
+        width: 100%;
+        text-align: center;
+        margin: vars.$gutter;
+      }
     }
     
     // Section de Droite (rules)
     &__rules {
       width: 45%;
-      border: solid 1px black;
-      margin-right: 1.5rem;
+      height: 464px;
+      margin: auto;
+      // border: solid 1px black;
+      // margin-right: 1.5rem;
+      background-color: rgba($color: #494545, $alpha: 0.2);
+      font-weight: 500;
+      &--title {
+        width: 90%;
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: vars.$gutter * 3;
+      }
+
+      &--paragraphe {
+      margin-top:3.5rem;
+
+      }
+
     }
 
     // Cartes des races et classes
     &__random {
       display: block;
-      margin-top: 1rem;
+      margin-top: 3rem;
       display:block ;
     }
 
@@ -130,7 +174,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
-      margin-bottom: 1rem;
+      margin-bottom: 3rem;
     }
 
     &__random--races {
@@ -143,4 +187,10 @@
      
   }
 
+}
+@media screen and (min-width:1440px) {
+  .main__rules {
+  height: 368px;
+
+  }
 }

@@ -1,52 +1,87 @@
 @use '../../../styles/vars';
+.choices{
 
+&__skill{
+  margin-bottom: 2%;
+}
+}
 .skills {
   border: 1px solid black;
   box-shadow: 1em 0 .4em vars.$colorTitle;
   padding: vars.$gutter ;
   margin: vars.$gutter * 2 ;
 
-  &__content--properties{
-    display: flex;
-    justify-content: space-around;
+  &__results{
+  margin-left: 2%;
+  display: inline;
   }
-  &__choices-menu{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  &__incantation_duration{
-    margin-left: vars.$gutter;
-  }
-  &__range{
-    margin-left: vars.$gutter*2.5;
-  }
-  &__duration{
-    margin-left: vars.$gutter*2.5;
+
+&__content--properties{
+  
+}
+
+&__incantation_duration{
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+&__range{
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+&__duration{
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+&__description{
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+
+  // &__content--properties{
+  //   display: flex;
+  //   justify-content: space-around;
+  // }
+  // &__choices-menu{
+  //   display: flex;
+  //   flex-wrap: wrap;
+  // }
+  // &__incantation_duration{
+  //   margin-left: vars.$gutter;
+  // }
+  // &__range{
+  //   margin-left: vars.$gutter*2.5;
+  // }
+  // &__duration{
+  //   margin-left: vars.$gutter*2.5;
     
-  }
+  // }
 }
 @media only screen and (min-device-width : 768px){
   .choices{
-    &__skill{
-      margin-left: vars.$gutter*6;
-    }
+    // &__skill{
+    //   margin-left: vars.$gutter*6;
+    // }
   }
   .skills {
-    &__incantation_duration{
-      margin-left: vars.$gutter*1;
-    }
-    &__range{
-      margin-left: vars.$gutter*1;
+  //   &__incantation_duration{
+  //     margin-left: vars.$gutter*1;
+  //   }
+  //   &__range{
+  //     margin-left: vars.$gutter*1;
       
-    }
-    &__duration{
-      margin-left: vars.$gutter*1;
+  //   }
+  //   &__duration{
+  //     margin-left: vars.$gutter*1;
       
-    }
-    &__description{
-      margin-left: vars.$gutter*1;
+  //   }
+  //   &__description{
+  //     margin-left: vars.$gutter*1;
       
-    }
-  }
+  //   }
+   }
   
 }

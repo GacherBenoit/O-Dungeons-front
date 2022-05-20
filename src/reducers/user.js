@@ -12,6 +12,7 @@ import {
   LASTNAME_NEW_USER,
   SET_ID,
   LOGOUT,
+  SAVE_ALL_AVATARS,
 } from '../actions/users';
 
 export const initialState = {
@@ -31,6 +32,7 @@ export const initialState = {
   },
   roles: [],
   password_change: false,
+  allavatars: [],
 
   // State concernant le menu du site en version mobile
   settingsMenu: {
@@ -128,6 +130,11 @@ function reducer(state = initialState, action = {}) {
           name: '',
           imageUrl: '',
         },
+      };
+    case SAVE_ALL_AVATARS:
+      return {
+        ...state,
+        allavatars: action.allavatars,
       };
     default:
       return state;

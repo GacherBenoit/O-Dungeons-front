@@ -158,3 +158,12 @@ export const GET_ALL_AVATAR = 'GET_ALL_AVATAR';
 export const getAllAvatar = () => ({
   type: GET_ALL_AVATAR,
 });
+
+// ACTION TYPE SAVE_ALL_AVATARS
+export const SAVE_ALL_AVATARS = 'SAVE_ALL_AVATARS';
+
+// ACTION CREATOR saveAllAvatars
+export const saveAllAvatars = (allavatars) => ({
+  type: SAVE_ALL_AVATARS,
+  allavatars,
+});

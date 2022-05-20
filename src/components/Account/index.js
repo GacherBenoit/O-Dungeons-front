@@ -26,6 +26,7 @@ function Account() {
   const password = useSelector((state) => state.user.password);
   const newPassword = useSelector((state) => state.user.newpassword);
   const passwordChange = useSelector((state) => state.user.password_change);
+  const allavatars = useSelector((state) => state.user.allavatars);
 
   const dispatch = useDispatch();
 
@@ -66,7 +67,7 @@ function Account() {
     evt.preventDefault();
     dispatch(editPasswordUser());
   }
-
+  console.log(allavatars);
   return (
     <div className="my-account">
       <h3 className="my-account__title">Mes informations</h3>
@@ -85,7 +86,13 @@ function Account() {
       </div>
 
       <div className="my-account__avatar">
-        <p>Choix de l'avatar (a venir....)</p>
+        <h3 className="my-account__avatar--title">Choisir un nouvel avatar</h3>
+        <button type="button" className="my-account__avatar--button"> Voir les avatars</button>
+        <div className="my-account__avatar--allavatar">
+          {allavatars.map((avatar) => (
+            <img key={avatar.id} src={avatar.imageUrl} alt={avatar.name} />
+          ))}
+        </div>
       </div>
 
       <div className="my-account__edit">

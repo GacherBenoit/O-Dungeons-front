@@ -29,6 +29,7 @@ import {
   EDIT_PASSWORD_USER,
   passwordChange,
   GET_ALL_AVATAR,
+  saveAllAvatars,
 } from '../actions/users';
 
 import {
@@ -505,7 +506,8 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .get('avatars')
         .then(
           (response) => {
-            console.log(response);
+            // console.log(response);
+            store.dispatch(saveAllAvatars(response.data));
           },
         )
         .catch(

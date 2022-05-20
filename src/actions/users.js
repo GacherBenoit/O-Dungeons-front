@@ -150,3 +150,45 @@ export const EDIT_PASSWORD_USER = 'EDIT_PASSWORD_USER';
 export const editPasswordUser = () => ({
   type: EDIT_PASSWORD_USER,
 });
+
+// ACTION TYPE GET_ALL_AVATAR
+export const GET_ALL_AVATAR = 'GET_ALL_AVATAR';
+
+// ACTION CREATOR getAllAvatar
+export const getAllAvatar = () => ({
+  type: GET_ALL_AVATAR,
+});
+
+// ACTION TYPE SAVE_ALL_AVATARS
+export const SAVE_ALL_AVATARS = 'SAVE_ALL_AVATARS';
+
+// ACTION CREATOR saveAllAvatars
+export const saveAllAvatars = (allavatars) => ({
+  type: SAVE_ALL_AVATARS,
+  allavatars,
+});
+
+// ACTION TYPE SET_NEW_AVATAR_ID
+export const SET_NEW_AVATAR_ID = 'SET_NEW_AVATAR_ID';
+
+// ACTION CREATOR setNewAvatarId
+export const setNewAvatarId = (id) => ({
+  type: SET_NEW_AVATAR_ID,
+  id,
+});
+
+// ACTION TYPE CHANGE_AVATAR
+export const CHANGE_AVATAR = 'CHANGE_AVATAR';
+
+// ACTION CREATOR changeAvatar
+export const changeAvatar = () => ({
+  type: CHANGE_AVATAR,
+});
+
+// ACTION TYPE SEE_AVATAR_TOOGLE
+export const SEE_AVATAR_TOOGLE = 'SEE_AVATAR_TOOGLE';
+
+// ACTION CREATOR seeAvatarToogle
+export const seeAvatarToogle = () => ({
+  type: SEE_AVATAR_TOOGLE,
+});

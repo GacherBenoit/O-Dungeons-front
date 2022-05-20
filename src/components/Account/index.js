@@ -1,5 +1,6 @@
 // == Import : npm
 import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 // == Import : local
 import './account.scss';
 import {
@@ -10,6 +11,10 @@ import {
   editAccountUser,
   setNewPassword,
   editPasswordUser,
+  getAllAvatar,
+  setNewAvatarId,
+  changeAvatar,
+  seeAvatarToogle,
 } from '../../actions/users';
 
 // == Composant
@@ -24,8 +29,18 @@ function Account() {
   const password = useSelector((state) => state.user.password);
   const newPassword = useSelector((state) => state.user.newpassword);
   const passwordChange = useSelector((state) => state.user.password_change);
+  const allavatars = useSelector((state) => state.user.allavatars);
+  const seeAvatar = useSelector((state) => state.user.settingsMenu.seeAvatar);
 
   const dispatch = useDispatch();
+
+  useEffect(
+    () => {
+      // je veux charger les avatar disponible en BDD, je demande au store
+      dispatch(getAllAvatar());
+    },
+    [], // permet de charger une seule fois la liste
+  );
 
   function handleEditEmail(evt) {
     dispatch(mailNewUser(evt.target.value));
@@ -57,6 +72,15 @@ function Account() {
     dispatch(editPasswordUser());
   }
 
+  function handleChoiceAvatar(evt) {
+    dispatch(setNewAvatarId(evt.target.id));
+    dispatch(changeAvatar());
+  }
+
+  function handleSeeImage() {
+    dispatch(seeAvatarToogle());
+  }
+
   return (
     <div className="my-account">
       <h3 className="my-account__title">Mes informations</h3>
@@ -73,11 +97,25 @@ function Account() {
           <p className="my-account__information--email">Email: {email}</p>
         </div>
       </div>
-
       <div className="my-account__avatar">
+        <h3 className="my-account__avatar--title">Choisir un nouvel avatar</h3>
+        <button type="button" className="my-account__avatar--button" onClick={handleSeeImage}> Voir les avatars</button>
+        <div className={`my-account ${seeAvatar ? 'my-account__avatar--allavatar' : 'my-account__avatar--allavatar--hidden'}`}>
+          <div className="my-account__avatar--avatars">
+            {allavatars.map((avatar) => (
+              <img
+                key={avatar.id}
+                id={avatar.id}
+                src={avatar.imageUrl}
+                alt={avatar.name}
+                className="my-account__avatar--avatars--image"
+                onClick={handleChoiceAvatar}
+              />
+            ))}
+          </div>
+        </div>
         <p>Choix de l'avatar (à venir....)</p>
       </div>
-
       <div className="my-account__edit">
         <form className="my-account__edit--form" onSubmit={editAccountSubmit}>
           <label htmlFor="lastname">

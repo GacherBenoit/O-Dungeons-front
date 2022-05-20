@@ -12,6 +12,9 @@ import {
   LASTNAME_NEW_USER,
   SET_ID,
   LOGOUT,
+  SAVE_ALL_AVATARS,
+  SET_NEW_AVATAR_ID,
+  SEE_AVATAR_TOOGLE,
 } from '../actions/users';
 
 export const initialState = {
@@ -31,11 +34,14 @@ export const initialState = {
   },
   roles: [],
   password_change: false,
+  allavatars: [],
+  idnewavatar: null,
 
   // State concernant le menu du site en version mobile
   settingsMenu: {
     // le menu est-il ouvert
     isOpen: false,
+    seeAvatar: false,
   },
 };
 
@@ -50,6 +56,14 @@ function reducer(state = initialState, action = {}) {
         settingsMenu: {
           ...state.settingsMenu,
           isOpen: !state.settingsMenu.isOpen,
+        },
+      };
+    case SEE_AVATAR_TOOGLE:
+      return {
+        ...state,
+        settingsMenu: {
+          ...state.settingsMenu,
+          seeAvatar: !state.settingsMenu.seeAvatar,
         },
       };
     case SET_ID:
@@ -128,6 +142,16 @@ function reducer(state = initialState, action = {}) {
           name: '',
           imageUrl: '',
         },
+      };
+    case SAVE_ALL_AVATARS:
+      return {
+        ...state,
+        allavatars: action.allavatars,
+      };
+    case SET_NEW_AVATAR_ID:
+      return {
+        ...state,
+        idnewavatar: action.id,
       };
     default:
       return state;

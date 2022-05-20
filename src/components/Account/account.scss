@@ -43,8 +43,46 @@
   // Champ pour modification avatar
   &__avatar {
     border: solid 1px black;
+    width: 90%;
     margin: 1rem;
     box-shadow: 0.5rem 0.4rem black;
+  }
+
+  &__avatar--title {
+    margin: 0.5rem;
+  }
+
+  &__avatar--button {
+    display: inline-block;
+    margin: 0.5rem 1rem;
+    padding: 0.4rem;    
+    width: 90%;
+    color: crimson;
+    border: 1px crimson solid;
+    box-shadow: 0.4rem 0.4rem black;
+  }
+
+  &__avatar--allavatar {
+    display: block;
+    width: 100%;
+  }
+
+  &__avatar--allavatar--hidden {
+    display: none;
+  }
+
+  &__avatar--avatars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__avatar--avatars--image {
+    border: solid 1px black;
+    margin: 0.4rem;
+    height: 150px;
+    width: 45%;
+    overflow: hidden;
   }
 
   // Champ pour edition des infos utilisateurs 
@@ -141,21 +179,31 @@
       box-shadow: none;
     }
 
-    // Champ avatar
-    &__avatar {
-      width: 90%;
-      margin: 1rem auto;
-    }
-
     &__information--avatar {
       border: 1px solid black;
-      width: 25%;
+      width: 150px;
       
     }
 
     &__information--personnal {
       border: 1px solid black;
       padding-left: 0.5rem;
+    }
+
+    // champ avatar
+
+    // Champ information avatar
+    &__avatar {
+      width: 90%;
+      margin: 1rem auto;
+    }
+
+    &__avatar--button {
+      margin: 1rem 3rem;
+    }
+
+    &__avatar--avatars--image {
+      width: 150px;
     }
     
     // Champ edition des information

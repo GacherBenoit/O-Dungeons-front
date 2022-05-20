@@ -95,15 +95,19 @@ function Account() {
         <h3 className="my-account__avatar--title">Choisir un nouvel avatar</h3>
         <button type="button" className="my-account__avatar--button"> Voir les avatars</button>
         <div className="my-account__avatar--allavatar">
-          {allavatars.map((avatar) => (
-            <img
-              key={avatar.id}
-              id={avatar.id}
-              src={avatar.imageUrl}
-              alt={avatar.name}
-              onClick={handleChoiceAvatar}
-            />
-          ))}
+          <div className="my-account__avatar--avatars">
+            {allavatars.map((avatar) => (
+              <img
+                key={avatar.id}
+                id={avatar.id}
+                src={avatar.imageUrl}
+                alt={avatar.name}
+                className="my-account__avatar--avatars--image"
+                onClick={handleChoiceAvatar}
+              />
+            ))}
+          </div>
+
         </div>
       </div>
 

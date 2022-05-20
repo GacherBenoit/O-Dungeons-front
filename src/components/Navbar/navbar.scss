@@ -6,9 +6,7 @@
   align-items: center;
   padding: 1rem;
   width: 100vw;
-}
-   
-  
+
   &__links {
     display: flex;
     width:100vw;
@@ -26,6 +24,7 @@
     background-position-x: 35em;
     background-size: cover;
   }
+    
 
   &__show &__links {
     width: 100vw;

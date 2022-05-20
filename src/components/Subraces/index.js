@@ -26,18 +26,18 @@ function Subraces() {
       <section className="subraces__presentation">
         {currentSubRace && currentSubRace.map((subRace) => (
           <div key={subRace.id} className="subraces__presentation--card">
-            <h3>{subRace.name}</h3>
-            <p>
+            <h3 className="subraces__presentation--name">{subRace.name}</h3>
+            <p className="subraces__presentation--description">
               <span>Description</span>: {subRace.description}
             </p>
             <div>
-              <span>{subRace.trait}</span>
-              <p>Charisme:{subRace.charisma}</p>
-              <p>Constitution:{subRace.constitution}</p>
-              <p>Dextérité:{subRace.dexterity}</p>
-              <p>Intelligence:{subRace.intelligence}</p>
-              <p>Force:{subRace.strength}</p>
-              <p>Sagesse:{subRace.wisdom}</p>
+              <p className="subraces__presentation--trait">{subRace.trait}</p>
+              <p className="subraces__presentation--caracteristics--element"> Charisme:{subRace.charisma}</p>
+              <p className="subraces__presentation--caracteristics--element">Constitution:{subRace.constitution}</p>
+              <p className="subraces__presentation--caracteristics--element">Dextérité:{subRace.dexterity}</p>
+              <p className="subraces__presentation--caracteristics--element"> Intelligence:{subRace.intelligence}</p>
+              <p className="subraces__presentation--caracteristics--element">Force:{subRace.strength}</p>
+              <p className="subraces__presentation--caracteristics--element"> Sagesse:{subRace.wisdom}</p>
             </div>
           </div>
         ))}

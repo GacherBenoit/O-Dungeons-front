@@ -128,6 +128,16 @@
       background-color: rgba($color: #494545, $alpha: 0.2);
       font-weight: 500;
     }
+    &__section--presentation--right {  
+      width:45%;
+      display: flex;
+      flex-wrap: wrap;
+      // border: solid 1px black;
+      background-color: rgba($color: #494545, $alpha: 0.2);
+      font-weight: 500;
+    
+    }
+    
 
     &__image {
       display: block;

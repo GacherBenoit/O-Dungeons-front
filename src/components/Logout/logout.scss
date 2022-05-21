@@ -1,11 +1,12 @@
+@use '../../styles/vars';
 .logout {
   display: flex;
   justify-content: space-between;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-right: 1rem;
-  margin-left: 1rem;
-
+  // margin-top: 1rem;
+  // margin-bottom: 1rem;
+  // margin-right: 1rem;
+  // margin-left: 1rem;
+  margin: 1rem;
   &__texte {
     color: crimson;
     padding: 0.5rem;
@@ -22,7 +23,10 @@
 @media screen and (min-width: 1024px) {
   .logout {
     width: 90%;
-    margin: 1rem auto;
+    margin: 2rem auto;
+    &__texte, &__button {
+      margin: vars.$gutter;
+    }
   }
   
 }

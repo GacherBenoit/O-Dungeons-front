@@ -1,6 +1,10 @@
+@use '../../styles/vars';
 .my-account {
-  // position: relative;
-  // Champ Information
+  &__title {
+    font-family: vars.$policeTitle;
+    text-align: center;
+    font-size: 1.5rem;
+  }
   &__information {
     // border: solid 2px red;
     display: flex;
@@ -171,7 +175,7 @@
 
 @media screen and (min-width: 1024px) {
   .my-account {
-
+    
     // Champ information
     &__information {
       margin: 1rem auto;

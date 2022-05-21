@@ -32,6 +32,7 @@
 
 @media screen and (min-width: 990px){
   .creator {
+    margin-top: vars.$gutter * 3;
     &__choices--content{
     background-attachment: fixed;
     background-position: center;

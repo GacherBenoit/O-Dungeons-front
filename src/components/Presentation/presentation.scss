@@ -127,16 +127,9 @@
       // border: solid 1px black;
       background-color: rgba($color: #494545, $alpha: 0.2);
       font-weight: 500;
+      position: relative;
     }
-    &__section--presentation--right {  
-      width:45%;
-      display: flex;
-      flex-wrap: wrap;
-      // border: solid 1px black;
-      background-color: rgba($color: #494545, $alpha: 0.2);
-      font-weight: 500;
-    
-    }
+   
     
 
     &__image {
@@ -196,9 +189,9 @@
 
     // Cartes des races et classes
     &__random {
-      display: block;
       margin-top: 3rem;
       display:block ;
+      position: relative;
     }
 
     &__random--classes {
@@ -206,6 +199,23 @@
       flex-wrap: wrap;
       justify-content: space-around;
       margin-bottom: 3rem;
+      position: relative;
+    }
+    &__random::before{
+      content: "";
+      background-image: url(../../assets/images/rodeur.png);
+      background-repeat: no-repeat;
+      background-size: 55vw;
+      bottom: 0;
+      content: "";
+      left: 0;
+      margin-left: 22vw;
+      margin-top: 10vw;
+      opacity: .5;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
     }
 
     &__random--races {

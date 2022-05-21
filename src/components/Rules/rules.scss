@@ -3,7 +3,22 @@
 .rules{
   &__section--presentation{
     margin-top: 7em;
+    display: block;
+    position: relative;
     
+  }
+  &__section--presentation::before{
+    content: "";
+    background-image: url(../../assets/images/elfe.png);
+    margin-top: 50vw;
+    background-size: cover;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
   }
   &__titles{
     font-size: 1.5em;
@@ -44,6 +59,47 @@ main {
     font-size: 1.5em;
     margin: auto;
     width: 80%;
+  }
+  &__section--presentation{
+    margin-top: 7em;
+    display: block;
+    position: relative;
+    
+  }
+  &__section--presentation--right{
+    margin-top: 7em;
+    display: block;
+    position: relative;
+    
+    
+  }
+  &__section--presentation::before{
+    content: "";
+    background-image: url(../../assets/images/elfe.png);
+    margin-top: 5vw;
+    background-size: cover;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    
+  }
+  &__section--presentation--right::before{
+    content: "";
+    background-image: url(../../assets/images/elfe.png);
+    margin-top: 5vw;
+    background-size: cover;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    
   }
 }
 }

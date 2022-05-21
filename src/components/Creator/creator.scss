@@ -1,8 +1,13 @@
 @use '../../styles/vars';
 
 .creator {
-  // margin-top: 8rem;
-  text-align: center;
+  &__choices--content{
+     background-image: url(../../assets/images/kisspng-paper-parchment-papyrus-writing-notebook-5b0f7246a6c8e7.9619406815277389506832.png);
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: 200vw;
+  }
 }
 
 .caracteristics {
@@ -25,6 +30,17 @@
  
 }
 
+@media screen and (min-width: 990px){
+  .creator {
+    &__choices--content{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 105vw;
+    background-image: url(../../assets/images/kisspng-paper-scroll-clip-art-paper-5ab9116c1eba55.3360450315220780601259.png)
+  }
+  }
+}
 
 
 

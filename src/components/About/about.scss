@@ -1,26 +1,65 @@
-// @use 'src/styles/vars';
-// main {
-//   // padding: vars.$gutter * 2;
-//   font-size: large;
+@use 'src/styles/vars';
 
-// }
-// ul {
-//   margin-bottom: vars.$gutter * 2;
-//   text-align: left;
-// }
+.about {
+  &__title {
+    font-family: vars.$policeTitle;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: vars.$gutter;
+  }
+  &__paragraphe {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: vars.$gutter;
+    &--span {
+      font-family: vars.$policeTitle;
+      font-weight: 800;
+      color: vars.$colorTitle;
+      font-size: 1.2rem;
+    }
+  }
+  &__list {
+    &--subtitle {
+      font-family: vars.$policeTitle;
+      font-size: 1.2rem;
+    }
+    &--item {
+      margin-top: vars.$gutter;
+    }
+    &--span {
+      font-weight: 800;
+      color: vars.$colorTitle;
+    }
+  }
+  &__secondList, &__thirdList {
+    margin-top: vars.$gutter;
+    &--item {
+      margin-top: vars.$gutter;
+    }
+  }
+}
 
-// span {
-//   color: vars.$colorTitle;
-//   font-weight: bold;
+.purpose {
+  margin-top: vars.$gutter;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
 
-// }
+  &__subtitle {
+    font-family: vars.$policeTitle;
+    font-size: 1.2rem;
+    text-align: center;
+  }
 
-// li {
-//   margin-top: vars.$gutter;
-// }
-// header {
-//   height: 150px;
-// }
-// .subtitle {
-//   text-decoration:wavy;
-// }
+  &__paragraphe {
+    margin-top: vars.$gutter;
+
+    &--span {
+      font-family: vars.$policeTitle;
+      font-weight: 800;
+      color: vars.$colorTitle;
+      font-size: 1.2rem;
+    }
+  }
+}

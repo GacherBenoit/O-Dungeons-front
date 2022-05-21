@@ -1,14 +1,19 @@
+@use '../../styles/vars';
 .classes{
   &__cards{
-   margin-top: 5em;
-   
+  margin-top: 5em;
   }
- 
+  &__title {
+    font-family: vars.$policeTitle;
+    font-size: 2.5rem;
+    text-align: center;
+  }
 }
 
 
 @media screen and (min-width: 990px){
   .classes{
+    margin-top: vars.$gutter * 4;
       &__cards{
         margin-left: 2em;
         display: flex;
@@ -37,8 +42,6 @@
     .card{
       
       width: 30%;
-    
-      
       
       &__img {
         width: 90%;

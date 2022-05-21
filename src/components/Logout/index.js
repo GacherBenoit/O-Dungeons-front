@@ -1,5 +1,6 @@
 // == Import : npm
 import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 // == Import : local
 import './logout.scss';
 import { logout } from '../../actions/users';
@@ -10,10 +11,12 @@ function Logout() {
   const firstname = useSelector((state) => state.user.firstName);
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   function handleLogout() {
     dispatch(logout());
-    console.log('click');
+    // console.log('click');
+    navigate('/', { replace: true });
   }
 
   return (

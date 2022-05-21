@@ -7,11 +7,15 @@
     height: 90%;
     margin-top: 25%;
     margin-bottom: 15%;
+    margin-left: 120px;
   }
   &__mainclass--title {
-    display: initial;
+    // display: initial;
     margin-left: vars.$gutter;
-    font-weight: 800
+    // font-weight: 800;
+    font-family: vars.$policeTitle;
+    text-align: center;
+    font-size: 2.5rem;
   }
   &__paragraphe{
     margin-left: vars.$gutter*0.5;
@@ -20,7 +24,10 @@
   }
   &__title{
     text-align: center;
-    font-weight: 800
+    // font-weight: 800;
+    font-family: vars.$policeTitle;
+    font-size: 2rem;
+    margin: vars.$gutter * 2;
   }
   &__presentation--title{
     margin-top: vars.$gutter;

@@ -169,7 +169,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .get(`races/${currentId}`)
         .then(
           (response) => {
-            console.log(response.data);
+            // console.log(response.data);
             store.dispatch(saveCurrentRaceCreator(response.data));
           },
         )
@@ -186,7 +186,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .get(`subraces/${currentSubraceId}`)
         .then(
           (response) => {
-            console.log(response.data);
+            // console.log(response.data);
             store.dispatch(saveCurrentSubrace(response.data));
           },
         )
@@ -203,7 +203,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .get(`classes/${currentClasseId}/abilities`)
         .then(
           (response) => {
-            console.log(response.data);
+            // console.log(response.data);
             store.dispatch(saveCurrentClasseAbilities(response.data));
           },
         )
@@ -220,7 +220,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .get(`classes/${currentClasseId}`)
         .then(
           (response) => {
-            console.log(response.data);
+            // console.log(response.data);
             store.dispatch(saveCurrentClasseCreator(response.data));
           },
         )
@@ -243,12 +243,12 @@ const apiMiddleWare = (store) => (next) => (action) => {
           },
         )
         .then((response) => {
-          console.log(response);
+          // console.log(response);
           // on extrait la propriété data de la reponse
           // que l'on stocke dans une variable user
           const { data: user } = response;
 
-          console.log(user);
+          // console.log(user);
           store.dispatch(saveUser(user.user));
           store.dispatch(isLogged());
 
@@ -290,7 +290,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
           // console.log(response);
           const { data: user } = response;
 
-          console.log(user);
+          // console.log(user);
           store.dispatch(saveUser(user.user));
           store.dispatch(isLogged());
 
@@ -326,7 +326,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
 
         )
         .then((response) => {
-          console.log(response);
+          // console.log(response);
 
           const { data: user } = response;
           store.dispatch(saveUser(user));
@@ -357,7 +357,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
         firstName,
         lastName,
       } = state.user;
-      console.log(state.user);
+      // console.log(state.user);
       axiosInstance
         .put(
           `users/${id}`,
@@ -376,7 +376,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
           },
         )
         .then((response) => {
-          console.log(response);
+          // console.log(response);
 
           const { data: user } = response;
           store.dispatch(saveUser(user));
@@ -412,7 +412,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
           },
         )
         .then((response) => {
-          console.log(response);
+          // console.log(response);
 
           const { data: user } = response;
           store.dispatch(saveUser(user));
@@ -445,7 +445,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .get(`abilities/${firstCurrentAbilitiesId}`)
         .then(
           (response) => {
-            console.log(response.data);
+            // console.log(response.data);
             store.dispatch(saveCurrentFirstAbilitiesSpecs(response.data));
           },
         )
@@ -461,7 +461,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .get(`abilities/${secondCurrentAbilitiesId}`)
         .then(
           (response) => {
-            console.log(response.data);
+            // console.log(response.data);
             store.dispatch(saveCurrentSecondAbilitiesSpecs(response.data));
           },
         )
@@ -477,7 +477,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .get(`abilities/${thirdCurrentAbilitiesId}`)
         .then(
           (response) => {
-            console.log(response.data);
+            // console.log(response.data);
             store.dispatch(saveCurrentThirdAbilitiesSpecs(response.data));
           },
         )
@@ -493,7 +493,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .get(`abilities/${fourthCurrentAbilitiesId}`)
         .then(
           (response) => {
-            console.log(response.data);
+            // console.log(response.data);
             store.dispatch(saveCurrentFourthAbilitiesSpecs(response.data));
           },
         )
@@ -546,7 +546,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
           },
         )
         .then((response) => {
-          console.log(response);
+          // console.log(response);
 
           const { data: user } = response;
           store.dispatch(saveUser(user));

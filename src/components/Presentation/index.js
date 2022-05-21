@@ -15,7 +15,7 @@ import './presentation.scss';
 function Presentation() {
   const randomRace = useSelector((state) => state.races.randomRace);
   const randomClasses = useSelector((state) => state.classes.randomClasse);
-
+  const burgerMeniIsOn = useSelector((state) => state.user.settingsMenu.isOpen);
   const dispatch = useDispatch();
 
   useEffect(
@@ -31,7 +31,7 @@ function Presentation() {
   return (
     <main className="main">
       <div className="main__sections">
-        <section className="main__section--presentation">
+        <section className={burgerMeniIsOn ? 'main__section--presentation--right' : 'main__section--presentation'}>
           <img className="main__image" src={mainImage} alt="soldat" />
           <h2 className="main__section--presentation--title">
             Présentation

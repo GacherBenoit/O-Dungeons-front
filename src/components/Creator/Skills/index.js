@@ -55,15 +55,14 @@ function Skills() {
 
   return (
     <section className="skills">
-      <div className="skills__content">
+      {/* <div className="skills__content">
         <ul className="skills__content--properties">
-          <li>Nom</li>
-          <li>Temps d'incantation</li>
-          <li>Portée</li>
-          <li>Durée</li>
-          <li>Description</li>
+          <li>Temps d'incantation:</li>
+          <li>Portée:</li>
+          <li>Durée:</li>
+          <li>Description:</li>
         </ul>
-      </div>
+      </div> */}
       <div className="skills__choices-menu">
         <div className="skills__choices">
           <label htmlFor="choices-skill" />
@@ -77,10 +76,14 @@ function Skills() {
               </option>
             ))}
           </select>
-          <span className="skills__incantation_duration">{firstAbilitieSpecs.incantationTime}</span>
-          <span className="skills__range">{firstAbilitieSpecs.abilityRange}</span>
-          <span className="skills__duration">{firstAbilitieSpecs.duration}</span>
-          <span className="skills__description">{firstAbilitieSpecs.quickDescription}</span>
+          <div className="skills__content">
+            <ul className="skills__content--properties">
+              <li className="skills__incantation_duration">Temps d'incantation:<p className="skills__results">{firstAbilitieSpecs.incantationTime}</p></li>
+              <li className="skills__range">Portée:<p className="skills__results">{firstAbilitieSpecs.abilityRange}</p></li>
+              <li className="skills__duration">Durée:<p className="skills__results">{firstAbilitieSpecs.duration}</p></li>
+              <li className="skills__description">Description:<p className="skills__results">{firstAbilitieSpecs.quickDescription}</p></li>
+            </ul>
+          </div>
         </div>
         <div className="skills__choices">
           <label htmlFor="choices-skill" />
@@ -94,10 +97,14 @@ function Skills() {
               </option>
             ))}
           </select>
-          <span className="skills__incantation_duration">{secondAbilitieSpecs.incantationTime}</span>
-          <span className="skills__range">{secondAbilitieSpecs.abilityRange}</span>
-          <span className="skills__duration">{secondAbilitieSpecs.duration}</span>
-          <span className="skills__description">{secondAbilitieSpecs.quickDescription}</span>
+          <div className="skills__content">
+            <ul className="skills__content--properties">
+              <li className="skills__incantation_duration">Temps d'incantation: <p className="skills__results">{secondAbilitieSpecs.incantationTime}</p></li>
+              <li className="skills__range">Portée:<p className="skills__results">{secondAbilitieSpecs.abilityRange}</p></li>
+              <li className="skills__duration">Durée:<p className="skills__results">{secondAbilitieSpecs.duration}</p></li>
+              <li className="skills__description">Description:<p className="skills__results">{secondAbilitieSpecs.quickDescription}</p></li>
+            </ul>
+          </div>
         </div>
         <div className="skills__choices">
           <label htmlFor="choices-skill" />
@@ -111,10 +118,14 @@ function Skills() {
               </option>
             ))}
           </select>
-          <span className="skills__incantation_duration">{thirdAbilitieSpecs.incantationTime}</span>
-          <span className="skills__range">{thirdAbilitieSpecs.abilityRange}</span>
-          <span className="skills__duration">{thirdAbilitieSpecs.duration}</span>
-          <span className="skills__description">{thirdAbilitieSpecs.quickDescription}</span>
+          <div className="skills__content">
+            <ul className="skills__content--properties">
+              <li className="skills__incantation_duration">Temps d'incantation:<p className="skills__results">{thirdAbilitieSpecs.incantationTime}</p></li>
+              <li className="skills__range">Portée:<p className="skills__results">{thirdAbilitieSpecs.abilityRange}</p></li>
+              <li className="skills__duration">Durée:<p className="skills__results">{thirdAbilitieSpecs.duration}</p></li>
+              <li className="skills__description">Description:<p className="skills__results">{thirdAbilitieSpecs.quickDescription}</p></li>
+            </ul>
+          </div>
         </div>
         <div className="skills__choices">
           <label htmlFor="choices-skill" />
@@ -128,10 +139,14 @@ function Skills() {
               </option>
             ))}
           </select>
-          <span className="skills__incantation_duration">{fourthAbilitieSpecs.incantationTime}</span>
-          <span className="skills__range">{fourthAbilitieSpecs.abilityRange}</span>
-          <span className="skills__duration">{fourthAbilitieSpecs.duration}</span>
-          <span className="skills__description">{fourthAbilitieSpecs.quickDescription}</span>
+          <div className="skills__content">
+            <ul className="skills__content--properties">
+              <li className="skills__incantation_duration">Temps d'incantation:<p className="skills__results">{fourthAbilitieSpecs.incantationTime}</p></li>
+              <li className="skills__range">Portée:<p className="skills__results">{fourthAbilitieSpecs.abilityRange}</p></li>
+              <li className="skills__duration">Durée:<p className="skills__results">{fourthAbilitieSpecs.duration}</p></li>
+              <li className="skills__description">Description:<p className="skills__results">{fourthAbilitieSpecs.quickDescription}</p></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>

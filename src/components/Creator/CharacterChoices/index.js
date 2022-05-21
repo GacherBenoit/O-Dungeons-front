@@ -66,7 +66,7 @@ function CharacterChoices() {
 
   return (
     <div className="choices">
-      <h3>Character Choices</h3>
+      <h2 className="choices__main--title">Création de personnages</h2>
       <input
         type="text"
         placeholder="Nom du personnage"

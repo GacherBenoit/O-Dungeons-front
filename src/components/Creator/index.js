@@ -21,19 +21,23 @@ import Equipment from './Equipment';
 function Creator() {
   return (
     <main className="creator">
-      <h2>Création de personnages</h2>
-      <CharacterChoices />
-      <Statistics />
-      <CaracteristicsPrincipals />
-      <Inspiration />
-      <Personality />
-      <Skills />
-      <Throws />
-      <Equipment />
-      <Traits />
-      <Capacities />
-      <Languages />
+      <div className="creator__choices--content">
+        <div className="creator__choices--content--parchemin">
+          <CharacterChoices />
+          <Statistics />
+          <CaracteristicsPrincipals />
+          <Inspiration />
+          <Personality />
+          <Skills />
+          <Throws />
+          <Equipment />
+          <Traits />
+          <Capacities />
+          <Languages />
+        </div>
+      </div>
     </main>
+   
   );
 }
 

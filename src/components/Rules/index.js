@@ -1,10 +1,12 @@
+import { useSelector } from 'react-redux';
 import './rules.scss';
 
 function Rules() {
+  const burgerMeniIsOn = useSelector((state) => state.user.settingsMenu.isOpen);
   return (
     <main>
       <div className="rules__sections">
-        <section className="rules__section--presentation">
+        <section className={burgerMeniIsOn ? 'rules__section--presentation--right' : 'rules__section--presentation'}>
           <h1 className="rules__title">Découvrez les règles et l'univers</h1>
           <h2 className="rules__paragraph__title">L'univers de Donjon et Dragon</h2>
           <p className="rules__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit.

@@ -3,7 +3,7 @@ import './languages.scss';
 function Languages() {
   return (
     <div className="languages">
-      <h4 className="languages__title">Autre compétence et  languages</h4>
+      <h4 className="languages__title">Bonne partie !!</h4>
     </div>
   );
 }

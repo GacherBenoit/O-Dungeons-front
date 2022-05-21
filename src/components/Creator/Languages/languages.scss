@@ -5,4 +5,8 @@
   box-shadow: 1em 0 .4em vars.$colorTitle;
   margin: vars.$gutter * 2;
   padding: vars.$gutter;
+  &__title {
+    font-family: vars.$policeTitle;
+    text-align: center;
+  }
 }

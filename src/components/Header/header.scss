@@ -3,6 +3,7 @@
   // background: linear-gradient(to bottom right, rgb(41, 39, 39), 70%, rgb(177, 17, 17) );
   height: 10vh;
   // position: fixed;
+
   // background-image: url(../../assets/images/logo.png);
   background-image: url(../../assets/images/logo-mobile.png);
 
@@ -36,7 +37,7 @@
     position: relative;
     height: 12vh;
     width: 100vw;
-    background-image: url(../../assets/images/logo-definitive.png);
+    background-image: url('../../assets/images/logo-definitive.png');
     background-repeat: no-repeat;
   
   }

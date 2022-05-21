@@ -23,8 +23,8 @@ function Races() {
   );
 
   return (
-    <main>
-      <h1>Races</h1>
+    <main className="races">
+      <h1 className="races__title">Races</h1>
       <div className="races__cards">
         { listRaces.map((race) => (
           <Card

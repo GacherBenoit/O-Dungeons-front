@@ -22,8 +22,8 @@ function Classes() {
   );
 
   return (
-    <main>
-      <h1>Classes</h1>
+    <main className="classes">
+      <h1 className="classes__title">Classes</h1>
       <div className="classes__cards">
         { classesList.map((classe) => (
           <Card

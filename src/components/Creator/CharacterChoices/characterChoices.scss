@@ -5,8 +5,11 @@
   flex-direction: column;
  
   &__main--title{
-    margin-top: 12vw;
+    // margin-top: 12vw;
     text-align: center;
+    font-family: vars.$policeTitle;
+    font-size: 2.5rem;
+    margin: vars.$gutter * 2;
   }
   &__results {
     display: flex;

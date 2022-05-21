@@ -1,5 +1,9 @@
 .my-account {
   // position: relative;
+
+  &__title {
+    margin: 0.5rem 1rem;
+  }
   // Champ Information
   &__information {
     // border: solid 2px red;

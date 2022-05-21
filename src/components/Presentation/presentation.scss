@@ -129,7 +129,15 @@
       font-weight: 500;
       position: relative;
     }
-   
+    &__section--presentation--right {
+      width:45%;
+      display: flex;
+      flex-wrap: wrap;
+      // border: solid 1px black;
+      background-color: rgba($color: #494545, $alpha: 0.2);
+      font-weight: 500;
+      position: relative;
+    }
     
 
     &__image {
@@ -217,6 +225,7 @@
       top: 0;
       z-index: -1;
     }
+    
 
     &__random--races {
       display: flex;

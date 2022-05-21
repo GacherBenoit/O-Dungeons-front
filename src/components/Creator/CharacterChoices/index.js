@@ -68,6 +68,7 @@ function CharacterChoices() {
     <div className="choices">
       <h2 className="choices__main--title">Création de personnages</h2>
       <input
+        className="choices__name"
         type="text"
         placeholder="Nom du personnage"
         // Champ du nom du personnage  sauvegarder dans le state

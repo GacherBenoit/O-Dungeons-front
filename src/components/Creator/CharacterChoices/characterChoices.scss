@@ -7,10 +7,11 @@
   &__main--title{
     // margin-top: 12vw;
     text-align: center;
+    margin-bottom: vars.$gutter;
     font-family: vars.$policeTitle;
     font-size: 2.5rem;
     margin: vars.$gutter * 2;
-  }
+   }
   &__results {
     display: flex;
     border: 1px solid black;
@@ -22,16 +23,10 @@
     &--img {
       width: 50%;
     }
-   
   }
 }
 
-.choices select, .choices input {
-  width: 50%;
-  margin: vars.$gutter;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 @media screen and(min-width: 768px) {
   .choices__results {
     display: flex;

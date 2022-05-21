@@ -114,7 +114,6 @@ function Account() {
             ))}
           </div>
         </div>
-        <p>Choix de l'avatar (à venir....)</p>
       </div>
       <div className="my-account__edit">
         <form className="my-account__edit--form" onSubmit={editAccountSubmit}>

@@ -15,16 +15,12 @@
     &__dices{
       margin: vars.$gutter*2;
     }
-    &__weapon--title{
+    &__weapon--title, &__armor--title, &__items--title{
       text-align: center;
       font-weight: 600;
+      font-size: 1.5rem;
     }
-    &__armor--title{
-      text-align: center;
-      font-weight: 600;
-    }
-    &__items--title{
-      text-align: center;
-      font-weight: 600;
+    &__result--span {
+      font-weight: 800;
     }
 }

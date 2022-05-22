@@ -122,11 +122,11 @@ function CharacterChoices() {
       </label>
       <div className="choices__results">
         <ul className="choices__results--list">
-          <li>Nom du joueur:{valueName}</li>
-          <li>Classe: {classeName}</li>
-          <li>Race: {raceName}</li>
-          <li>Background:{backgroundName}</li>
-          <li>Alignement: {currentMorality}-{currentAlignement}</li>
+          <li>Nom du joueur:<span className="choices__results--list--item--span">{valueName}</span></li>
+          <li>Classe:<span className="choices__results--list--item--span">{classeName}</span></li>
+          <li>Race:<span className="choices__results--list--item--span"> {raceName}</span></li>
+          <li>Background:<span className="choices__results--list--item--span">{backgroundName}</span></li>
+          <li>Alignement:<span className="choices__results--list--item--span"> {currentMorality}-{currentAlignement}</span></li>
           <li>Points d'experience: 0</li>
         </ul>
         <img src={`data:image/png;base64,${currentClasseImage}`} alt="" className="choices__results--img" />

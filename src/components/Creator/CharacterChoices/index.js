@@ -13,7 +13,6 @@ import {
 } from '../../../actions/character';
 // == Import: local
 import './characterChoices.scss';
-import warrior from '../../../assets/images/guerriertransparent.png';
 
 // == Composant
 
@@ -75,7 +74,7 @@ function CharacterChoices() {
         onChange={handleChangeName}
         value={valueName}
       />
-      <label>
+      <label className="choices__label" htmlFor="choices-race">
         <select
           className="choices__race"
           id="choices-race"
@@ -92,24 +91,27 @@ function CharacterChoices() {
           ))}
         </select>
       </label>
-      <label htmlFor="choices-subrace" />
-      <select
-        className="choices__subraces"
-        onChange={handleSubraceChoice}
-      >
-        <option value="">Choix de la sous-race</option>
-        {subracesList && subracesList.map((subrace) => (
-          <option key={subrace.id} value={subrace.id}>{subrace.name}</option>
-        ))}
-      </select>
-      <label htmlFor="choices__classe" />
-      <select className="choices__classe" onChange={handleClasseChoice}>
-        <option value="">Choix de la classe</option>
-        {listClasses && listClasses.map((classe) => (
-          <option key={classe.id} value={classe.id}>{classe.name}</option>
-        ))}
-      </select>
-      <label htmlFor="choices__background">
+      <label htmlFor="choices-subrace" className="choices__label">
+        <select
+          className="choices__subrace"
+          onChange={handleSubraceChoice}
+        >
+          <option value="">Choix de la sous-race</option>
+          {subracesList && subracesList.map((subrace) => (
+            <option key={subrace.id} value={subrace.id}>{subrace.name}</option>
+          ))}
+        </select>
+      </label>
+
+      <label htmlFor="choices__classe" className="choices__label">
+        <select className="choices__classe" onChange={handleClasseChoice}>
+          <option value="">Choix de la classe</option>
+          {listClasses && listClasses.map((classe) => (
+            <option key={classe.id} value={classe.id}>{classe.name}</option>
+          ))}
+        </select>
+      </label>
+      <label htmlFor="choices__background" className="choices__label">
         <select className="choices__background" onChange={handleBackgroundChoice}>
           <option value="">Choix du vécus</option>
           {backgroundList.map((background) => (

@@ -426,12 +426,14 @@ const apiMiddleWare = (store) => (next) => (action) => {
       next(action);
       break;
     }
+    // Appel à l'API pour recevoir les informations du background selectionné
     case FETCH_CURRENT_BACKGROUND_CREATOR: {
       const { character: { currentBackgroundId } } = store.getState();
       axiosInstance
         .get(`backgrounds/${currentBackgroundId}`)
         .then(
           (response) => {
+            // Sauvegarde la réponse du background selectionné dans le state
             store.dispatch(saveCurrentBackground(response.data));
           },
         )
@@ -441,6 +443,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
       next(action);
       break;
     }
+    // Appel à l'API pour recevoir les informations de la première abilité selectionné
     case FETCH_FIRST_ABILITIES_SPECS: {
       const { character: { firstCurrentAbilitiesId } } = store.getState();
       axiosInstance
@@ -448,6 +451,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .then(
           (response) => {
             // console.log(response.data);
+            // Sauvegarde la réponse de la première abilité selectionné dans le state
             store.dispatch(saveCurrentFirstAbilitiesSpecs(response.data));
           },
         )
@@ -457,12 +461,14 @@ const apiMiddleWare = (store) => (next) => (action) => {
       next(action);
       break;
     }
+    // Appel à l'API pour recevoir les informations de la deuxième abilité selectionné
     case FETCH_SECOND_ABILITIES_SPECS: {
       const { character: { secondCurrentAbilitiesId } } = store.getState();
       axiosInstance
         .get(`abilities/${secondCurrentAbilitiesId}`)
         .then(
           (response) => {
+            // Sauvegarde la réponse de la deuxième abilité selectionné dans le state
             // console.log(response.data);
             store.dispatch(saveCurrentSecondAbilitiesSpecs(response.data));
           },
@@ -473,12 +479,14 @@ const apiMiddleWare = (store) => (next) => (action) => {
       next(action);
       break;
     }
+    // Appel à l'API pour recevoir les informations de la troisième abilité selectionné
     case FETCH_THIRD_ABILITIES_SPECS: {
       const { character: { thirdCurrentAbilitiesId } } = store.getState();
       axiosInstance
         .get(`abilities/${thirdCurrentAbilitiesId}`)
         .then(
           (response) => {
+            // Sauvegarde la réponse de la troisième abilité selectionné dans le state
             // console.log(response.data);
             store.dispatch(saveCurrentThirdAbilitiesSpecs(response.data));
           },
@@ -489,6 +497,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
       next(action);
       break;
     }
+    // Appel à l'API pour recevoir les informations de la quatrième abilité selectionné
     case FETCH_FOURTH_ABILITIES_SPECS: {
       const { character: { fourthCurrentAbilitiesId } } = store.getState();
       axiosInstance
@@ -496,6 +505,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .then(
           (response) => {
             // console.log(response.data);
+            // Sauvegarde la réponse de la quatrième abilité selectionné dans le state
             store.dispatch(saveCurrentFourthAbilitiesSpecs(response.data));
           },
         )
@@ -505,12 +515,14 @@ const apiMiddleWare = (store) => (next) => (action) => {
       next(action);
       break;
     }
+    // Appel à l'API pour recevoir les informations de tout les avatars
     case GET_ALL_AVATAR: {
       axiosInstance
         .get('avatars')
         .then(
           (response) => {
             // console.log(response);
+            // Sauvegarde la réponse avec toutes les informations des avatars dans le state
             store.dispatch(saveAllAvatars(response.data));
           },
         )

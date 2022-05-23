@@ -1,5 +1,5 @@
 import {
-  SET_RACE,
+  // SET_RACE,
   FETCH_RACES,
   // SET_CLASSE,
   FETCH_RACE_CREATOR,
@@ -32,7 +32,7 @@ import {
   SAVE_INTELLIGENCE_DICE,
   SAVE_WISDOM_DICE,
   SAVE_CHARISMA_DICE,
-  } from '../actions/character';
+} from '../actions/character';
 
 const initialState = {
   race: '',
@@ -83,11 +83,11 @@ function reducer(state = initialState, action = {}) {
         ...state,
         currentClasseId: action.id,
       };
-    case SET_RACE:
-      return {
-        ...state,
-        currentId: action.name,
-      };
+    // case SET_RACE:
+    //   return {
+    //     ...state,
+    //     currentId: action.name,
+    //   };
       // liste des races
     case FETCH_RACES:
       return {

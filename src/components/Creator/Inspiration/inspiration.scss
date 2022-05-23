@@ -21,3 +21,19 @@
     padding-top: vars.$gutter;
   }
 }
+@media screen and (min-width: 990px){
+  .inspiration {
+    
+    &__paragraphe {
+      text-align: center;
+      padding-top: vars.$gutter;
+      margin-left: auto;
+      margin-right: auto;
+      
+    }
+    &__title {
+      padding-top: vars.$gutter;
+      
+    }
+  }  
+}

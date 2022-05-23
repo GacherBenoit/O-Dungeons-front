@@ -15,15 +15,15 @@ function Statistics() {
     <section className="statistics">
       <ul className="stats__list">
         <li className="stats__armor"><img className="stats__icon" src={ArmorIcon} alt="armor-icon" />
+ 
+          {/* {armor && armor.map((armorAmount) =>
+            (<span>key={armorAmount.id} {armorAmount.armorClass} Armure</span>))} */}
 
-          {armor && armor.map((armorAmount) =>
-            (<span>key={armorAmount.id} {armorAmount.armorClass}</span>))} armure
-
-          {armor && armor.map((armorAmount) => (<span key={armorAmount.id}> {armorAmount.armorClass}</span>))} armure
+          {armor && armor.map((armorAmount) => (<span>{armorAmount.armorClass}</span>))} Armure
 
         </li>
-        <li className="stats__initiative"><img className="stats__icon" src={InitiativeIcon} alt="initiative-icon" /><span>2</span>Initiative </li>
-        <li className="stats__speed"><img className="stats__icon" src={SpeedIcon} alt="speed-icon" /><span>0</span>Vitesse </li>
+        <li className="stats__initiative"><img className="stats__icon" src={InitiativeIcon} alt="initiative-icon" /><span> 2</span> Initiative </li>
+        <li className="stats__speed"><img className="stats__icon" src={SpeedIcon} alt="speed-icon" /><span> 0</span> Vitesse </li>
       </ul>
       <div className="stats__health-all-stats">
         <ul>

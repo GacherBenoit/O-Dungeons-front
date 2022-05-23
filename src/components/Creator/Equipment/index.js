@@ -19,7 +19,7 @@ function Equipment() {
             key={equipment.item.name}
             className="equipment__list--item"
           >
-            -{equipment.quantity} {equipment.item.name} ayant un poids de  {equipment.item.weight}
+            -<span className="equipment__list--item--span">{equipment.quantity} {equipment.item.name}</span> ayant un poids de  <span className="equipment__list--item--span">{equipment.item.weight}</span>
             kg
           </li>
         ))}
@@ -27,7 +27,7 @@ function Equipment() {
           <li
             key={equipement.id}
             className="equipment__list--item"
-          >-{equipement.name}  ayant un poids de   {equipement.weight}
+          >-<span className="equipment__list--item--span">{equipement.name}</span>  ayant un poids de   <span className="equipment__list--item--span">{equipement.weight}</span> kg
           </li>
         ))}
       </ul>

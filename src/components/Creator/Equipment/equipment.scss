@@ -14,5 +14,8 @@
   }
   &__list--item {
     margin: vars.$gutter;
+    &--span {
+      font-weight: 700;
+    }
   }
 }

@@ -3,28 +3,27 @@
 .subclasses {
 
   &__img {
-    width: 160px;
+    display:block;
+    width: 260px;
     height: 90%;
-    margin-top: 25%;
+    margin-top: 15%;
     margin-bottom: 15%;
-    margin-left: 120px;
+    margin-left: auto;
+    margin-right: auto;
   }
   &__mainclass--title {
-    // display: initial;
     margin-left: vars.$gutter;
-    // font-weight: 800;
     font-family: vars.$policeTitle;
     text-align: center;
     font-size: 2.5rem;
   }
   &__paragraphe{
-    margin-left: vars.$gutter*0.5;
-    margin-right: vars.$gutter*0.5;
+    margin-left: vars.$gutter;
+    margin-right: vars.$gutter;
     margin-top: vars.$gutter;
   }
   &__title{
     text-align: center;
-    // font-weight: 800;
     font-family: vars.$policeTitle;
     font-size: 2rem;
     margin: vars.$gutter * 2;
@@ -34,11 +33,21 @@
     margin-bottom:vars.$gutter ;
     text-align: center;
     font-weight: 400;
+    font-family: vars.$policeTitle;
   }
   &__presentation--descritpion{
-    margin-right: vars.$gutter*0.5;
-    margin-left: vars.$gutter*0.5
+    margin-right: vars.$gutter;
+    margin-left: vars.$gutter
     
   }
 }
 
+@media screen and(min-width: 1024px) {
+  .subclasses {
+    &__img {
+      width: 500px;
+      margin-top:1rem;
+      margin-bottom: 1rem;
+    }
+  }
+}

@@ -28,16 +28,16 @@ function Subraces() {
           <div key={subRace.id} className="subraces__presentation--card">
             <h3 className="subraces__presentation--name">{subRace.name}</h3>
             <p className="subraces__presentation--description">
-              <span>Description</span>: {subRace.description}
+              <span className="subraces__presentation--span">Description</span>: {subRace.description}
             </p>
             <div>
-              <p className="subraces__presentation--trait">{subRace.trait}</p>
-              <p className="subraces__presentation--caracteristics--element"> Charisme:{subRace.charisma}</p>
-              <p className="subraces__presentation--caracteristics--element">Constitution:{subRace.constitution}</p>
-              <p className="subraces__presentation--caracteristics--element">Dextérité:{subRace.dexterity}</p>
-              <p className="subraces__presentation--caracteristics--element"> Intelligence:{subRace.intelligence}</p>
-              <p className="subraces__presentation--caracteristics--element">Force:{subRace.strength}</p>
-              <p className="subraces__presentation--caracteristics--element"> Sagesse:{subRace.wisdom}</p>
+              <p className="subraces__presentation--trait"><span className="subraces__presentation--span">Trait</span>: {subRace.trait}</p>
+              <p className="subraces__presentation--caracteristics--element"> Charisme:<span className="subraces__presentation--span">{subRace.charisma}</span></p>
+              <p className="subraces__presentation--caracteristics--element">Constitution:<span className="subraces__presentation--span">{subRace.constitution}</span></p>
+              <p className="subraces__presentation--caracteristics--element">Dextérité:<span className="subraces__presentation--span">{subRace.dexterity}</span></p>
+              <p className="subraces__presentation--caracteristics--element"> Intelligence:<span className="subraces__presentation--span">{subRace.intelligence}</span></p>
+              <p className="subraces__presentation--caracteristics--element">Force:<span className="subraces__presentation--span">{subRace.strength}</span></p>
+              <p className="subraces__presentation--caracteristics--element"> Sagesse:<span className="subraces__presentation--span">{subRace.wisdom}</span></p>
             </div>
           </div>
         ))}

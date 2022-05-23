@@ -243,7 +243,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
           },
         )
         .then((response) => {
-          // console.log(response);
+          console.log(response.data.user);
           // on extrait la propriété data de la reponse
           // que l'on stocke dans une variable user
           const { data: user } = response;
@@ -329,6 +329,8 @@ const apiMiddleWare = (store) => (next) => (action) => {
           // console.log(response);
 
           const { data: user } = response;
+          console.log(user);
+
           store.dispatch(saveUser(user));
           store.dispatch(isLogged());
         })

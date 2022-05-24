@@ -1,6 +1,7 @@
 // == Import: local
+// Css
 import './creator.scss';
-
+// Composant
 import CharacterChoices from './CharacterChoices';
 import Statistics from './Statistics';
 import CaracteristicsPrincipals from './CaracteristicsPrincipals';
@@ -11,12 +12,14 @@ import Skills from './Skills';
 import Traits from './Traits';
 import Capacities from './Capacities';
 import Languages from './Languages';
-// == Icons
+// Icons
 import ArmorIcon from '../../assets/icons/armor.png';
 import InitiativeIcon from '../../assets/icons/initiative.png';
 import SpeedIcon from '../../assets/icons/speed.png';
 import Health from '../../assets/icons/health.png';
 import Equipment from './Equipment';
+
+// == Composant
 
 function Creator() {
   return (
@@ -37,7 +40,6 @@ function Creator() {
         </div>
       </div>
     </main>
-   
   );
 }
 

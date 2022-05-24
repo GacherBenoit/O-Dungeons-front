@@ -1,12 +1,19 @@
+// == Import: npm
 import { useDispatch, useSelector } from 'react-redux';
+
+// == Import: local
+// Action
 import {
   saveCharismaDice,
   saveConstitutionDice, saveDexterityDice, saveIntelligenceDice, saveStrengthDice, saveWisdomDice,
 } from '../../../actions/character';
+// Selector
 import throwDice from '../../../selectors/dice';
 import sum from '../../../selectors/sum';
-// import DiceButton from '../DiceButton';
+// Css
 import './caracteristics.scss';
+
+// == Composant
 
 function CaracteristicsPrincipals() {
   // Récupération des caractéristiques de la sous-race depuis le state
@@ -58,6 +65,7 @@ function CaracteristicsPrincipals() {
             onClick={strengthDiceHandler}
           >
             lancer de dé
+            {/* : <img src={dice} alt="dé" /> */}
           </button>
         </li>
         <li className="caracteristics__principals--list--item">-Dextérité: {caracteristics.dexterity || '0' } + {dexterityDiceResult || '0'} = {sum(caracteristics.dexterity, dexterityDiceResult)}
@@ -110,4 +118,5 @@ function CaracteristicsPrincipals() {
   );
 }
 
+// == Export
 export default CaracteristicsPrincipals;

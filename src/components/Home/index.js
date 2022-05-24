@@ -3,11 +3,12 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Routes, Route, useLocation } from 'react-router-dom';
 
-// == Import
+// == Import: local
+// Css
 import './home.scss';
+// Action
 import { findUser } from '../../actions/users';
-
-// == Composant
+// Composant
 import Header from '../Header';
 import Presentation from '../Presentation';
 import Rules from '../Rules';
@@ -24,6 +25,8 @@ import Subraces from '../Subraces';
 import CreateAccount from '../CreateAccount';
 import Account from '../Account';
 import Logout from '../Logout';
+
+// == Composant
 
 function Home() {
   // On récupère l'id dans le localStorage

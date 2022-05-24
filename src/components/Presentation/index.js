@@ -1,21 +1,30 @@
-// ==npm
+// == Import: npm
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-
-import mainImage from 'src/assets/images/wood-g1d44fdfb5_640.jpg';
 import { NavLink } from 'react-router-dom';
 
+// == Import: local
+// Image
+import mainImage from 'src/assets/images/wood-g1d44fdfb5_640.jpg';
+// Action
 import { randomRaces } from '../../actions/races';
 import { randomClasse } from '../../actions/classes';
-
+// Composant
 import Card from '../Card';
-
+// Css
 import './presentation.scss';
 
+// == Composant
+
 function Presentation() {
+  // On recupere les infos dans le state race (info que nous envoie l'API)
   const randomRace = useSelector((state) => state.races.randomRace);
+  // On recupere les infos dans le state classes (info que nous envoie l'API)
   const randomClasses = useSelector((state) => state.classes.randomClasse);
-  const burgerMeniIsOn = useSelector((state) => state.user.settingsMenu.isOpen);
+  // En mode mobile, c'est la valeur contenu dans le state user.settingsMenu.isOpen
+  // qui permet d'ouvrir ou de cacher la barre de navigation lors du clic sur le
+  // menu burger
+  const burgerMenuIsOn = useSelector((state) => state.user.settingsMenu.isOpen);
   const dispatch = useDispatch();
 
   useEffect(
@@ -31,7 +40,7 @@ function Presentation() {
   return (
     <main className="main">
       <div className="main__sections">
-        <section className={burgerMeniIsOn ? 'main__section--presentation--right' : 'main__section--presentation'}>
+        <section className={burgerMenuIsOn ? 'main__section--presentation--right' : 'main__section--presentation'}>
           <img className="main__image" src={mainImage} alt="soldat" />
           <h2 className="main__section--presentation--title">
             Présentation
@@ -105,4 +114,5 @@ function Presentation() {
   );
 }
 
+// == Export
 export default Presentation;

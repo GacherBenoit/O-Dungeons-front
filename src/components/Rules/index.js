@@ -1,5 +1,10 @@
+// == Import: npm
 import { useSelector } from 'react-redux';
+
+// == Import: local
 import './rules.scss';
+
+// == Composant
 
 function Rules() {
   const burgerMeniIsOn = useSelector((state) => state.user.settingsMenu.isOpen);
@@ -36,4 +41,5 @@ function Rules() {
   );
 }
 
+// == Export
 export default Rules;

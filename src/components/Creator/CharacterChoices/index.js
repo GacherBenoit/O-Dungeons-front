@@ -1,5 +1,9 @@
+// == Import: npm
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+
+// == Import: local
+// Action
 import { fetchRaces, saveCurrentRace } from '../../../actions/races';
 import { fetchClasses } from '../../../actions/classes';
 import {
@@ -11,7 +15,7 @@ import {
   saveCurrentBackgroundId,
   fetchCurrentBackgroundCreator,
 } from '../../../actions/character';
-// == Import: local
+// Css
 import './characterChoices.scss';
 
 // == Composant

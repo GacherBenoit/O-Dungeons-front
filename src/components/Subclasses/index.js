@@ -1,10 +1,14 @@
-// import { useParams } from 'react-router-dom';
+// == Import: npm
 import { useSelector } from 'react-redux';
 
 // == Import : local
+// Composant
 import Loading from '../Loading';
 import ClasseItem from './ClasseItem';
+// Css
 import './subclasses.scss';
+
+// == Composant
 
 function Subclasses() {
   // const { slug } = useParams();
@@ -42,4 +46,5 @@ function Subclasses() {
   );
 }
 
+// == Export
 export default Subclasses;

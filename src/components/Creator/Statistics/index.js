@@ -1,11 +1,16 @@
-import './statistics.scss';
-
+// == Import: npm
 import { useSelector } from 'react-redux';
-// == Icons
+
+// == Import: local
+// Css
+import './statistics.scss';
+// Icons
 import ArmorIcon from '../../../assets/icons/armor.png';
 import InitiativeIcon from '../../../assets/icons/initiative.png';
 import SpeedIcon from '../../../assets/icons/speed.png';
 import Health from '../../../assets/icons/health.png';
+
+// == Composant
 
 function Statistics() {
   const armor = useSelector((state) => state.character.currentClasse.armors);
@@ -15,7 +20,7 @@ function Statistics() {
     <section className="statistics">
       <ul className="stats__list">
         <li className="stats__armor"><img className="stats__icon" src={ArmorIcon} alt="armor-icon" />
- 
+
           {/* {armor && armor.map((armorAmount) =>
             (<span>key={armorAmount.id} {armorAmount.armorClass} Armure</span>))} */}
 
@@ -56,4 +61,5 @@ function Statistics() {
   );
 }
 
+// == Export
 export default Statistics;

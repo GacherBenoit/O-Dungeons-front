@@ -10,7 +10,7 @@ import {
   PASSWORD_NEW_USER,
   FIRSTNAME_NEW_USER,
   LASTNAME_NEW_USER,
-  SET_ID,
+  // SET_ID,
   LOGOUT,
   SAVE_ALL_AVATARS,
   SET_NEW_AVATAR_ID,
@@ -66,11 +66,11 @@ function reducer(state = initialState, action = {}) {
           seeAvatar: !state.settingsMenu.seeAvatar,
         },
       };
-    case SET_ID:
-      return {
-        ...state,
-        id: action.id,
-      };
+    // case SET_ID:
+    //   return {
+    //     ...state,
+    //     id: action.id,
+    //   };
       // Avec cette action, on remplis le state email
       // avec chaque valeur que l'utilisateur tape sur son clavier
     case SET_EMAIL:

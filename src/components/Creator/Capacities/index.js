@@ -1,4 +1,7 @@
+// == Import: local
 import './capacities.scss';
+
+// == Composant
 
 function Capacities() {
   return (
@@ -86,4 +89,5 @@ function Capacities() {
   );
 }
 
+// == Export
 export default Capacities;

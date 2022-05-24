@@ -1,10 +1,10 @@
-// NPM
-
+// == Import: npm
 import { useSelector, useDispatch } from 'react-redux';
 
+// == Import: local
 // Actions
-
-import { saveCurrentFirstAbilitiesId,
+import {
+  saveCurrentFirstAbilitiesId,
   saveCurrentSecondAbilitiesId,
   saveCurrentThirdAbilitiesId,
   saveCurrentFourthAbilitiesId,
@@ -13,9 +13,10 @@ import { saveCurrentFirstAbilitiesId,
   fetchThirdAbilitiesSpecs,
   fetchFourthAbilitiesSpecs,
 } from '../../../actions/character';
-
-// Import CSS
+// CSS
 import './skills.scss';
+
+// == Composant
 
 function Skills() {
   const abilitiesList = useSelector(
@@ -64,7 +65,7 @@ function Skills() {
         </ul>
       </div> */}
       <div className="skills__choices-menu">
-        <div className="skills__choices__group--one"> 
+        <div className="skills__choices__group--one">
           <div className="skills__choices">
             <label htmlFor="choices-skill" />
             <select className="choices__skill" id="choices-skill" onChange={handleFirstAbilitiesChoice}>
@@ -87,7 +88,7 @@ function Skills() {
             </div>
           </div>
           <div className="skills__choices">
-              <label htmlFor="choices-skill" />
+            <label htmlFor="choices-skill" />
             <select className="choices__skill" id="choices-skill" onChange={handleSecondAbilitiesChoice}>
               <option value="">Compétences</option>
               {abilitiesList && abilitiesList.map((abilities) => (
@@ -108,28 +109,28 @@ function Skills() {
             </div>
           </div>
         </div>
-        <div className="skills__choices__group--two"> 
-        <div className="skills__choices">
-          <label htmlFor="choices-skill" />
-          <select className="choices__skill" id="choices-skill" onChange={handleThirdAbilitiesChoice}>
-            <option value="">Compétences</option>
-            {abilitiesList && abilitiesList.map((abilities) => (
-              <option
-                key={abilities.id}
-                value={abilities.id}
-              >{abilities.name}
-              </option>
-            ))}
-          </select>
-          <div className="skills__content">
-            <ul className="skills__content--properties">
-              <li className="skills__incantation_duration">Temps d'incantation:<p className="skills__results">{thirdAbilitieSpecs.incantationTime}</p></li>
-              <li className="skills__range">Portée:<p className="skills__results">{thirdAbilitieSpecs.abilityRange}</p></li>
-              <li className="skills__duration">Durée:<p className="skills__results">{thirdAbilitieSpecs.duration}</p></li>
-              <li className="skills__description">Description:<p className="skills__results">{thirdAbilitieSpecs.quickDescription}</p></li>
-            </ul>
+        <div className="skills__choices__group--two">
+          <div className="skills__choices">
+            <label htmlFor="choices-skill" />
+            <select className="choices__skill" id="choices-skill" onChange={handleThirdAbilitiesChoice}>
+              <option value="">Compétences</option>
+              {abilitiesList && abilitiesList.map((abilities) => (
+                <option
+                  key={abilities.id}
+                  value={abilities.id}
+                >{abilities.name}
+                </option>
+              ))}
+            </select>
+            <div className="skills__content">
+              <ul className="skills__content--properties">
+                <li className="skills__incantation_duration">Temps d'incantation:<p className="skills__results">{thirdAbilitieSpecs.incantationTime}</p></li>
+                <li className="skills__range">Portée:<p className="skills__results">{thirdAbilitieSpecs.abilityRange}</p></li>
+                <li className="skills__duration">Durée:<p className="skills__results">{thirdAbilitieSpecs.duration}</p></li>
+                <li className="skills__description">Description:<p className="skills__results">{thirdAbilitieSpecs.quickDescription}</p></li>
+              </ul>
+            </div>
           </div>
-        </div>
           <div className="skills__choices">
             <label htmlFor="choices-skill" />
             <select className="choices__skill" id="choices-skill" onChange={handleFourthAbilitiesChoice}>

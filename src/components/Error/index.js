@@ -1,8 +1,12 @@
-// == import: local
+// == Import: npm
 import { NavLink } from 'react-router-dom';
 
+// == Import: local
+// Css
 import './error.scss';
+// Image
 import orcsarmy from '../../assets/images/orcarmy.png';
+
 // == Composant
 
 function Error() {
@@ -15,5 +19,5 @@ function Error() {
     </main>
   );
 }
-
+// == Export
 export default Error;

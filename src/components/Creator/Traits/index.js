@@ -1,6 +1,10 @@
+// == Import: npm
 import { useSelector } from 'react-redux';
+
+// == Import: local
 import './traits.scss';
 
+// == Composant
 function Traits() {
   const trait = useSelector((state) => state.character.currentSubrace.trait);
   return (
@@ -13,4 +17,5 @@ function Traits() {
   );
 }
 
+// == Export
 export default Traits;

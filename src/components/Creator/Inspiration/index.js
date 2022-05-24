@@ -1,6 +1,13 @@
+// == Import: npm
 import { useDispatch, useSelector } from 'react-redux';
+
+// == Import: local
+// Action
 import { saveAlignement, saveMorality } from '../../../actions/character';
+// Css
 import './inspiration.scss';
+
+// == Composant
 
 function Inspiration() {
   const morality = useSelector((state) => state.character.morality);
@@ -56,4 +63,6 @@ function Inspiration() {
     </div>
   );
 }
+
+// == Export
 export default Inspiration;

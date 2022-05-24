@@ -1,13 +1,16 @@
-// ==npm
+// == Import: npm
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import PropTypes from 'prop-types';
-// ==components
+
+// == Import: local
+// Composant
 import Card from '../Card';
-// ==Actions
+// Actions
 import { fetchClasses } from '../../actions/classes';
-// ==CSS
+// CSS
 import './classes.scss';
+
+// == Composant
 
 function Classes() {
   const classesList = useSelector((state) => state.classes.classes);
@@ -41,4 +44,5 @@ function Classes() {
   );
 }
 
+// == Export
 export default Classes;

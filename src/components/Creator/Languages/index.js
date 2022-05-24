@@ -1,4 +1,7 @@
+// == Import: local
 import './languages.scss';
+
+// == Composant
 
 function Languages() {
   return (
@@ -8,4 +11,5 @@ function Languages() {
   );
 }
 
+// == Export
 export default Languages;

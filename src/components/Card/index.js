@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
 // == Import: local
+// Action
 import { fetchClasseComplete, classeCurrentId } from '../../actions/classes';
 import { fetchRaceComplete, raceCurrentId } from '../../actions/races';
-
+// Css
 import './card.scss';
 
-// import barbarianImage from 'src/assets/images/barbarian.jpg';
+// == Composant
 
 function Card({
   name, description, image, slug, id, type,
@@ -39,7 +40,7 @@ function Card({
     </aside>
   );
 }
-
+// Validation des props
 Card.propTypes = {
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
@@ -50,4 +51,5 @@ Card.propTypes = {
 
 };
 
+// == Export
 export default Card;

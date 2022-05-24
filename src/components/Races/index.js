@@ -1,10 +1,11 @@
-// nopm
+// == Import: npm
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+// == Import: local
 // action
 import { fetchRaces } from '../../actions/races';
-// == Import: local
+// Css
 import './races.scss';
 
 // ==components

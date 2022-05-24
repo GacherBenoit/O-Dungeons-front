@@ -1,10 +1,13 @@
-// import { useParams } from 'react-router-dom';
+// == Import: npm
 import { useSelector } from 'react-redux';// == Import : local
 
+// == Import: local
+// Composant
 import Loading from '../Loading';
-
+// Css
 import './subraces.scss';
 
+// == Composant
 function Subraces() {
   const loading = useSelector((state) => state.races.loading);
   const currentRace = useSelector((state) => state.races.currentRace);
@@ -46,4 +49,5 @@ function Subraces() {
   );
 }
 
+// == Export
 export default Subraces;

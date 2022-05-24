@@ -1,6 +1,10 @@
+// == Import: npm
 import { useSelector } from 'react-redux';
 
+// == Import: local
 import './classeItem.scss';
+
+// == Composant
 
 function ClasseItem() {
   const currentClasse = useSelector((state) => state.classes.currentClasse);
@@ -48,4 +52,5 @@ function ClasseItem() {
   );
 }
 
+// == Export
 export default ClasseItem;

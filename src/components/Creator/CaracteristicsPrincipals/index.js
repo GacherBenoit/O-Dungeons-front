@@ -1,13 +1,19 @@
+// == Import: npm
 import { useDispatch, useSelector } from 'react-redux';
+
+// == Import: local
+// Action
 import {
   saveCharismaDice,
   saveConstitutionDice, saveDexterityDice, saveIntelligenceDice, saveStrengthDice, saveWisdomDice,
 } from '../../../actions/character';
+// Selector
 import throwDice from '../../../selectors/dice';
 import sum from '../../../selectors/sum';
-// import dice from '../../../assets/images/de.png';
-// import DiceButton from '../DiceButton';
+// Css
 import './caracteristics.scss';
+
+// == Composant
 
 function CaracteristicsPrincipals() {
   // Récupération des caractéristiques de la sous-race depuis le state
@@ -112,4 +118,5 @@ function CaracteristicsPrincipals() {
   );
 }
 
+// == Export
 export default CaracteristicsPrincipals;

@@ -1,8 +1,11 @@
 // == Import : npm
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
+
 // == Import : local
+// Css
 import './account.scss';
+// Action
 import {
   mailNewUser,
   passwordNewUser,
@@ -42,41 +45,51 @@ function Account() {
     [], // permet de charger une seule fois la liste
   );
 
+  // Dispatch l'action pour editer le champ mail
   function handleEditEmail(evt) {
     dispatch(mailNewUser(evt.target.value));
   }
 
+  // Dispatch l'action pour editer le champ firstName
   function handleEditFirstname(evt) {
     dispatch(firstnameNewUser(evt.target.value));
   }
 
+  // Dispatch l'action pour editer le champ lastName
   function handleEditLastname(evt) {
     dispatch(lastnameNewUser(evt.target.value));
   }
 
+  // Dispatch l'action pour editer le champ password
   function handleEditpassword(evt) {
     dispatch(passwordNewUser(evt.target.value));
   }
 
+  // Dispatch l'action pour editer le champ nouveau mot de passe
   function handleEditNewPassword(evt) {
     dispatch(setNewPassword(evt.target.value));
   }
 
+  // Fonction qui dispatch l'action pour envoyer les changement de l'utilisateur a l'API
   function editAccountSubmit(evt) {
     evt.preventDefault();
     dispatch(editAccountUser());
   }
 
+  // Fonction qui dispatch l'action afin d'envoyer le nouveau mot de passe utilisateur a l'API
   function editPasswordSubmit(evt) {
     evt.preventDefault();
     dispatch(editPasswordUser());
   }
 
+  // Fonction qui dispatch l'action afin d'envoyer le choix de l'avatar de l'utilisateur a l'API
   function handleChoiceAvatar(evt) {
     dispatch(setNewAvatarId(evt.target.id));
     dispatch(changeAvatar());
   }
 
+  // Fonction qui dispatch l'action qui permet d'afficher ou non
+  //  les avatars disponible pour l'utilisateur
   function handleSeeImage() {
     dispatch(seeAvatarToogle());
   }

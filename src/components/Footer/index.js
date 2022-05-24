@@ -4,6 +4,8 @@ import { NavLink } from 'react-router-dom';
 // ==  Import: local
 import './footer-deux.scss';
 
+// == Composant
+
 function Footer() {
   return (
     <footer className="footer">
@@ -18,4 +20,5 @@ function Footer() {
   );
 }
 
+// == Export
 export default Footer;

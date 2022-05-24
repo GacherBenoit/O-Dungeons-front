@@ -1,4 +1,7 @@
+// == Import: local
 import './personality.scss';
+
+// == Composant
 
 function Personality() {
   return (
@@ -15,4 +18,5 @@ function Personality() {
   );
 }
 
+// == Export
 export default Personality;

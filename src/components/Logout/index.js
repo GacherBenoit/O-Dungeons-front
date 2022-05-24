@@ -13,6 +13,9 @@ function Logout() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  // Appel l'action qui va vidée tout les champ qui contienne des informations sur l'utilisateur
+  // Cette action vide egalement le local storage qui contient son ID et Son token d'identification
+  // qui permet de communiqué avec l'API
   function handleLogout() {
     dispatch(logout());
     // console.log('click');

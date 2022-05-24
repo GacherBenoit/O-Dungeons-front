@@ -5,6 +5,7 @@ import {
 } from '../../../actions/character';
 import throwDice from '../../../selectors/dice';
 import sum from '../../../selectors/sum';
+// import dice from '../../../assets/images/de.png';
 // import DiceButton from '../DiceButton';
 import './caracteristics.scss';
 
@@ -58,6 +59,7 @@ function CaracteristicsPrincipals() {
             onClick={strengthDiceHandler}
           >
             lancer de dé
+            {/* : <img src={dice} alt="dé" /> */}
           </button>
         </li>
         <li className="caracteristics__principals--list--item">-Dextérité: {caracteristics.dexterity || '0' } + {dexterityDiceResult || '0'} = {sum(caracteristics.dexterity, dexterityDiceResult)}

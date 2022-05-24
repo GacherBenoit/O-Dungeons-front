@@ -65,11 +65,13 @@ const axiosInstance = axios.create({
 
 const apiMiddleWare = (store) => (next) => (action) => {
   switch (action.type) {
+    // Récupération via l'API des classes
     case FETCH_CLASSES:
       axiosInstance
         .get('classes')
         .then(
           (response) => {
+            // Envoi des classes dans le state
             store.dispatch(saveClasses(response.data));
           },
         )
@@ -78,11 +80,13 @@ const apiMiddleWare = (store) => (next) => (action) => {
         );
       next(action); // Si l'action type au dessus n'est pas appellé, axios passe à l'action suivante
       break;
+    // Récupération via l'API des races
     case FETCH_RACES:
       axiosInstance
         .get('races')
         .then(
           (response) => {
+            // Envoi des races dans le state
             store.dispatch(saveRaces(response.data));
           },
         )
@@ -91,11 +95,13 @@ const apiMiddleWare = (store) => (next) => (action) => {
         );
       next(action);
       break;
+      // Récupération des background via l'API
     case FETCH_BACKGROUND_CREATOR:
       axiosInstance
         .get('backgrounds')
         .then(
           (response) => {
+            // Sauvegarde des background dans le state
             store.dispatch(saveBackgroundCreator(response.data));
           },
         )
@@ -104,11 +110,13 @@ const apiMiddleWare = (store) => (next) => (action) => {
         );
       next(action);
       break;
+      // Récupération via l'API de 2 races au hasard
     case RANDOM_RACES:
       axiosInstance
         .get('races/random')
         .then(
           (response) => {
+            // Sauvegarde dans le state des 2 races
             store.dispatch(saveRandomRaces(response.data));
           },
         )
@@ -117,11 +125,13 @@ const apiMiddleWare = (store) => (next) => (action) => {
         );
       next(action);
       break;
+      // Récupération via l'API de 2 classes au hasard
     case RANDOM_CLASSE:
       axiosInstance
         .get('classes/random')
         .then(
           (response) => {
+            // Sauvegarde des 2 classes dans le state
             store.dispatch(saveRandomClasse(response.data));
           },
         )
@@ -130,6 +140,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
         );
       next(action);
       break;
+      // Récupération via l'API d'une classe complète suivant son ID
     case FETCH_CLASSE_COMPLETE: {
       const { classes: { currentId } } = store.getState();
       // console.log(currentId);
@@ -137,6 +148,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .get(`classes/${currentId}`)
         .then(
           (response) => {
+            // Sauvegarde dans le state de la classe complète
             store.dispatch(saveCurrentClasse(response.data));
           },
         )
@@ -146,6 +158,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
       next(action);
       break;
     }
+    // Récupérationd'une race complète via l'API
     case FETCH_RACE_COMPLETE: {
       const { races: { currentId } } = store.getState();
       // console.log(currentId);
@@ -153,6 +166,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .get(`races/${currentId}`)
         .then(
           (response) => {
+            // Sauvegarde de la classe complète dans le state
             store.dispatch(saveCurrentRace(response.data));
           },
         )
@@ -162,6 +176,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
       next(action);
       break;
     }
+    // Récupération via l'API d'une race par son ID
     case FETCH_RACE_CREATOR: {
       const { character: { currentId } } = store.getState();
       console.log(currentId);
@@ -169,7 +184,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .get(`races/${currentId}`)
         .then(
           (response) => {
-            // console.log(response.data);
+            // Sauvegarde dans le state de la classe sélectionnée
             store.dispatch(saveCurrentRaceCreator(response.data));
           },
         )
@@ -179,6 +194,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
       next(action);
       break;
     }
+    // Récupération via l'API d'une sous-race suivant son id
     case FETCH_SUBRACE_CREATOR: {
       const { character: { currentSubraceId } } = store.getState();
       console.log(currentSubraceId);
@@ -186,7 +202,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .get(`subraces/${currentSubraceId}`)
         .then(
           (response) => {
-            // console.log(response.data);
+            // Sauvegarde de la sous-race sélectionnée
             store.dispatch(saveCurrentSubrace(response.data));
           },
         )
@@ -196,6 +212,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
       next(action);
       break;
     }
+    // Récupération des habilités d'une classe via l'API
     case FETCH_CURRENT_CLASSE_ABILITIES: {
       const { character: { currentClasseId } } = store.getState();
       console.log(currentClasseId);
@@ -203,7 +220,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .get(`classes/${currentClasseId}/abilities`)
         .then(
           (response) => {
-            // console.log(response.data);
+            // Sauvegarde des habilités de la class dans le state
             store.dispatch(saveCurrentClasseAbilities(response.data));
           },
         )
@@ -213,6 +230,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
       next(action);
       break;
     }
+    // Récupération via l'API de la classe courante
     case FETCH_CURRENT_CLASSE_CREATOR: {
       const { character: { currentClasseId } } = store.getState();
       console.log(currentClasseId);
@@ -220,7 +238,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
         .get(`classes/${currentClasseId}`)
         .then(
           (response) => {
-            // console.log(response.data);
+            // Sauvegarde dans le state de la classe selectionnée
             store.dispatch(saveCurrentClasseCreator(response.data));
           },
         )
@@ -230,6 +248,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
       next(action);
       break;
     }
+    // Envoi dans l'API le username et password  dans l'API
     case LOGIN: {
       const state = store.getState();
       const { email, password } = state.user;
@@ -243,7 +262,6 @@ const apiMiddleWare = (store) => (next) => (action) => {
           },
         )
         .then((response) => {
-          console.log(response.data.user);
           // on extrait la propriété data de la reponse
           // que l'on stocke dans une variable user
           const { data: user } = response;
@@ -267,6 +285,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
       next(action);
       break;
     }
+    // Envoi à l'API l'utilisateur créé
     case CREATE_NEW_ACCOUNT: {
       const state = store.getState();
       const {
@@ -305,6 +324,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
       next(action);
       break;
     }
+    // Récupération des données d'un utilisateur
     case FIND_USER: {
       const findId = localStorage.getItem('id');
       const idSave = JSON.parse(findId);
@@ -340,11 +360,13 @@ const apiMiddleWare = (store) => (next) => (action) => {
       next(action);
       break;
     }
+    // Vide le local storage
     case LOGOUT: {
       localStorage.clear();
       next(action);
       break;
     }
+    // Envoi à l'API les modifications d'un utilisateur
     case EDIT_ACCOUNT_USER: {
       const findToken = localStorage.getItem('token');
       const token = JSON.parse(findToken);
@@ -390,6 +412,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
       next(action);
       break;
     }
+    // Envoi à l'API le nouveau password d'un utilisateur
     case EDIT_PASSWORD_USER: {
       const findToken = localStorage.getItem('token');
       const token = JSON.parse(findToken);

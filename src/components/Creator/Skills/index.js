@@ -64,48 +64,51 @@ function Skills() {
         </ul>
       </div> */}
       <div className="skills__choices-menu">
-        <div className="skills__choices">
-          <label htmlFor="choices-skill" />
-          <select className="choices__skill" id="choices-skill" onChange={handleFirstAbilitiesChoice}>
-            <option value="">Compétences</option>
-            {abilitiesList && abilitiesList.map((abilities) => (
-              <option
-                key={abilities.id}
-                value={abilities.id}
-              >{abilities.name}
-              </option>
-            ))}
-          </select>
-          <div className="skills__content">
-            <ul className="skills__content--properties">
-              <li className="skills__incantation_duration">Temps d'incantation:<p className="skills__results">{firstAbilitieSpecs.incantationTime}</p></li>
-              <li className="skills__range">Portée:<p className="skills__results">{firstAbilitieSpecs.abilityRange}</p></li>
-              <li className="skills__duration">Durée:<p className="skills__results">{firstAbilitieSpecs.duration}</p></li>
-              <li className="skills__description">Description:<p className="skills__results">{firstAbilitieSpecs.quickDescription}</p></li>
-            </ul>
+        <div className="skills__choices__group--one"> 
+          <div className="skills__choices">
+            <label htmlFor="choices-skill" />
+            <select className="choices__skill" id="choices-skill" onChange={handleFirstAbilitiesChoice}>
+              <option value="">Compétences</option>
+              {abilitiesList && abilitiesList.map((abilities) => (
+                <option
+                  key={abilities.id}
+                  value={abilities.id}
+                >{abilities.name}
+                </option>
+              ))}
+            </select>
+            <div className="skills__content">
+              <ul className="skills__content--properties">
+                <li className="skills__incantation_duration">Temps d'incantation:<p className="skills__results">{firstAbilitieSpecs.incantationTime}</p></li>
+                <li className="skills__range">Portée:<p className="skills__results">{firstAbilitieSpecs.abilityRange}</p></li>
+                <li className="skills__duration">Durée:<p className="skills__results">{firstAbilitieSpecs.duration}</p></li>
+                <li className="skills__description">Description:<p className="skills__results">{firstAbilitieSpecs.quickDescription}</p></li>
+              </ul>
+            </div>
+          </div>
+          <div className="skills__choices">
+              <label htmlFor="choices-skill" />
+            <select className="choices__skill" id="choices-skill" onChange={handleSecondAbilitiesChoice}>
+              <option value="">Compétences</option>
+              {abilitiesList && abilitiesList.map((abilities) => (
+                <option
+                  key={abilities.id}
+                  value={abilities.id}
+                >{abilities.name}
+                </option>
+              ))}
+            </select>
+            <div className="skills__content">
+              <ul className="skills__content--properties">
+                <li className="skills__incantation_duration">Temps d'incantation: <p className="skills__results">{secondAbilitieSpecs.incantationTime}</p></li>
+                <li className="skills__range">Portée:<p className="skills__results">{secondAbilitieSpecs.abilityRange}</p></li>
+                <li className="skills__duration">Durée:<p className="skills__results">{secondAbilitieSpecs.duration}</p></li>
+                <li className="skills__description">Description:<p className="skills__results">{secondAbilitieSpecs.quickDescription}</p></li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div className="skills__choices">
-          <label htmlFor="choices-skill" />
-          <select className="choices__skill" id="choices-skill" onChange={handleSecondAbilitiesChoice}>
-            <option value="">Compétences</option>
-            {abilitiesList && abilitiesList.map((abilities) => (
-              <option
-                key={abilities.id}
-                value={abilities.id}
-              >{abilities.name}
-              </option>
-            ))}
-          </select>
-          <div className="skills__content">
-            <ul className="skills__content--properties">
-              <li className="skills__incantation_duration">Temps d'incantation: <p className="skills__results">{secondAbilitieSpecs.incantationTime}</p></li>
-              <li className="skills__range">Portée:<p className="skills__results">{secondAbilitieSpecs.abilityRange}</p></li>
-              <li className="skills__duration">Durée:<p className="skills__results">{secondAbilitieSpecs.duration}</p></li>
-              <li className="skills__description">Description:<p className="skills__results">{secondAbilitieSpecs.quickDescription}</p></li>
-            </ul>
-          </div>
-        </div>
+        <div className="skills__choices__group--two"> 
         <div className="skills__choices">
           <label htmlFor="choices-skill" />
           <select className="choices__skill" id="choices-skill" onChange={handleThirdAbilitiesChoice}>
@@ -127,25 +130,26 @@ function Skills() {
             </ul>
           </div>
         </div>
-        <div className="skills__choices">
-          <label htmlFor="choices-skill" />
-          <select className="choices__skill" id="choices-skill" onChange={handleFourthAbilitiesChoice}>
-            <option value="">Compétences</option>
-            {abilitiesList && abilitiesList.map((abilities) => (
-              <option
-                key={abilities.id}
-                value={abilities.id}
-              >{abilities.name}
-              </option>
-            ))}
-          </select>
-          <div className="skills__content">
-            <ul className="skills__content--properties">
-              <li className="skills__incantation_duration">Temps d'incantation:<p className="skills__results">{fourthAbilitieSpecs.incantationTime}</p></li>
-              <li className="skills__range">Portée:<p className="skills__results">{fourthAbilitieSpecs.abilityRange}</p></li>
-              <li className="skills__duration">Durée:<p className="skills__results">{fourthAbilitieSpecs.duration}</p></li>
-              <li className="skills__description">Description:<p className="skills__results">{fourthAbilitieSpecs.quickDescription}</p></li>
-            </ul>
+          <div className="skills__choices">
+            <label htmlFor="choices-skill" />
+            <select className="choices__skill" id="choices-skill" onChange={handleFourthAbilitiesChoice}>
+              <option value="">Compétences</option>
+              {abilitiesList && abilitiesList.map((abilities) => (
+                <option
+                  key={abilities.id}
+                  value={abilities.id}
+                >{abilities.name}
+                </option>
+              ))}
+            </select>
+            <div className="skills__content">
+              <ul className="skills__content--properties">
+                <li className="skills__incantation_duration">Temps d'incantation:<p className="skills__results">{fourthAbilitieSpecs.incantationTime}</p></li>
+                <li className="skills__range">Portée:<p className="skills__results">{fourthAbilitieSpecs.abilityRange}</p></li>
+                <li className="skills__duration">Durée:<p className="skills__results">{fourthAbilitieSpecs.duration}</p></li>
+                <li className="skills__description">Description:<p className="skills__results">{fourthAbilitieSpecs.quickDescription}</p></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

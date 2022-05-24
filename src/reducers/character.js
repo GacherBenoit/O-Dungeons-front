@@ -32,7 +32,7 @@ import {
   SAVE_INTELLIGENCE_DICE,
   SAVE_WISDOM_DICE,
   SAVE_CHARISMA_DICE,
-  } from '../actions/character';
+} from '../actions/character';
 
 const initialState = {
   race: '',

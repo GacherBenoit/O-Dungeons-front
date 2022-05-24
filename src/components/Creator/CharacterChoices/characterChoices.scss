@@ -73,3 +73,12 @@
     }
   }
 }
+@media screen and (min-width: 1824px){
+  .choices {
+    font-size: x-large;
+    
+     &__name, &__race, &__subrace, &__classe, &__background {
+    font-size: x-large;
+  }
+}
+}

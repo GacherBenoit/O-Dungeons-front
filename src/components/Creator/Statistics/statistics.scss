@@ -59,6 +59,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: vars.$gutter;
+    margin-top: vars.$gutter;
   }
   &__die-save{
     text-align: center;
@@ -119,4 +120,9 @@ width: 25%;
 margin: 16px;
 }
 }
+}
+@media screen and (min-width: 1824px){
+  .statistics {
+  font-size: x-large;
+  }
 }

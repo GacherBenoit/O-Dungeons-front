@@ -72,3 +72,13 @@
    }
 }
 }
+@media screen and (min-width: 1824px){
+  .choices{
+    &__skill{
+      font-size: x-large;
+    }
+  }
+  .skills{
+    font-size: x-large;  
+}
+}

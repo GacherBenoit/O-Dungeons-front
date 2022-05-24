@@ -38,6 +38,7 @@ function Statistics() {
         <li>Hit Dice</li>
       </ul>
       <div className="stats__die-throw">
+        <p className="stats__die-save">Mort sauvés</p>
         <ul className="circle__success">
           <li>Succès</li>
           <li><span className="circle" /></li>
@@ -49,7 +50,6 @@ function Statistics() {
           <li><span className="circle" /></li>
           <li><span className="circle" /></li>
           <li><span className="circle" /></li>
-          <li><p>Mort sauvés</p></li>
         </ul>
       </div>
     </section>

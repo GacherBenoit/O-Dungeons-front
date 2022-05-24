@@ -3,7 +3,7 @@ import './capacities.scss';
 function Capacities() {
   return (
     <section className="caracteristics__capacities">
-      <h4>Liste des capacités</h4>
+      <h4 className="caracteristics__capacities__title">Liste des capacités</h4>
       <div className="caracteristics__capacities--checkbox">
         <div className="capacities">
           <div>

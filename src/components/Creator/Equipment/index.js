@@ -1,5 +1,10 @@
+// == Import: npm
 import { useSelector } from 'react-redux';
+
+// == Import: local
 import './equipment.scss';
+
+// == Composant
 
 function Equipment() {
   const equipmentList = useSelector((state) => state.character.currentClasse.playableClassItems);
@@ -35,4 +40,5 @@ function Equipment() {
   );
 }
 
+// == Export
 export default Equipment;

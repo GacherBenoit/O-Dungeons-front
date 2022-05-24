@@ -1,5 +1,7 @@
+// == Import: local
 import './throws.scss';
 
+// == Composant
 function Throws() {
   return (
     <div className="throws">
@@ -38,4 +40,5 @@ function Throws() {
   );
 }
 
+// == Export
 export default Throws;

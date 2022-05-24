@@ -1,7 +1,10 @@
-// import throwDice from '../../../selectors/dice';
+// == Import: local
+// Image
 import dices from '../../../assets/images/petitde.jpg';
-
+// Css
 import './diceButton.scss';
+
+// == Composant
 
 function DiceButton() {
   // function dice() {
@@ -26,4 +29,5 @@ function DiceButton() {
   );
 }
 
+// == Export
 export default DiceButton;

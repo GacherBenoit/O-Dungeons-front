@@ -244,3 +244,13 @@
 
   }
 }
+@media only screen and (min-width : 1824px) {
+.main{
+  &__random::before{
+    margin-top: -5vw;
+    margin-left: 30vw;
+    background-size: 45vw;
+  }
+}
+
+}

@@ -58,3 +58,13 @@
     
   }
 }
+@media screen and (min-width: 1824px){
+  .classes{
+    
+      &__cards::before{
+      margin-left: 50vw;
+      background-size: 60vw;
+      margin-top: 1vw;
+      }
+    }
+  }

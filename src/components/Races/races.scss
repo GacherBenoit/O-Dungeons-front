@@ -81,3 +81,14 @@
     
   }
 }
+@media only screen and (min-width : 1824px) {
+  .races{
+    &__cards::before{
+      margin-top: -15vw;
+      margin-left: 20vw;
+      background-size: 70vw;
+    }
+  }
+  
+  }
+  

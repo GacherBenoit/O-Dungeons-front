@@ -107,3 +107,21 @@ main {
   }
 }
 }
+@media screen and (min-width:1824px)
+{
+  .rules{
+  &__section--presentation--right::before {
+    background-repeat: no-repeat;
+    background-size: 30vw;
+    margin-top: -5vw;
+  }
+  
+    &__section--presentation::before {
+      background-repeat: no-repeat;
+      background-size: 30vw;
+      margin-top: -5vw;
+    }
+
+
+}
+}

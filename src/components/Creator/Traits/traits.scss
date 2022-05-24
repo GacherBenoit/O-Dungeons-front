@@ -5,11 +5,15 @@
   box-shadow: 1em 0 .4em vars.$colorTitle;
   margin: vars.$gutter * 2;
   padding: vars.$gutter;
+  &--title{
+    text-align: center;
+  }
   &__paragraphe {
     text-align: left;
     padding: vars.$gutter;
     &--list {
       padding: vars.$gutter;
     }
+    
   }
 }

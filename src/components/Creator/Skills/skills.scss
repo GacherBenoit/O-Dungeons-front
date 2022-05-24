@@ -16,9 +16,7 @@
   display: inline;
   }
 
-&__content--properties{
-  
-}
+
 
 &__incantation_duration{
   margin-top: 2%;
@@ -60,28 +58,17 @@
     
   // }
 }
-@media only screen and (min-device-width : 768px){
-  .choices{
-    // &__skill{
-    //   margin-left: vars.$gutter*6;
-    // }
+@media only screen and (min-device-width :1024px){
+  .skills{
+  &__choices__group--one{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2vw;
   }
-  .skills {
-  //   &__incantation_duration{
-  //     margin-left: vars.$gutter*1;
-  //   }
-  //   &__range{
-  //     margin-left: vars.$gutter*1;
-      
-  //   }
-  //   &__duration{
-  //     margin-left: vars.$gutter*1;
-      
-  //   }
-  //   &__description{
-  //     margin-left: vars.$gutter*1;
-      
-  //   }
+  &__choices__group--two {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2vw;
    }
-  
+}
 }

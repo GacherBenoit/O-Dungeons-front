@@ -22,6 +22,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: vars.$gutter;
+    
   }
   &__health{
     text-align: center;
@@ -59,6 +60,9 @@
     margin-right: auto;
     margin-bottom: vars.$gutter;
   }
+  &__die-save{
+    text-align: center;
+  }
 }
 .circle{
   height: 12px;
@@ -77,4 +81,42 @@
     margin-left: 1vh;
     display: flex;
   }
+}
+@media screen and (min-width: 990px){
+.statistics{
+  display: flex;
+}
+  .stats{
+&__speed{
+  height: auto;
+  padding: 1vw;
+}
+&__list{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+&__initiative{
+  height: auto;
+  padding: 1vw;
+}
+&__armor{
+  height: auto;
+  padding: 1vw;
+}
+    
+&__health-all-stats{
+  width: 40%;
+  margin: 16px;
+  
+}
+&__dice{
+padding: 1vw;
+width: 25%;
+}
+&__die-throw{
+  padding: 1vw;
+width: 25%;
+margin: 16px;
+}
+}
 }

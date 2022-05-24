@@ -19,3 +19,14 @@
 .capacities div {
   padding: vars.$gutter;
 }
+
+@media screen and (min-width: 1824px){
+  .capacities{
+    font-size: x-large;
+  }
+ .caracteristics{
+   &__capacities__title{
+     font-size: x-large;
+   }
+}
+}

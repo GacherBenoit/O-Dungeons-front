@@ -31,17 +31,19 @@
         margin-left: auto;
   }
   &__body--link{
-    margin:vars.$gutter ;
-    margin-left: 33%;
+  text-align:center;
+    
+  }
+}
+@media screen and (min-width: 768px){
+.card{
+  
+  &__image--classe{
+    margin-left: 11vw;
   }
 }
 
-
-
-  
-
-  
-
+}
 @media screen and (min-width: 990px){
 
   .card {

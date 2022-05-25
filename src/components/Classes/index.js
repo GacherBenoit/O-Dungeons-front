@@ -13,6 +13,7 @@ import './classes.scss';
 // == Composant
 
 function Classes() {
+  const burgerMenuIsOn = useSelector((state) => state.user.settingsMenu.isOpen);
   const classesList = useSelector((state) => state.classes.classes);
   const dispatch = useDispatch();
   // au montage du composant principal
@@ -25,7 +26,7 @@ function Classes() {
   );
 
   return (
-    <main className="classes">
+    <main className={burgerMenuIsOn ? 'classes--right' : 'classes'}>
       <h1 className="classes__title">Classes</h1>
       <div className="classes__cards">
         { classesList.map((classe) => (

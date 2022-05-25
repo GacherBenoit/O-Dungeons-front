@@ -130,7 +130,34 @@ main {
       background-size: 30vw;
       margin-top: -5vw;
     }
-
+    &__section--presentation::before{
+      content: "";
+      background-image: url(../../assets/images/elfe.png);
+      margin-top: -15vw;
+      background-size: 35vw;
+      opacity: 0.5;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+      
+    }
+    &__section--presentation--right::before{
+      content: "";
+      background-image: url(../../assets/images/elfe.png);
+      margin-top: -15vw;
+      background-size: 35vw;
+      opacity: 0.5;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+      
+    }
 
 }
 }

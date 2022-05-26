@@ -12,6 +12,7 @@ import './races.scss';
 import Card from '../Card';
 
 function Races() {
+  const burgerMenuIsOn = useSelector((state) => state.user.settingsMenu.isOpen);
   const listRaces = useSelector((state) => state.races.races);
   const dispatch = useDispatch();
 
@@ -24,7 +25,7 @@ function Races() {
   );
 
   return (
-    <main className="races">
+    <main className={burgerMenuIsOn ? 'races--right' : 'races'}>
       <h1 className="races__title">Races</h1>
       <div className="races__cards">
         { listRaces.map((race) => (

@@ -2,6 +2,19 @@
 .error {
   display: flex;
   flex-direction: column;
+  &__title {
+    font-family: vars.$policeTitle;
+    font-size: 2.5rem;
+    margin-bottom: vars.$gutter;
+  }
+  &__button {
+    width: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: vars.$colorTitle;
+    border-radius: 20px;
+    padding: 4px;
+  }
 }
 
 // button {

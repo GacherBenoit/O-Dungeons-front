@@ -12,9 +12,9 @@ import orcsarmy from '../../assets/images/orcarmy.png';
 function Error() {
   return (
     <main className="error">
-      <h1>Oupsss ... tu es tombé dans une embuscade !!</h1>
+      <h1 className="error__title">Oupsss ... tu es tombé dans une embuscade !!</h1>
 
-      <button type="button"><NavLink to="/">Retour à l'accueil</NavLink></button>
+      <button className="error__button" type="button"><NavLink to="/">Retour à l'accueil</NavLink></button>
       <img src={orcsarmy} alt="orcs" />
     </main>
   );

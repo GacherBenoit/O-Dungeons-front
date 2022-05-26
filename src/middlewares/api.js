@@ -179,7 +179,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
     // Récupération via l'API d'une race par son ID
     case FETCH_RACE_CREATOR: {
       const { character: { currentId } } = store.getState();
-      console.log(currentId);
+      // console.log(currentId);
       axiosInstance
         .get(`races/${currentId}`)
         .then(
@@ -197,7 +197,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
     // Récupération via l'API d'une sous-race suivant son id
     case FETCH_SUBRACE_CREATOR: {
       const { character: { currentSubraceId } } = store.getState();
-      console.log(currentSubraceId);
+      // console.log(currentSubraceId);
       axiosInstance
         .get(`subraces/${currentSubraceId}`)
         .then(
@@ -215,7 +215,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
     // Récupération des habilités d'une classe via l'API
     case FETCH_CURRENT_CLASSE_ABILITIES: {
       const { character: { currentClasseId } } = store.getState();
-      console.log(currentClasseId);
+      // console.log(currentClasseId);
       axiosInstance
         .get(`classes/${currentClasseId}/abilities`)
         .then(
@@ -233,7 +233,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
     // Récupération via l'API de la classe courante
     case FETCH_CURRENT_CLASSE_CREATOR: {
       const { character: { currentClasseId } } = store.getState();
-      console.log(currentClasseId);
+      // console.log(currentClasseId);
       axiosInstance
         .get(`classes/${currentClasseId}`)
         .then(
@@ -349,7 +349,7 @@ const apiMiddleWare = (store) => (next) => (action) => {
           // console.log(response);
 
           const { data: user } = response;
-          console.log(user);
+          // console.log(user);
 
           store.dispatch(saveUser(user));
           store.dispatch(isLogged());

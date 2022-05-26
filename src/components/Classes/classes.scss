@@ -10,35 +10,91 @@
   }
 }
 
+@media screen and (min-width: 768px)
+{
+  .classes{
+  // display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  
+  &__cards{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+    
+}
+.classes::before{
+  margin-top: 5em;
+  content: "";
+  background-image: url(../../assets/images/dragon.png);
+  background-repeat: no-repeat;
+  background-size: 180vw;
+  bottom: 0;
+  left: 0;
+  margin-left: -20vw;
+  margin-top: 15vw;
+  opacity: .8;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
 
+}
 @media screen and (min-width: 990px){
   .classes{
     margin-top: vars.$gutter * 4;
+    
+    &--right{
+      margin-top: 64px;
+      flex-wrap: wrap;
+      position: relative;
+    }
       &__cards{
         margin-left: 2em;
         display: flex;
         flex-wrap: wrap;
         position: relative;
+        width: 100%;
       }
-      &__cards::before{
+      &::before{
+        
         margin-top: 5em;
         content: "";
         background-image: url(../../assets/images/war-dwarf.png);
         background-repeat: no-repeat;
-        background-size: 33vw;
+        background-size: 37vw;
         bottom: 0;
         left: 0;
-        margin-left: 62vw;
-        margin-top: 38vw;
-        opacity: .5;
+        margin-left: 65vw;
+        margin-top: 48vw;
+        opacity: .8;
         position: absolute;
         right: 0;
         top: 0;
         z-index: -1;
-      }
-
-     
+      }    
+      &--right::before{
+        
+        margin-top: 5em;
+        content: "";
+        background-image: url(../../assets/images/war-dwarf.png);
+        background-repeat: no-repeat;
+        background-size: 37vw;
+        bottom: 0;
+        left: 0;
+        margin-left: 65vw;
+        margin-top: 48vw;
+        opacity: .8;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+      }       
 }
+ 
     .card{
       
       width: 30%;
@@ -58,13 +114,82 @@
     
   }
 }
+@media screen and (min-width: 1440px){
+ .classes{
+  &::before{
+     margin-top: 5em;
+    content: "";
+    background-image: url(../../assets/images/war-dwarf.png);
+    background-repeat: no-repeat;
+    background-size: 24vw;
+    bottom: 0;
+    left: 0;
+    margin-left: 66vw;
+    margin-top: 36vw;
+    opacity: .8;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }  
+  &--right::before{
+    margin-top: 5em;
+   content: "";
+   background-image: url(../../assets/images/war-dwarf.png);
+   background-repeat: no-repeat;
+   background-size: 24vw;
+   bottom: 0;
+   left: 0;
+   margin-left: 66vw;
+   margin-top: 36vw;
+   opacity: .8;
+   position: absolute;
+   right: 0;
+   top: 0;
+   z-index: -1;
+ }  
+}
+}
 @media screen and (min-width: 1824px){
   .classes{
+    &::before{
+      margin-top: 5em;
+     content: "";
+     background-image: url(../../assets/images/war-dwarf.png);
+     background-repeat: no-repeat;
+     background-size: 44vw;
+     bottom: 0;
+     left: 0;
+     margin-left: 54vw;
+     margin-top: -6vw;
+     opacity: .8;
+     position: absolute;
+     right: 0;
+     top: 0;
+     z-index: -1;
+   }  
+   &--right::before{
+     margin-top: 5em;
+    content: "";
+    background-image: url(../../assets/images/war-dwarf.png);
+    background-repeat: no-repeat;
+    background-size: 44vw;
+    bottom: 0;
+    left: 0;
+    margin-left: 54vw;
+    margin-top: -6vw;
+    opacity: .8;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }  
     
-      &__cards::before{
-      margin-left: 51vw;
-      background-size: 43vw;
-      margin-top: -11vw;
-      }
+    
+  &__cards::before{
+  margin-left: 51vw;
+  background-size: 70vw;
+  margin-top: -1vw;
+  }
     }
   }

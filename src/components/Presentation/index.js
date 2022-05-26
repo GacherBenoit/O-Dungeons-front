@@ -39,8 +39,8 @@ function Presentation() {
 
   return (
     <main className="main">
-      <div className="main__sections">
-        <section className={burgerMenuIsOn ? 'main__section--presentation--right' : 'main__section--presentation'}>
+      <div className={burgerMenuIsOn ? 'main__section__right' : 'main__section'}>
+        <section className="main__section--presentation">
           <img className="main__image" src={mainImage} alt="soldat" />
           <h2 className="main__section--presentation--title">
             Présentation

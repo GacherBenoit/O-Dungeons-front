@@ -64,8 +64,8 @@ function CaracteristicsPrincipals() {
             type="button"
             onClick={strengthDiceHandler}
           >
-            lancer de dé
-            {/* : <img src={dice} alt="dé" /> */}
+            Jet de Dés
+            {/* : <img src={dice} alt="Dés" /> */}
           </button>
         </li>
         <li className="caracteristics__principals--list--item">-Dextérité: {caracteristics.dexterity || '0' } + {dexterityDiceResult || '0'} = {sum(caracteristics.dexterity, dexterityDiceResult)}
@@ -73,7 +73,7 @@ function CaracteristicsPrincipals() {
             type="button"
             onClick={dexterityDiceHandler}
           >
-            lancer de dé
+            Jet de Dés
           </button>
 
         </li>
@@ -82,7 +82,7 @@ function CaracteristicsPrincipals() {
             type="button"
             onClick={constitutionhDiceHandler}
           >
-            lancer de dé
+            Jet de Dés
           </button>
 
         </li>
@@ -91,7 +91,7 @@ function CaracteristicsPrincipals() {
             type="button"
             onClick={intelligenceDiceHandler}
           >
-            lancer de dé
+            Jet de Dés
           </button>
 
         </li>
@@ -100,7 +100,7 @@ function CaracteristicsPrincipals() {
             type="button"
             onClick={wisdomDiceHandler}
           >
-            lancer de dé
+            Jet de Dés
           </button>
 
         </li>
@@ -109,7 +109,7 @@ function CaracteristicsPrincipals() {
             type="button"
             onClick={charismaDiceHandler}
           >
-            lancer de dé
+            Jet de Dés
           </button>
 
         </li>

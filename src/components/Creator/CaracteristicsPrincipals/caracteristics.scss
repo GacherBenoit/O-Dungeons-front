@@ -18,7 +18,13 @@
     }
   }
   &--title {
-    margin-top: vars.$gutter ;
+    margin-top: vars.$gutter  ;
+  }
+  &--list button {
+    padding: vars.$gutter *0.5;
+    border-radius: 10px;
+    background-color:#edddc3;
+    border: 1px solid vars.$colorTitle;
   }
   
 }

@@ -52,6 +52,7 @@
     margin-right: auto;
     margin: vars.$gutter;
     text-align: center;
+    display: grid;
   }
   &__die-throw{
     border: 1px solid #000000;
@@ -63,6 +64,7 @@
   }
   &__die-save{
     text-align: center;
+    margin-bottom: 2vw;
   }
 }
 .circle{
@@ -74,13 +76,10 @@
   border: solid black;
   margin-left: 1vh;
 
-  &__success{
+  &__success,  &__loose{
     margin-left: 1vh;
     display: flex;
-  }
-  &__loose{
-    margin-left: 1vh;
-    display: flex;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 990px){

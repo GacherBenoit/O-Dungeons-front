@@ -16,6 +16,9 @@ module.exports = merge(common, {
     // Stats bundle
     new BundleStatsWebpackPlugin(),
   ],
+  output: {
+    publicPath: './',
+  },
   module: {
     rules: [
       {

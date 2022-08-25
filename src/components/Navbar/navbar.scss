@@ -9,7 +9,7 @@
 
   &__links {
     display: flex;
-    width:100vw;
+    /* width:100vw; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -19,16 +19,17 @@
     height: 100vh;
     padding: 2rem;
     visibility: hidden;
-    // background: linear-gradient(to bottom right, rgb(41, 39, 39), 70%, rgb(177, 17, 17) );
-   /*  background-image: url('../../assets/images/fantasy-gcad0e870d_640.jpg');
-    background-position-x: 35em; */
-    background-size: cover;
+    background: rgb(254, 252, 252);
+    /* background-image: url('../../assets/images/logo-mobile.png'); */
+    /* background-position-x: 35em; 
+    background-size: cover; */
     color: rgb(7, 6, 6);
   }
     
 
   &__show &__links {
     width: 100vw;
+    height: 37.5em;
     right: 0;
     bottom: 0;
     visibility: visible;

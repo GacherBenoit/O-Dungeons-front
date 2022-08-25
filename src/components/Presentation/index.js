@@ -41,7 +41,7 @@ function Presentation() {
     <main className="main">
       <div className={burgerMenuIsOn ? 'main__section__right' : 'main__section'}>
         <section className="main__section--presentation">
-          <img className="main__image" src={mainImage} alt="soldat" />
+          {/* <img className="main__image" src={mainImage} alt="soldat" /> */}
           <h2 className="main__section--presentation--title">
             Présentation
           </h2>

@@ -58,7 +58,7 @@ import {
 
 const axiosInstance = axios.create({
   // par exemple, on peut définir une url de base !
-  baseURL: 'http://pierre-arnaudlandoin-server.eddi.cloud/projet-17-o-dungeons-back/public/api/',
+  baseURL: 'https://back.odungeon.fr/api',
   // baseURL: 'http://romanlotocki-server.eddi.cloud/projet-17-o-dungeons-back/public/api',
   // baseURL: 'http://pierre-arnaud-landoin.vpnuser.lan:8080/api/',
 });

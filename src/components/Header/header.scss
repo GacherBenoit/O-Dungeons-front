@@ -1,20 +1,19 @@
 .header{
-  width: 100vw;
+ /*  width: 100vw; */
   // background: linear-gradient(to bottom right, rgb(41, 39, 39), 70%, rgb(177, 17, 17) );
-  height: 10vh;
+ /*  height: 10vh; */
   // position: fixed;
 
   // background-image: url(../../assets/images/logo.png);
   background-image: url(../../assets/images/logo-mobile.png);
-
   height: 10vh;
   width: 100vw;
   background-position: center;
-  margin-top: 3vw;
   margin-bottom: 3vw;
+  position: fixed;
 
 
-  &__content{
+ /*  &__content{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -40,6 +39,7 @@
     background-image: url('../../assets/images/logo-definitive.png');
     background-repeat: no-repeat;
   
-  }
+  } */
 }
+
 

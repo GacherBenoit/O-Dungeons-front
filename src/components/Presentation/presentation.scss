@@ -1,5 +1,5 @@
 @use 'src/styles/vars';
-.main {
+/* .main {
   margin-top: vars.$gutter * 3;
   
   &__section{
@@ -15,29 +15,9 @@
     width: 100vw;
    margin: auto;
    display: block;
-  //  position: absolute;
+  
   }
-  //    position: relative;
   
-  // }
-  // &__section--presentation--right {  
-  //   width: 100vw;
-  //   margin: auto;
-  
-  // }
-  // &__section--presentation::before{
-  //   content: "";
-  //   background-image: url(../../assets/images/rodeur.png);
-  //   margin-top: 50vw;
-  //   background-size: cover;
-  //   opacity: 0.5;
-  //   top: 0;
-  //   left: 0;
-  //   bottom: 0;
-  //   right: 0;
-  //   position: absolute;
-  //   z-index: -1;
-  // }
 
   &__image {
     width: 95vw;
@@ -79,11 +59,11 @@
     margin-top: 1rem;
     margin-left: 1rem;
     text-align: center;
-  }
+  } */
 
   // CARD
 
-  &__cards--classes {
+ /*  &__cards--classes {
 
     margin: 0.5rem;
   }
@@ -103,9 +83,9 @@
       font-family: vars.$policeTitle;
       font-size: 50px;
     }
-  }
+  } */
 
-}
+/* }
 .main__section::before{
   content: "";
     background-image: url(../../assets/images/rodeur.png);
@@ -117,9 +97,9 @@
     bottom: 0;
     right: 0;
     position: absolute;
-    z-index: -1;
-}
-.main__section__right::before{
+    z-index: -1; */
+/* } */
+/* .main__section__right::before{
   content: "";
     background-image: url(../../assets/images/rodeur.png);
     margin-top: 70vw;
@@ -156,6 +136,22 @@
   .main{
 
     &__section{
+      margin-top: 1rem;
+      width: 90%;
+      height: 500px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      background-image: url('../../assets/images/druid-g4a26deb11_640.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: rgba(146, 114, 19, 0.979);
+      // color: #FFD700;
+      margin: vars.$gutter;
+      margin-left: auto;
+      margin-right: auto;     
+    }
+    &__section__right{
       margin-top: 1rem;
       width: 90%;
       height: 500px;
@@ -342,4 +338,4 @@
   }
 }
 
-}
+} */

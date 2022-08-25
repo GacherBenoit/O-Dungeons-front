@@ -1,6 +1,14 @@
 @use 'src/styles/vars';
 
-.card {
+.card{
+  &__image--classe{
+
+    width: 10em;
+    margin: vars.$gutter * 4;
+  }
+}
+
+/* .card {
   
   border: 10px solid transparent;
   border-image: url(./../../assets/images/kisspng-paper-parchment-papyrus-writing-notebook-5b0f7246a6c8e7.9619406815277389506832.png) 200 stretch;
@@ -130,3 +138,4 @@
   }  
 }
 
+ */

@@ -1,4 +1,5 @@
 // == Import : local
+
 // composant
 import Navbar from '../Navbar';
 // css
@@ -9,7 +10,7 @@ import './header.scss';
 function Header() {
   return (
     <header className="header">
-      <div className="header__navbar--left">
+      <div className="header__navbar">
         <Navbar />
       </div>
     </header>

@@ -34,7 +34,7 @@ function Card({
         <p className="card__body--excerpt">
           {description}
         </p>
-        <p className="card__body--link" onClick={handleClasseClick}><Link className="card__body--konw--more" to={`/${type}/${slug}`}>en savoir plus...</Link> </p>
+        <p className="card__body--link" onClick={handleClasseClick}><Link className="card__body--know--more" to={`/${type}/${slug}`}>en savoir plus...</Link> </p>
       </div>
 
     </aside>

@@ -1,4 +1,53 @@
 @use 'src/styles/vars';
+
+.main{
+  
+  font-family: vars.$policeText;
+  text-align: center;
+  padding-top: 8em;
+  margin-right: vars.$gutter;
+  margin-left: vars.$gutter;
+
+ &__section--presentation{
+
+  &--title {
+    font-family: vars.$policeTitle;
+    font-size: 3em;
+  }
+  &--paragraphe{
+    margin-top: vars.$gutter ;
+    margin-bottom: vars.$gutter ;
+    
+  }
+  &--link{
+    
+    font-family: vars.$policeText;
+  }
+}
+  &__rules{
+    
+    &--title{
+      margin-top: vars.$gutter;
+      font-family: vars.$policeTitle;
+      font-size: 3em;
+    }
+    &--paragraphe{
+      margin-top: vars.$gutter ;
+      margin-bottom: vars.$gutter ;
+      
+    }
+}
+
+ &__random{
+
+  &--title{
+    font-family: vars.$policeTitle;
+    font-size: 3em;
+    margin-bottom: vars.$gutter ;
+  }
+ }
+}
+
 /* .main {
   margin-top: vars.$gutter * 3;
   

@@ -43,7 +43,7 @@ function Presentation() {
         <section className="main__section--presentation">
           {/* <img className="main__image" src={mainImage} alt="soldat" /> */}
           <h2 className="main__section--presentation--title">
-            Présentation
+            Presentation
           </h2>
           <p className="main__section--presentation--paragraphe">
             Donjon et Dragon est un jeu de rôle sur table.
@@ -59,12 +59,12 @@ function Presentation() {
         </section>
         <section className="main__rules">
           <h2 className="main__rules--title">
-            Règles du jeu
+            Regles du jeu
           </h2>
           <p className="main__rules--paragraphe">
             Le jeu de rôle Dungeons & Dragons baigne dans un univers de combats et de magie.
             De nombreux jeux de notre enfance sont basés sur l’immersion.
-            Au même titre, D&D s’appuie sur l’imagination.
+            Au même titre, Dungeons & Dragons s’appuie sur l’imagination.
             Il s'agit de détailler le château fort par une nuit de tempête
             et imaginer comment un aventurier réagirait aux défis que représente cette scène.
           </p>
@@ -75,7 +75,7 @@ function Presentation() {
       </div>
       <div className="main__random">
         <h3 className="main__random--title">
-          Découvrir une Classe
+          Decouvrir une Classe
         </h3>
         <div className="main__random--classes">
           { randomClasses.map((classeRandom) => (
@@ -91,7 +91,7 @@ function Presentation() {
           ))}
         </div>
         <h3 className="main__random--title">
-          Découvrir une Race
+          Decouvrir une Race
         </h3>
         <div className="main__random--races">
           { randomRace.map((raceRandom) => (

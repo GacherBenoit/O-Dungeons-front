@@ -1,6 +1,22 @@
 @use 'reset';
 @use 'vars';
 
+@font-face {
+  font-family: 'the_wild_breath_of_zeldaRg';
+  src: url('../assets/fonts/thewildbreathofzelda-15lv_2-webfont.woff2') format('woff2'),
+       url('../assets/fonts/thewildbreathofzelda-15lv_2-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+
+  font-family: 'breathe_fireregular';
+  src: url('../assets/fonts/breathefire-65pg-webfont.woff2') format('woff2'),
+       url('../assets/fonts/breathefire-65pg-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 /* body {
   height: 100vh;
   width: 100vw;

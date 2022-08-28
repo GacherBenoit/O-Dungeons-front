@@ -11,27 +11,31 @@
  &__section--presentation{
 
   &--title {
+    color: vars.$colorTitle;
     font-family: vars.$policeTitle;
     font-size: 3em;
   }
   &--paragraphe{
+    color: vars.$colorText;
     margin-top: vars.$gutter ;
     margin-bottom: vars.$gutter ;
     
   }
   &--link{
-    
+    color: vars.$colorLink;
     font-family: vars.$policeText;
   }
 }
   &__rules{
     
     &--title{
+      color: vars.$colorTitle;
       margin-top: vars.$gutter;
       font-family: vars.$policeTitle;
       font-size: 3em;
     }
     &--paragraphe{
+      color: vars.$colorText;
       margin-top: vars.$gutter ;
       margin-bottom: vars.$gutter ;
       
@@ -41,6 +45,7 @@
  &__random{
 
   &--title{
+    color: vars.$colorTitle;
     font-family: vars.$policeTitle;
     font-size: 3em;
     margin-bottom: vars.$gutter ;

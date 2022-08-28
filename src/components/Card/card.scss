@@ -11,13 +11,19 @@
     font-family: vars.$policeText;
     
     &--title{
+      color: vars.$colorCardTitle;
       font-family: vars.$policeTitle;
       font-size: 2em;
     }
+    
+    &--excerpt{
+      color: vars.$colorCardText;
+    }
   
-  &--link{
-    margin-top: vars.$gutter;
-  }
+    &--link{
+      color: vars.$colorLink;
+      margin-top: vars.$gutter;
+    }
 }
   &__image{
     background-image: url(http://localhost:8080/images/663162e941f3a561c538.jpg);

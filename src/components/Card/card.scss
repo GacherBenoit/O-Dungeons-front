@@ -4,7 +4,7 @@
   
   margin: vars.$gutter;
   border-radius: 25px;
-  box-shadow: 5px 5px 15px vars.$boxShadow;
+  box-shadow: 5px 5px 15px vars.$cardBoxShadow;
   text-align: center;
   
   &__body{
@@ -26,12 +26,10 @@
     }
 }
   &__image{
-    background-image: url(http://localhost:8080/images/663162e941f3a561c538.jpg);
-    background-size: cover;
+    background-image: vars.$fontCardBackground;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    background-repeat: no-repeat;
-    background-position: center;
+   
   
   &--classe{
 

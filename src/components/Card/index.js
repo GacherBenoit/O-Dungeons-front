@@ -25,6 +25,7 @@ function Card({
   }
   return (
     <aside className="card">
+
       <div className="card__image">
         <img className="card__image--classe" src={`data:image/png;base64,${image}`} alt="barbare" />
       </div>

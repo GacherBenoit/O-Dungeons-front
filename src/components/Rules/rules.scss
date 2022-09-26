@@ -41,7 +41,15 @@
   }
 }
 
-
+@media screen and (min-width:768px)
+{
+  .rules{
+    &__section--presentation::before{
+      margin-top:-17vw;
+    }
+  }
+  
+}
 @media screen and (min-width: 990px)
 {
 main {
@@ -77,6 +85,7 @@ main {
     
     
   }
+  
   &__section--presentation::before{
     content: "";
     background-image: url(../../assets/images/elfe.png);
@@ -107,15 +116,7 @@ main {
   }
 }
 }
-@media screen and (min-width:768px)
-{
-  .rules{
-    &__section--presentation::before{
-      margin-top:-17vw;
-    }
-  }
-  
-}
+
 @media screen and (min-width:1824px)
 {
   .rules{

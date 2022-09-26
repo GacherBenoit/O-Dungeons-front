@@ -47,17 +47,18 @@
   .classes{
     margin-top: vars.$gutter * 4;
     
-    &--right{
-      margin-top: 64px;
-      flex-wrap: wrap;
-      position: relative;
-    }
       &__cards{
         margin-left: 2em;
         display: flex;
         flex-wrap: wrap;
         position: relative;
         width: 100%;
+      }
+
+      &--right{
+        margin-top: 64px;
+        flex-wrap: wrap;
+        position: relative;
       }
       &::before{
         

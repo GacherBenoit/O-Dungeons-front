@@ -2,20 +2,20 @@
 
 .card {
   
-  border: 10px solid transparent;
-  border-image: url(./../../assets/images/kisspng-paper-parchment-papyrus-writing-notebook-5b0f7246a6c8e7.9619406815277389506832.png) 200 stretch;
   background-image: url(../../assets/images/kisspng-paper-parchment-papyrus-writing-notebook-5b0f7246a6c8e7.9619406815277389506832.png);
-  border: 10px solid transparent;
   padding: 0px;
   background-clip: content-box;
   background-size: auto;
   background-position: center;
   margin-bottom: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80vw;             
 
    &__image--classe{
     width: 160px;
     height: 160px;
-    margin-left: 25vw;
+    margin-left: 12vw;
     
    }
    &__body--title{
@@ -29,6 +29,7 @@
         -webkit-box-orient: vertical;
         display: -webkit-box;
         margin-left: auto;
+        text-align: center;
   }
   &__body--link{
   text-align:center;
@@ -37,6 +38,9 @@
 }
 @media screen and (min-width: 768px){
 .card{
+  margin-left: auto;
+  margin-right: auto;
+  width: 40vw;
   
   &__image--classe{
     margin-left: 11vw;
@@ -47,9 +51,8 @@
 @media screen and (min-width: 990px){
 
   .card {
-  border-image: url(./../../assets/images/kisspng-paper-parchment-papyrus-writing-notebook-5b0f7246a6c8e7.9619406815277389506832.png) 200 stretch;
+  
   background-image: url(../../assets/images/kisspng-paper-parchment-papyrus-writing-notebook-5b0f7246a6c8e7.9619406815277389506832.png);
-  border: 10px solid transparent;
   padding: 0px;
   background-clip: content-box;
   background-size: auto;
@@ -113,16 +116,19 @@
   }
 
 }
-@media screen and (min-width: 1224px)
-{
+@media only screen and (min-width : 1378px) {
+  
   .card{
-    border:6px solid transparent
-  }
+   
+  
+    background-size: cover;
+  }   
 }
+
 @media only screen and (min-width : 1824px) {
   
   .card{
-    border:6px solid transparent;
+   
   
   &__body--link {
    text-align: center;

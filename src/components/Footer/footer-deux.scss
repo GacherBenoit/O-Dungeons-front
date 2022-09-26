@@ -1,10 +1,11 @@
 @use '../../styles/vars';
 
 .footer {
-  height: 200px;
+  
   background-image: url('../../assets/images/footer-transparency.png');
   background-size: cover;
   background-repeat: no-repeat;
+  height: 200px;
 
   &__background {
     height: 100%;
@@ -24,10 +25,10 @@
     }
   }
 }
-@media screen and(min-width:375px) {
+ @media screen and(min-width:375px) {
 .footer{
   height: 250px;
-  background-size: contain;
+  background-size: cover;
   &__list{
     display: flex;
     justify-content: space-evenly;
@@ -87,6 +88,6 @@
 
 @media screen and(min-width:2000px) {
   .footer {
-    height: 800px;
+    height: 1300px;
   }
 }
